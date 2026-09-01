@@ -1,105 +1,92 @@
-import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import { CalendarCheck2, CircleUserRound, ShieldCheck } from 'lucide-react';
 
 const Ouraproch = () => {
   const approaches = [
     {
       id: 1,
-      icon: '📊',
-      title: 'Strategy First',
-      description: 'We understand your brand, audience, and goals before creating a content direction that works.'
+      icon: CalendarCheck2,
+      title: 'Book Appointments',
+      description: 'You apply for funding and we set-up an intro with you to get to know the team.'
     },
     {
       id: 2,
-      icon: '🎨',
-      title: 'Creative & Consistent',
-      description: 'We design high-quality content that represents your brand and keeps your audience engaged.'
+      icon: CircleUserRound,
+      title: 'Due Diligence',
+      description: 'After that, we go through a few due diligence procedures to align our interests.'
     },
     {
       id: 3,
-      icon: '📈',
-      title: 'Measure & Improve',
-      description: 'We track performance, analyze results, and continuously improve your social media presence.'
+      icon: ShieldCheck,
+      title: 'Deal Signed',
+      description: 'Once we are done with due diligence, then we commit to your round and build with you.'
     }
   ];
 
   return (
-    <div className="relative w-full min-h-screen bg-white overflow-hidden py-20 px-4 md:px-8">
-      
-      {/* Main Content */}
-      <div className="relative z-10 max-w-6xl mx-auto">
-        
-        {/* Header Section */}
-        <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            OUR <span className="text-[#dd0403]">APPROACH</span>
+    <div className="relative min-h-screen w-full overflow-hidden bg-[#050505] px-4 py-20 md:px-8">
+      <div className="relative z-10 mx-auto max-w-[1200px]">
+        <div className="mb-16 text-center md:mb-20">
+          <h2 className="text-[2.4rem] font-semibold tracking-[-0.05em] text-white md:text-[3.5rem]">
+            Our <span className="text-[#dd0403]">Approach</span>
           </h2>
-          
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mt-8">
-            <span className="text-lg md:text-xl font-semibold text-gray-700">Strategy.</span>
-            <span className="text-lg md:text-xl font-semibold text-[#dd0403]">Creativity.</span>
-            <span className="text-lg md:text-xl font-semibold text-gray-700">Consistency.</span>
-            <span className="text-lg md:text-xl font-semibold text-[#dd0403]">Growth.</span>
-          </div>
         </div>
 
-        {/* Process Flow Container */}
         <div className="relative">
-          {/* Desktop Connecting Lines */}
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5">
-            {/* Left Line */}
-            <div className="absolute top-0 left-[15%] right-[65%] h-0.5 bg-gray-300 border-t-2 border-dashed border-gray-400" style={{backgroundImage: 'repeating-linear-gradient(90deg, #dd0403 0px, #dd0403 10px, transparent 10px, transparent 20px)'}}></div>
-            
-            {/* Right Line */}
-            <div className="absolute top-0 left-[65%] right-[15%] h-0.5 bg-gray-300 border-t-2 border-dashed border-gray-400" style={{backgroundImage: 'repeating-linear-gradient(90deg, #dd0403 0px, #dd0403 10px, transparent 10px, transparent 20px)'}}></div>
-          </div>
+          <svg
+            className="pointer-events-none absolute left-1/2 top-20 hidden h-[150px] w-[72%] -translate-x-1/2 lg:block"
+            viewBox="0 0 900 150"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M94 82C172 82 250 82 332 82C408 82 478 82 560 82C640 82 706 82 806 82"
+              stroke="rgba(255,255,255,0.45)"
+              strokeWidth="2"
+              strokeDasharray="8 14"
+              strokeLinecap="round"
+            />
+            <path
+              d="M96 82C135 110 155 122 179 122C208 122 214 110 245 82"
+              stroke="rgba(255,255,255,0.45)"
+              strokeWidth="2"
+              strokeDasharray="8 14"
+              strokeLinecap="round"
+            />
+            <path
+              d="M706 82C735 110 756 122 780 122C809 122 815 110 846 82"
+              stroke="rgba(255,255,255,0.45)"
+              strokeWidth="2"
+              strokeDasharray="8 14"
+              strokeLinecap="round"
+            />
+          </svg>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-            {approaches.map((approach, index) => (
-              <div
-                key={approach.id}
-                className="group flex flex-col items-start"
-              >
-                {/* Icon Box */}
-                <div className="mb-6 flex items-center justify-center w-24 h-24 bg-[#dd0403]/10 border-2 border-[#dd0403] rounded-2xl group-hover:bg-[#dd0403]/20 transition-all duration-300 transform group-hover:scale-110">
-                  <span className="text-5xl">{approach.icon}</span>
-                </div>
+          <div className="relative z-10 grid gap-14 md:grid-cols-3">
+            {approaches.map((approach) => {
+              const Icon = approach.icon;
 
-                {/* Content */}
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              return (
+                <div
+                  key={approach.id}
+                  className="flex flex-col items-center text-center md:items-start md:text-left"
+                >
+                  <div className="mb-7 flex h-24 w-24 items-center justify-center rounded-[1.5rem] bg-[#0f8efc] shadow-[0_15px_30px_rgba(20,132,255,0.25)] ring-1 ring-white/10 md:h-28 md:w-28">
+                    <Icon className="h-10 w-10 text-white md:h-12 md:w-12" strokeWidth={2.2} />
+                  </div>
+
+                  <h3 className="mb-4 text-3xl font-semibold leading-tight text-white md:text-[2.15rem]">
                     {approach.title}
                   </h3>
-                  
-                  <p className="text-gray-600 text-base leading-relaxed">
+
+                  <p className="max-w-[260px] text-base leading-relaxed text-white/75 md:text-lg">
                     {approach.description}
                   </p>
                 </div>
-
-                {/* Hover Accent */}
-                <div className="mt-6 h-1 w-0 bg-[#dd0403] rounded-full group-hover:w-12 transition-all duration-300"></div>
-              </div>
-            ))}
+              );
+            })}
           </div>
-
-          {/* Mobile Connecting Lines (Vertical) */}
-          <div className="lg:hidden mt-8 flex flex-col gap-4">
-            <div className="h-8 border-l-2 border-dashed border-[#dd0403] mx-auto"></div>
-            <div className="h-8 border-l-2 border-dashed border-[#dd0403] mx-auto"></div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-20">
-          <p className="text-xl text-gray-700 mb-6">
-            Ready to transform your brand with our strategic approach?
-          </p>
-          
-          <button className="inline-flex items-center gap-2 bg-[#dd0403] text-white font-semibold px-8 py-3 rounded-xl hover:bg-[#c00302] transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer shadow-lg hover:shadow-xl">
-            <span>Start Your Journey</span>
-            <ArrowRight className="w-5 h-5" />
-          </button>
         </div>
       </div>
     </div>
