@@ -1,7 +1,6 @@
 import WhyDigitalMarketing from "./page/WhyDigitalMarketing";
 import DigitalMarketingAgency from "./page/DigitalMarketingAgencyinRajkot/DigitalMarketingAgency";
 import DigitalMarketingExperts from "./page/DigitalMarketingExpertsRajkot/DigitalMarketingExperts";
-import SeoService from "./page/seoservice/SeoService";
 import Digital_India from "./page/DigitalInIndia/Digital_India";
 import Digital from "./page/digitalcomind/digitalcomind";
 import Social from "./page/socialmedia/socialmedia";
@@ -16,31 +15,34 @@ import DigitalMarketingConsultant from "./page/consltandigital/DigitalMarketingC
 import Herachikal from "./components/ui/internetmarketing/Herachikal";
 import MainInternetMarketingRajkot from "./page/internet/MainInternetMarketingRajkot";
 import MainDigitalMarketingConsultant from "./page/consltandigital/MainDigitalMarketingConsultant"
-import Ouraproch from "./components/ui/ouraproch/Ouraproch";
+import MainDExpertsRajkot from "./page/DigitalMarketingExpertsRajkot/MainDExpertsRajkot";
+import Service from "./components/ui/dmcinindia/Services";
+import MainSeoPage from "./page/seoservice/MainSeoPage";
 
 
 function App() {
   return (
     <>
     {/* final ready page */}
-      {/* <MainInternetMarketingRajkot /> */}
       {/* <MainDigitalMarketingConsultant /> */}
-      <Ouraproch />
-      
-
-      {/* <SeoService /> */}
+      {/* <MainDExpertsRajkot /> */}
+      {/* <MainInternetMarketingRajkot /> */}
+      {/* <MainSeoPage /> */}
+   
       {/* <DigitalMarketingAgency /> */}
+      {/* <Digital /> */}
 
-      {/* <DigitalMarketingExperts /> */}
+      {/* <Service /> */}
+
+
  
      
       {/* <WhyDigitalMarketing /> */}
       {/* <Digital_India /> */}
-      {/* <Digital /> */}
       {/* <Social /> */}
       {/* <Ppc /> */}
       {/* <OnlineMarketing /> */}
-      {/* <EmailMarketing /> */}
+      <EmailMarketing />
       {/* <Internet /> */}
     </>
   );

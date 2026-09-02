@@ -385,7 +385,7 @@ function ServicePage() {
   const active = services.find((s) => s.id === activeService);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f7f5f1] text-neutral-950">
+    <main className="min-h-screen overflow-hidden bg-white text-neutral-950">
       {/* ── HERO ───────────────────────────────────────────────── */}
       <section className="relative overflow-hidden">
         {/* Decorative blobs */}
@@ -559,7 +559,7 @@ function ServicePage() {
           {/* <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 blur-3xl" /> */}
         </div>
 
-        <div className="relative mx-auto max-w-[95%] px-5 sm:px-8 lg:px-10">
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
           {/* Header */}
           <motion.div
             variants={fadeUp}
@@ -586,7 +586,8 @@ function ServicePage() {
             </p>
           </div>
 
-          <div className="grid items-start mx-auto  max-w-[95%]  gap-6 lg:grid-cols-[280px_0.9fr] xl:grid-cols-[300px_850px] mt-10  lg:ml-24">
+          <div className="grid items-start mx-auto  max-w-[100%]  gap-6 
+          lg:grid-cols-[280px_0.9fr] xl:grid-cols-[0.6fr_1.4fr] mt-10  ">
             {/* ── Sidebar tabs ── */}
             <motion.div
               variants={stagger}
@@ -1138,7 +1139,7 @@ function ServicePage() {
       </section>
 
       {/* ── ALL SERVICES CARDS GRID ─────────────────────────────── */}
-      <section className="bg-white py-20 sm:py-16">
+      {/* <section className="bg-white py-20 sm:py-16">
         <div className="mx-auto max-w-[95%] px-5 sm:px-8 lg:px-10">
           <motion.div
             variants={fadeUp}
@@ -1172,7 +1173,7 @@ function ServicePage() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       <IndustriesSection />
     </main>

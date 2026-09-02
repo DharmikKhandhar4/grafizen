@@ -66,7 +66,7 @@ const trust = [
 
 export default function DigitalCoIndia() {
   return (
-    <section className="relative overflow-hidden bg-[#f7f5f1] text-[#111]">
+    <section className="relative overflow-hidden bg-white text-[#111]">
 
       {/* -- BACKGROUND -- */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">

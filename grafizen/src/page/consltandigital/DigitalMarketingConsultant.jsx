@@ -44,9 +44,9 @@ export default function ReplicatedHero() {
           />
         </svg>
 
-        <div className="absolute inset-4 rounded-[30px] border-[3px] border-[#dd0403] bg-gradient-to-br from-[#eeeeee] via-[#f7f7f7] to-[#e9e9e9] lg:hidden" />
+        <div className="absolute inset-4 rounded-[30px] border-[3px] border-[#dd0403] bg-gradient-to-br from-[#eeeeee] via-[#f7f7f7] to-[#e9e9e9]  lg:hidden" />
 
-        <div className="relative z-10 grid min-h-[610px] grid-cols-1 gap-8 px-8 pb-9 pt-10 sm:px-12 lg:grid-cols-[0.58fr_0.42fr] lg:px-[74px] lg:pb-11 lg:pt-[78px]">
+        <div className="relative z-10 grid min-h-[610px] grid-cols-1 gap-8 px-8 pb-9 pt-10 sm:px-12 lg:grid-cols-[0.58fr_0.42fr] lg:px-[74px] lg:pb-11 lg:pt-[78px] ">
           <motion.div
             initial={{ opacity: 0, x: -28 }}
             animate={{ opacity: 1, x: 0 }}
@@ -81,7 +81,7 @@ export default function ReplicatedHero() {
               href="#contact"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="mt-6 inline-flex h-10 w-fit items-center justify-center rounded-full bg-gradient-to-r from-[#dd0403] to-[#df4040] px-11 text-sm font-bold text-white shadow-[0_16px_34px_rgba(221,4,3,0.22)]"
+              className="mt-6 inline-flex h-10 w-fit items-center justify-center rounded-full  bg-[#dd0403]  px-11 text-sm font-bold text-white shadow-[0_16px_34px_rgba(221,4,3,0.22)]"
             >
               Get a Free Strategy Call →
             </motion.a>

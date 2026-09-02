@@ -79,39 +79,40 @@ export default function CoreServicesSection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="mb-6 inline-flex items-center justify-center gap-3"
-          >
-            <span className="h-px w-8 rounded-full bg-[#dd0403]" />
-            <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-neutral-700 sm:text-[11px]">
-              Core Revenue Drivers
-            </span>
-          </motion.div>
+        <div className="mb-16 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          {/* Left */}
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-10 bg-[#dd0403]" />
+              <span className="text-[11px] font-bold tracking-[0.28em] text-[#dd0403]">
+                CORE REVENUE DRIVERS
+              </span>
+            </div>
+            <motion.h2
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl font-[500] leading-[1.06] tracking-[-0.045em] sm:text-5xl lg:text-[48px] text-black sm:text-[42px]"
+            >
+              Data-Driven Strategies{" "}
+              <span className="text-[#dd0403]">For Business Expansion</span>
+            </motion.h2>
+          </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-medium leading-[1.05] tracking-[-0.03em] text-[#111111] sm:text-5xl lg:text-[48px]"
-          >
-            Data-Driven Strategies Built to <br className="hidden sm:inline" />
-            <span className="block text-[#dd0403]">Scale Your Revenue</span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="mt-4 text-[#555048] text-base sm:text-lg"
-          >
-            We don’t offer one-size-fits-all packages. We deploy targeted growth
-            channels tailored to your exact industry and business goals.
-          </motion.p>
+          {/* Right */}
+          <div className="max-w-4xl">
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="mt-6 max-w-3xl text-base leading-5 text-neutral-500 sm:text-md text-black/55 text-[13px] font-[300]"
+            >
+              We don't offer one-size-fits-all packages. We deploy targeted
+              growth channels tailored to your exact industry and business
+              goals.
+            </motion.p>
+          </div>
         </div>
 
         {/* Interactive Desktop Tab Selector */}

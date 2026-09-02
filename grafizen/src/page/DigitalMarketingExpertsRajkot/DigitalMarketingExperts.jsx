@@ -19,6 +19,10 @@ import {
   ShieldCheck,
   Award,
 } from "lucide-react";
+import first from "../../../public/image/CompleteServices/front-end-programming.png";
+import growth from "../../../public/image/growth.png";
+import growingbusiness from "../../../public/image/growing-business.png";
+import webpage from "../../../public/image/componentsimage/web-page.png";
 
 export default function DigitalMarketingExperts() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,7 +45,7 @@ export default function DigitalMarketingExperts() {
   };
 
   return (
-    <section className="relative w-full min-h-screen bg-[#f7f5f1] text-[#1a1a1a] font-['Poppins',sans-serif] overflow-hidden selection:bg-[#dd0403] selection:text-white   px-4 sm:px-6 lg:px-12 flex flex-col justify-between">
+    <section className="relative w-full min-h-screen bg-white text-[#1a1a1a] font-['Poppins',sans-serif] overflow-hidden selection:bg-[#dd0403] selection:text-white   px-4 sm:px-6 lg:px-12 flex flex-col justify-between">
       {/* ================= BACKGROUND ELEMENTS ================= */}
       {/* Subtle dotted world map / grid pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
@@ -108,7 +112,11 @@ export default function DigitalMarketingExperts() {
               {/* Feature 1 */}
               <div className="flex items-center gap-2.5 pr-2 sm:border-r border-[#e5dcce]">
                 <div className="w-9 h-9 shrink-0 rounded-full bg-[#fdeaea] border border-[#fad5d5] flex items-center justify-center text-[#dd0403] shadow-sm">
-                  <Target className="w-4 h-4" />
+                  <img
+                    src={first}
+                    alt="Data-driven strategies"
+                    className="w-5 h-5 object-contain"
+                  />
                 </div>
                 <div className="text-[12px] font-semibold text-[#222] leading-snug">
                   Data-Driven <br />
@@ -119,7 +127,11 @@ export default function DigitalMarketingExperts() {
               {/* Feature 2 */}
               <div className="flex items-center gap-2.5 sm:px-2 sm:border-r border-[#e5dcce]">
                 <div className="w-9 h-9 shrink-0 rounded-full bg-[#fdeaea] border border-[#fad5d5] flex items-center justify-center text-[#dd0403] shadow-sm">
-                  <BarChart3 className="w-4 h-4" />
+                  <img
+                    src={growth}
+                    alt="Measurable growth"
+                    className="w-5 h-5 object-contain"
+                  />
                 </div>
                 <div className="text-[12px] font-semibold text-[#222] leading-snug">
                   Measurable <br />
@@ -130,7 +142,11 @@ export default function DigitalMarketingExperts() {
               {/* Feature 3 */}
               <div className="flex items-center gap-2.5 sm:px-2 sm:border-r border-[#e5dcce]">
                 <div className="w-9 h-9 shrink-0 rounded-full bg-[#fdeaea] border border-[#fad5d5] flex items-center justify-center text-[#dd0403] shadow-sm">
-                  <Users className="w-4 h-4" />
+                  <img
+                    src={growingbusiness}
+                    alt="ROI focused campaigns"
+                    className="w-5 h-5 object-contain"
+                  />
                 </div>
                 <div className="text-[12px] font-semibold text-[#222] leading-snug">
                   ROI Focused <br />
@@ -141,7 +157,11 @@ export default function DigitalMarketingExperts() {
               {/* Feature 4 */}
               <div className="flex items-center gap-2.5 sm:pl-2">
                 <div className="w-9 h-9 shrink-0 rounded-full bg-[#fdeaea] border border-[#fad5d5] flex items-center justify-center text-[#dd0403] shadow-sm">
-                  <Rocket className="w-4 h-4" />
+                  <img
+                    src={webpage}
+                    alt="Faster results"
+                    className="w-5 h-5 object-contain"
+                  />
                 </div>
                 <div className="text-[12px] font-semibold text-[#222] leading-snug">
                   Faster <br />

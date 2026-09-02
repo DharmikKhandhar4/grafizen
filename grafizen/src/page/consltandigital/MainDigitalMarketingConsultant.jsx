@@ -3,6 +3,7 @@ import DigitalMarketingConsultant from "../../page/consltandigital/DigitalMarket
 import PainPointsSection  from '../../page/consltandigital/PainPointsSection'
 import CoreServicesSection from './CoreServicesSection'
 import ProcessSteps from './processSteps'
+import Services from '../../components/ui/dmcinindia/Services'
 
 const MainDigitalMarketingConsultant = () => {
   return (
@@ -11,7 +12,8 @@ const MainDigitalMarketingConsultant = () => {
  <DigitalMarketingConsultant />
  <PainPointsSection />
  <CoreServicesSection />
-<ProcessSteps />
+ <Services />
+{/* <ProcessSteps /> */}
  </>
   )
 }

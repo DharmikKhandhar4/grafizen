@@ -181,7 +181,7 @@ export default function SeoService() {
   const depthLayers = Array.from({ length: 20 }, (_, i) => i);
 
   return (
-    <section className="relative w-full min-h-screen bg-white text-[#111111] font-['Poppins',sans-serif] overflow-hidden selection:bg-[#dd0403] selection:text-white  px-4 sm:px-6 lg:px-14 flex flex-col justify-between">
+    <section className="relative w-full  bg-white text-[#111111] font-['Poppins',sans-serif] overflow-hidden selection:bg-[#dd0403] selection:text-white  px-4 sm:px-6 lg:px-14 flex flex-col justify-between">
       {/* ================= ISOMETRIC WIREFRAME BACKGROUND ================= */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-90">
         {/* Subtle grid pattern */}
@@ -210,7 +210,7 @@ export default function SeoService() {
             className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center"
           >
             {/* Eyebrow badge */}
-            <div className="flex items-center gap-3 mb-10 mt-24">
+            <div className="flex items-center gap-3 mb-10 mt-0">
               <span className="w-8 h-[2px] bg-[#dd0403] rounded-full inline-block" />
               <span className="text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#dd0403] uppercase">
                 SEO SERVICES IN RAJKOT
@@ -503,30 +503,33 @@ export default function SeoService() {
         {/* =========================================================================
             SECTION 2: STRATEGIC KEYWORD PILLAR ARCHITECTURE & RANKING INSIGHT
         ========================================================================= */}
-        <div id="strategy-breakdown" className="mt-20 lg:mt-28 pt-12 ">
-          {/* Header Tag & Section Title */}
-          <div className="text-center max-w-3xl mx-auto mb-9">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4">
-              {/* <Sparkles className="w-4 h-4 text-[#dd0403]" /> */}
-              <span className="w-8 h-[2px] bg-[#dd0403] rounded-full inline-block"></span>
-              <span className="text-xs font-[500] uppercase tracking-widest text-[#dd0403]">
-                Proven Ranking Strategy
-              </span>
+        <div id="strategy-breakdown" className="mt-20 lg:mt-0 pt-12">
+          {/* Header Section */}
+          <div className="mb-16 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+            {/* Left */}
+            <div>
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-px w-10 bg-[#dd0403]" />
+                <span className="text-[11px] font-bold tracking-[0.28em] text-[#dd0403]">
+                  PROVEN RANKING STRATEGY
+                </span>
+              </div>
+
+              <h2 className="text-4xl font-[500] leading-[1.06] tracking-[-0.045em] sm:text-5xl lg:text-[48px] text-black sm:text-[42px]">
+                Why Broad <span className="text-[#dd0403]">"SEO Services"</span>{" "}
+                Fails &{" "}
+                <span className="text-[#dd0403]">Cluster Pillars Win</span>
+              </h2>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-[500] text-[#111111] tracking-tight">
-              Why Broad <span className="text-[#dd0403]">"SEO Services"</span>{" "}
-              Fails & How Cluster Pillars Win
-            </h2>
-
-            <p className="mt-4 text-[#555048] text-[13px] leading-relaxed">
-              The keyword{" "}
-              <strong className="text-[#111111]">“SEO services”</strong> is
-              fiercely competitive on a global level. Instead of burning budget
-              competing broadly, we construct high-authority dedicated pillar
-              clusters targeting immediate, high-intent local and niche
-              commercial searches.
-            </p>
+            {/* Right */}
+            <div className="max-w-4xl">
+              <p className="mt-6 max-w-3xl text-base leading-5 text-neutral-500 sm:text-md text-black/55 text-[13px] font-[300]">
+                Instead of burning budget competing broadly, we construct
+                high-authority dedicated pillar clusters targeting immediate,
+                high-intent local and niche commercial searches.
+              </p>
+            </div>
           </div>
 
           {/* ── 2-COLUMN STRATEGY COMPARISON & PILLAR ARCHITECTURE ── */}

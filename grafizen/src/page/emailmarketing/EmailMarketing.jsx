@@ -100,26 +100,22 @@ export default function EmailMarketingServices() {
 
           {/* Heading */}
 
-          <h2 className="text-4xl font-[500] leading-[0.98] tracking-[-0.045em] sm:text-6xl lg:text-[48px]">
-            Emails that start
-            
-            conversations  <br />and
-         
-            create{" "}
-            <span className="text-[#dd0403]">
-              customers.
-            </span>
-          </h2>
+         <h2 className="text-4xl font-[500] leading-[0.98] tracking-[-0.045em] sm:text-6xl lg:text-[48px]">
+  Result-Driven{" "}
+  <span className="text-[#dd0403]">
+    Email Marketing
+  </span>{" "}
+  <br />
+  Services in Rajkot
+</h2>
 
           {/* Description */}
 
-          <p className="mt-8 max-w-2xl text-base leading-7 text-black/55 sm:text-md">
-            Connect with your audience through strategic email marketing
-            campaigns built to increase engagement, nurture leads and drive
-            measurable business growth.
+          <p className="mt-6 max-w-2xl text-base leading-5 text-black/55 sm:text-md">
+       Grow your business with strategic email marketing campaigns, automation, personalization and data-driven optimization designed to generate leads, increase engagement and drive conversions.
           </p>
         </motion.div>
-    <div className=" flex  space-evenly w-[300px] ">
+    <div className=" flex  space-evenly w-[250px] ">
     {/* <div className="w-[300px] "> */}
           <img src={email} alt="Email Marketing" className="w-full h-auto" />
         </div>
@@ -145,7 +141,7 @@ export default function EmailMarketingServices() {
               duration: 0.8,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative min-h-[310px]"
+            className="relative min-h-[250px]"
           >
             {/* Vertical line */}
 
@@ -164,17 +160,17 @@ export default function EmailMarketingServices() {
                 <span className="h-2 w-2 rounded-full bg-[#dd0403]" />
               </div>
 
-              <div className="pt-1">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
+              <div className="pt-0">
+                {/* <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
                   Step 01
-                </p>
+                </p> */}
 
-                <h3 className="mt-1 text-xl font-semibold">
+                <h3 className="mt-0 text-xl font-semibold">
                   Reach
                 </h3>
 
-                <p className="mt-0 max-w-xs text-xs leading-6 text-black/50">
-                  Put your message in front of the people who matter.
+                <p className="mt-0 max-w-xs text-xs leading-3 text-black/50">
+               Reach the right customers with targeted email campaigns.
                 </p>
               </div>
             </motion.div>
@@ -192,17 +188,17 @@ export default function EmailMarketingServices() {
                 <span className="h-2 w-2 rounded-full bg-[#dd0403]" />
               </div>
 
-              <div className="pt-1">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
+              <div className="pt-0">
+                {/* <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
                   Step 02
-                </p>
+                </p> */}
 
-                <h3 className="mt-1 text-xl font-semibold">
+                <h3 className="mt-0 text-xl font-semibold">
                   Engage
                 </h3>
 
                 <p className="mt-0 max-w-xs text-xs leading-4 text-black/50">
-                  Create relevant experiences that encourage people to act.
+                  Build meaningful relationships through personalized email experiences.
                 </p>
               </div>
             </motion.div>
@@ -216,29 +212,28 @@ export default function EmailMarketingServices() {
               transition={{ delay: 0.5 }}
               className="relative mt-4 flex gap-5"
             >
-              <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#dd0403]/30 bg-[#dd0403] text-white">
+              <div className="relative z-10 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border ml-0.5 border-[#dd0403]/30 bg-[#dd0403] text-white">
                 <Check size={17} strokeWidth={3} />
               </div>
 
-              <div className="pt-1">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dd0403]">
+              <div className="">
+                {/* <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dd0403]">
                   Step 03
-                </p>
+                </p> */}
 
-                <h3 className="mt-1 text-xl font-semibold">
+                <h3 className="mt-0 text-xl font-semibold">
                   Convert
                 </h3>
 
                 <p className="mt-0 max-w-xs text-xs leading-4 text-black/50">
-                  Turn meaningful interactions into leads, sales and loyal
-                  customers.
+              Turn engaged subscribers into qualified leads, sales and loyal customers.
                 </p>
               </div>
             </motion.div>
 
             {/* Floating email notification */}
 
-            <motion.div
+            {/* <motion.div
               animate={{
                 y: [0, -10, 0],
               }}
@@ -274,7 +269,8 @@ export default function EmailMarketingServices() {
                   className="h-full rounded-full bg-[#dd0403]"
                 />
               </div>
-            </motion.div>
+            </motion.div> */}
+
           </motion.div>
 
           {/* =======================================================
@@ -308,8 +304,8 @@ export default function EmailMarketingServices() {
                   {/* Content */}
 
                   <div className="flex-1">
-                    <div className="flex items-center justify-between gap-5">
-                      <h3 className="text-2xl font-[500] tracking-tight transition-colors duration-300 group-hover:text-[#dd0403] sm:text-xl">
+                    <div className="flex items-center justify-between gap-5 ">
+                      <h3 className="text-2xl font-[500] tracking-tight transition-colors duration-300 group-hover:text-[#dd0403] sm:text-[15px] ">
                         {service.title}
                       </h3>
 
@@ -324,7 +320,7 @@ export default function EmailMarketingServices() {
                       </motion.div>
                     </div>
 
-                    <p className=" max-w-xl text-sm leading-6 text-black/50 sm:text-xs">
+                    <p className=" max-w-xl text-sm leading-4 text-black/50 sm:text-xs">
                       {service.text}
                     </p>
                   </div>
@@ -413,7 +409,7 @@ export default function EmailMarketingServices() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mt-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-center"
+          className="mt-7 flex flex-col justify-between gap-6 sm:flex-row sm:items-center"
         >
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#dd0403]">

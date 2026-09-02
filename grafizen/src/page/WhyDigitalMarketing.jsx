@@ -218,10 +218,10 @@ function WhyDigitalMarketing() {
   }, []);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f4f1eb] text-[#171717] selection:bg-[#dd0403] selection:text-white">
+    <main className="min-h-[50vh] overflow-hidden bg-white text-[#171717] selection:bg-[#dd0403] selection:text-white">
       <section className="mx-auto max-w-[1280px] px-5 pb-24 pt-8 sm:px-8 sm:pt-12  lg:pt-16">
         <div className="grid-cols-[1fr_0.8fr] grid gap-6 lg:grid">
-          <div className="relative min-h-[520px] lg:min-h-[550px]  w-full ">
+          <div className="relative min-h-[400px] lg:min-h-[400px]  w-full ">
             <div className="relative z-10 w-full overflow-hidden rounded-[15px] border border-black/10 bg-[#faf9f6] shadow-[16px_18px_0_#e7e2d9] lg:w-[calc(100%-110px)] ">
               <div className="flex h-11 items-center border-b border-black/10 bg-[#eeece7] px-4">
                 <div className="flex gap-2">
@@ -269,7 +269,7 @@ function WhyDigitalMarketing() {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-40 right-0 z-20 w-44 border border-black/10 bg-white p-4 shadow-[8px_8px_0_#dd0403] rounded-xl sm:w-52 sm:p-5 lg:right-8">
+            <div className="absolute bottom-10 right-0 z-20 w-44 border border-black/10 bg-white p-4 shadow-[8px_8px_0_#dd0403] rounded-xl sm:w-52 sm:p-5 lg:right-8">
               <div className="flex items-center justify-between  text-[10px] uppercase tracking-[0.12em] text-neutral-500">
                 <span>Search interest</span>
                 <TrendingUp size={15} className="text-[#dd0403]" />
@@ -321,7 +321,7 @@ function WhyDigitalMarketing() {
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart
                     data={chartData}
-                    margin={{ top:5  , right: 10, left: 10, bottom: 0 }}
+                    margin={{ top: 5, right: 10, left: 10, bottom: 0 }}
                   >
                     <defs>
                       <linearGradient id="fillRed" x1="0" y1="0" x2="0" y2="1">
@@ -366,31 +366,30 @@ function WhyDigitalMarketing() {
                   key={label}
                   className="bg-white rounded-2xl shadow-sm p-3 flex flex-col"
                 >
-                 <div className=" flex  items-start gap-3 ">
-                   <div className="w-6 h-6 rounded-full bg-red-50 flex  items-center justify-center ">
-                    <Icon className="w-4 h-4 text-red-600" />
+                  <div className=" flex  items-start gap-3 ">
+                    <div className="w-6 h-6 rounded-full bg-red-50 flex  items-center justify-center ">
+                      <Icon className="w-4 h-4 text-red-600" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-bold tracking-wide text-gray-500">
+                        {label}
+                      </p>
+                      <p className="text-md font-extrabold text-red-600 mt-1">
+                        {value}
+                      </p>
+                      <div className="flex items-center gap-1 mt-1">
+                        <ArrowUp className="w-3 h-3 text-green-500" />
+                        <span className="text-[11px] text-gray-400">{sub}</span>
+                      </div>
+                    </div>
                   </div>
-                <div>
-  <p className="text-[10px] font-bold tracking-wide text-gray-500">
-                    {label}
-                  </p>
-                    <p className="text-md font-extrabold text-red-600 mt-1">
-                    {value}
-                  </p>
-                  <div className="flex items-center gap-1 mt-1">
-                    <ArrowUp className="w-3 h-3 text-green-500" />
-                    <span className="text-[11px] text-gray-400">{sub}</span>
-                  </div>
-                 </div>
-                 </div>
-                
                 </div>
               ))}
             </div>
 
             {/* Bottom banner */}
             <div className="flex items-center gap-4 mt-4">
-              <div className="bg-white rounded-2xl shadow-sm p-5 flex-1">
+              <div className="bg-white rounded-2xl shadow-sm p-4 flex-1">
                 <p className="text-md font-bold text-gray-900 mb-4">
                   More visibility. More customers. More growth.
                 </p>
@@ -419,7 +418,7 @@ function WhyDigitalMarketing() {
               </div>
 
               <div className="relative flex-shrink-0">
-                <div className="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center ring-8 ring-red-100 shadow-lg">
+                <div className="w-18 h-18 rounded-full bg-red-600 flex items-center justify-center ring-8 ring-red-100 shadow-lg">
                   <BarChart3 className="w-8 h-8 text-white" />
                 </div>
               </div>
@@ -427,7 +426,7 @@ function WhyDigitalMarketing() {
           </div>
         </div>
 
-        <div className="mt-20  lg:mt-28">
+        {/* <div className="mt-20  lg:mt-28">
           <span className=" text-[10px] font-medium uppercase tracking-[0.22em] text-[#dd0403]">
             From search to sale
           </span>
@@ -436,7 +435,6 @@ function WhyDigitalMarketing() {
           </h2>
         </div>
         <div className="relative mt-12">
-          <div className="pointer-events-none absolute inset-x-0 top-16 hidden h-[360px] bg-[#dd0403]/[0.045] [clip-path:polygon(0_12%,100%_28%,100%_76%,0_100%)] lg:block" />
           <div className="relative grid gap-12 lg:grid-cols-3 lg:gap-10">
             {lanes.map((lane, laneIndex) => (
               <div key={lane.number} className="relative">
@@ -471,16 +469,11 @@ function WhyDigitalMarketing() {
                     </article>
                   ))}
                 </div>
-                {/* {laneIndex < 2 && (
-                  <div className="mt-7 hidden justify-end gap-1 text-[#dd0403] lg:flex">
-                    <span>›</span>
-                    <span>›</span>
-                  </div>
-                )} */}
+            
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
     </main>
   );

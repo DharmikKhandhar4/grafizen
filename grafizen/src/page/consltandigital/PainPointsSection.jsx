@@ -85,39 +85,28 @@ export default function PainPointsSection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-6">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="mb-3 inline-flex items-center justify-center gap-3"
-          >
-            <span className="h-px w-8 rounded-full bg-[#dd0403]" />
-            <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-neutral-700 sm:text-[11px]">
-              The Growth Bottlenecks
-            </span>
-          </motion.div>
+        <div className="mb-16 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          {/* Left */}
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-10 bg-[#dd0403]" />
+              <span className="text-[11px] font-bold tracking-[0.28em] text-[#dd0403]">
+                THE GROWTH BOTTLENECKS
+              </span>
+            </div>
+            <h2 className="text-4xl font-[500] leading-[1.06] tracking-[-0.045em] sm:text-5xl lg:text-[48px] text-black sm:text-[42px]">
+              Is Your Business Facing{" "}
+              <span className="text-[#dd0403]">Growth Roadblocks?</span>
+            </h2>
+          </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-medium leading-[1.05] tracking-[-0.03em] text-[#111111] sm:text-5xl lg:text-[48px]"
-          >
-            Is Your Business Facing These <br className="hidden sm:inline" />
-            <span className="block text-[#dd0403]">Growth Roadblocks?</span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="mt-4 text-[#555048] leading-5 text-base sm:text-lg"
-          >
-            Most Rajkot businesses struggle with digital marketing not from a
-            lack of effort, but from disconnected, outdated tactics.
-          </motion.p>
+          {/* Right */}
+          <div className="max-w-4xl">
+            <p className="mt-6 max-w-3xl text-base leading-5 text-neutral-500 sm:text-md text-black/55 text-[13px] font-[300]">
+              Most Rajkot businesses struggle with digital marketing not from a
+              lack of effort, but from disconnected, outdated tactics.
+            </p>
+          </div>
         </div>
 
         {/* Dynamic Cards Grid */}
