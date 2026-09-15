@@ -1,12 +1,12 @@
 import React from 'react'
-import SeoService from './SeoService'
-import Services from '../../components/ui/dmcinindia/Services'
+import SeoService from '../../components/seoservice/SeoService'
+import SeoServiceInfo from '../../components/seoservice/SeoServiceInfo'
 
 const MainSeoPage = () => {
   return (
    <>
      <SeoService />
-      <Services />
+      <SeoServiceInfo />
    </>
   )
 }

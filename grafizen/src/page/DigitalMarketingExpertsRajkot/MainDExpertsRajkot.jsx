@@ -1,8 +1,9 @@
 import React from "react";
 import DigitalMarketingExperts from "./DigitalMarketingExperts";
-import Ouraproch from "../../components/ui/ouraproch/Ouraproch.jsx";
-import SocialMediaServices from "../../components/ui/ouraproch/SocialMediaServices";
-import Services from "../../components/ui/dmcinindia/Services";
+import Ouraproch from "../../components/DigitalMarketingExpertsRajkot/Ouraproch.jsx";
+import SocialMediaServices from "../../components/DigitalMarketingExpertsRajkot/SocialMediaServices.jsx";
+import MainDigitalMarketingService from "../../components/DigitalMarketingExpertsRajkot/DigitalMarketingExpertsService.jsx";
+
 
 const MainDExpertsRajkot = () => {
   return (
@@ -10,7 +11,8 @@ const MainDExpertsRajkot = () => {
       <DigitalMarketingExperts />
       <SocialMediaServices />
       <Ouraproch />
-      <Services />
+      <MainDigitalMarketingService />
+   
     </div>
   );
 };

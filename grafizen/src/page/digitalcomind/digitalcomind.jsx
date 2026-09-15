@@ -80,13 +80,13 @@ export default function DigitalCoIndia() {
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.08, 0.14, 0.08] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -right-40 -top-40 h-[480px] w-[480px] rounded-full bg-[#dd0403] blur-[140px]"
+          className="absolute -right-40 -top-40 h-[300px] w-[480px] rounded-full bg-[#dd0403] blur-[140px]"
         />
-        <motion.div
+        {/* <motion.div
           animate={{ scale: [1, 1.15, 1], opacity: [0.04, 0.07, 0.04] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -bottom-32 -left-32 h-[360px] w-[360px] rounded-full bg-[#1565c0] blur-[120px]"
-        />
+        /> */}
       </div>
 
       {/* -- TICKER STRIP -- */}
@@ -151,7 +151,7 @@ export default function DigitalCoIndia() {
             {/* Subtext */}
             <motion.p
               variants={fadeUp}
-              className="mt-4 max-w-lg text-[13px] leading-6 text-neutral-500 sm:text-sm sm:leading-7"
+              className="mt-9 max-w-[600px] text-[16px] leading-6 text-neutral-500 sm:text-md sm:leading-6"
             >
               Grafizen is a full-service digital marketing company helping
               businesses across India grow through{" "}
@@ -162,9 +162,9 @@ export default function DigitalCoIndia() {
             </motion.p>
 
             {/* Trust bullets 2-col grid */}
-            <motion.div variants={fadeUp} className="mt-5 grid grid-cols-2 gap-x-4 gap-y-2">
+            <motion.div variants={fadeUp} className="mt-7 grid grid-cols-2 gap-x-4 gap-y-2 max-w-[500px]">
               {trust.map((item) => (
-                <div key={item} className="flex items-center gap-2 text-[12px] font-medium text-neutral-500">
+                <div key={item} className="flex items-center gap-2 text-[15px] font-medium text-neutral-500">
                   <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#dd0403]/10">
                     <Check size={10} strokeWidth={3} className="text-[#dd0403]" />
                   </span>
@@ -174,7 +174,7 @@ export default function DigitalCoIndia() {
             </motion.div>
 
             {/* CTAs */}
-            <motion.div variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
+            <motion.div variants={fadeUp} className="mt-9 flex flex-wrap gap-3">
               <a
                 href="/contact"
                 className="group inline-flex items-center gap-2 rounded-xl bg-[#dd0403] px-5 py-2.5 text-xs font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_32px_rgba(221,4,3,0.25)]"
@@ -194,7 +194,7 @@ export default function DigitalCoIndia() {
             </motion.div>
 
             {/* City strip */}
-            <motion.div variants={fadeUp} className="mt-6 flex flex-wrap items-center gap-2 text-[11px] text-neutral-400">
+            {/* <motion.div variants={fadeUp} className="mt-6 flex flex-wrap items-center gap-2 text-[11px] text-neutral-400">
               <MapPin size={13} className="text-[#dd0403]" />
               <span>Serving businesses across</span>
               {["Mumbai", "Delhi", "Bangalore", "Rajkot", "Pune", "+more"].map((city) => (
@@ -205,7 +205,7 @@ export default function DigitalCoIndia() {
                   {city}
                 </span>
               ))}
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* -- RIGHT visual panel -- */}
@@ -354,11 +354,11 @@ export default function DigitalCoIndia() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
-          className="mt-10 border-t border-black/[0.08] pt-7"
+          className="mt-10 border-t border-black/[0.08] pt-4"
         >
-          <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.22em] text-neutral-400">
+          {/* <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.22em] text-neutral-400">
             Built for every kind of Indian business
-          </p>
+          </p> */}
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
               { icon: Search, title: "SEO-First Approach", sub: "Rank higher, attract the right audience" },

@@ -368,11 +368,9 @@ const viewport = { once: true, amount: 0.12 };
 ───────────────────────────────────────────────────────────── */
 function SectionLabel({ children }) {
   return (
-    <div className="mb-5 flex items-center gap-3">
-      <span className="h-px w-10 bg-[#dd0403]" />
-      <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#dd0403]">
-        {children}
-      </span>
+    <div className="mb-5 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.2em] text-black/45">
+      <span className="h-px w-7 bg-[#dd0403]" />
+      <span>{children}</span>
     </div>
   );
 }
@@ -574,10 +572,8 @@ function ServicePage() {
             <h2 className="mt-0 text-3xl font-[500] leading-14 tracking-tight text-neutral-950 sm:text-4xl lg:text-[48px]">
               Everything you need to{" "}
               <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-[#dd0403] via-[#f53b3b] to-[#ff6b6b] bg-clip-text text-transparent">
-                  grow digitally.
-                </span>
-                <span className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-gradient-to-r from-[#dd0403] to-[#ff6b6b] opacity-30" />
+                <span className="text-[#dd0403]">grow digitally.</span>
+                <span className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-[#dd0403] opacity-30" />
               </span>
             </h2>
             <p className="mt-5 text-base leading-tight text-neutral-500 sm:text-md ">
@@ -586,8 +582,10 @@ function ServicePage() {
             </p>
           </div>
 
-          <div className="grid items-start mx-auto  max-w-[100%]  gap-6 
-          lg:grid-cols-[280px_0.9fr] xl:grid-cols-[0.6fr_1.4fr] mt-10  ">
+          <div
+            className="grid items-start mx-auto  max-w-[100%]  gap-6 
+          lg:grid-cols-[280px_0.9fr] xl:grid-cols-[0.6fr_1.4fr] mt-10  "
+          >
             {/* ── Sidebar tabs ── */}
             <motion.div
               variants={stagger}
@@ -614,14 +612,14 @@ function ServicePage() {
                   >
                     {/* Active left accent bar */}
                     {isActive && (
-                      <span className="absolute left-0 top-1/2 h-8 w-1 -translate-y-1/2 rounded-r-full bg-gradient-to-b from-[#dd0403] to-[#ff4444]" />
+                      <span className="absolute left-0 top-1/2 h-8 w-1 -translate-y-1/2 rounded-r-full bg-[#dd0403]" />
                     )}
 
                     {/* Icon */}
                     <div
                       className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl transition-all duration-300 ${
                         isActive
-                          ? "bg-gradient-to-br from-[#dd0403] to-[#ff4444] text-white shadow-md shadow-[#dd0403]/30"
+                          ? "bg-[#dd0403] text-white shadow-md shadow-[#dd0403]/30"
                           : "bg-neutral-100 text-neutral-500 group-hover:bg-[#dd0403]/10 group-hover:text-[#dd0403]"
                       }`}
                     >
@@ -751,19 +749,6 @@ function ServicePage() {
             GLASS HIGHLIGHT
         ====================================================== */}
 
-                <div
-                  className="
-            pointer-events-none
-            absolute
-            inset-0
-            rounded-[2.5rem]
-            bg-gradient-to-br
-            from-white/50
-            via-white/10
-            to-transparent
-          "
-                />
-
                 {/* Top Glass Shine */}
                 <div
                   className="
@@ -773,10 +758,7 @@ function ServicePage() {
             right-8
             top-0
             h-px
-            bg-gradient-to-r
-            from-transparent
-            via-white
-            to-transparent
+            bg-white
             opacity-80
           "
                 />
@@ -784,23 +766,6 @@ function ServicePage() {
                 {/* =====================================================
             DOT PATTERN
         ====================================================== */}
-
-                <div
-                  className="
-            pointer-events-none
-            absolute
-            right-0
-            top-0
-            h-40
-            w-40
-            opacity-20
-          "
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(circle, #dd0403 1px, transparent 1px)",
-                    backgroundSize: "16px 16px",
-                  }}
-                />
 
                 {/* =====================================================
             CONTENT
@@ -831,9 +796,7 @@ function ServicePage() {
                   items-center
                   justify-center
                   rounded-xl
-                  bg-gradient-to-br
-                  from-[#dd0403]
-                  to-[#ff4444]
+                  bg-[#dd0403]
                   text-white
                   shadow-xl
                   shadow-[#dd0403]/30
@@ -1021,9 +984,7 @@ function ServicePage() {
                       items-center
                       justify-center
                       rounded-full
-                      bg-gradient-to-br
-                      from-[#dd0403]
-                      to-[#ff4444]
+                      bg-[#dd0403]
                       shadow-sm
                       shadow-[#dd0403]/20
                     "
@@ -1069,9 +1030,7 @@ function ServicePage() {
                 items-center
                 gap-2
                 rounded-full
-                bg-gradient-to-r
-                from-[#dd0403]
-                to-[#ff4444]
+                bg-[#dd0403]
                 px-7
                 py-2.5
                 text-sm
@@ -1192,7 +1151,7 @@ function ServiceCard({ service }) {
         className="group relative flex h-full min-h-[300px] flex-col overflow-hidden rounded-xl bg-white border border-neutral-100 shadow-sm transition-all duration-500 hover:shadow-md hover:border-[#dd0403]/20"
       >
         {/* Red top accent bar */}
-        <div className="h-[3px] w-full bg-gradient-to-r from-[#dd0403] via-[#ff4d4d] to-[#dd0403]/40 opacity-60 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="h-[3px] w-full bg-[#dd0403] opacity-60 transition-opacity duration-500 group-hover:opacity-100" />
 
         <div className="relative flex h-full flex-col p-4 sm:p-5">
           {/* Top row: icon + number */}

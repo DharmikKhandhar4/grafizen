@@ -3,33 +3,62 @@ import { motion } from "framer-motion";
 import {
   Mail,
   ArrowUpRight,
-  Check,
-  Sparkles,
-  MousePointer2,
+  Settings,
+  UserRound,
   BarChart3,
+  UsersRound,
+  Target,
+  ShoppingCart,
+  TrendingUp,
+  Heart,
+  CircleCheckBig,
 } from "lucide-react";
+
 import email from "../../../public/image/email.png";
 
-const services = [
+const features = [
   {
-    number: "01",
-    title: "Email Campaigns",
-    text: "Engaging campaigns designed to reach the right audience at the right time.",
+    title: "Campaigns",
+    point: "Create targeted campaigns that reach the right audience.",
+    icon: CircleCheckBig,
   },
   {
-    number: "02",
-    title: "Email Automation",
-    text: "Automated customer journeys that nurture leads and drive repeat engagement.",
+    title: "Automation",
+    point: "Automate timely emails and follow-ups with ease.",
+    icon: CircleCheckBig,
   },
   {
-    number: "03",
     title: "Personalization",
-    text: "Relevant email experiences built around customer interests and behavior.",
+    point: "Deliver relevant messages based on customer behavior.",
+    icon: CircleCheckBig,
   },
   {
-    number: "04",
-    title: "Analytics & Optimization",
-    text: "Continuous testing and performance analysis to improve every campaign.",
+    title: "Analytics",
+    point: "Track performance and improve every campaign.",
+    icon: CircleCheckBig,
+  },
+];
+
+const benefits = [
+  {
+    title: "Targeted Communication",
+    text: "Reach the right audience with the right message.",
+    icon: UsersRound,
+  },
+  {
+    title: "Stronger Engagement",
+    text: "Engage your subscribers with relevant and valuable content.",
+    icon: Target,
+  },
+  {
+    title: "Better Conversions",
+    text: "Convert more subscribers into loyal customers.",
+    icon: ShoppingCart,
+  },
+  {
+    title: "Customer Loyalty",
+    text: "Build lasting relationships that drive repeat business.",
+    icon: TrendingUp,
   },
 ];
 
@@ -57,225 +86,29 @@ const item = {
   },
 };
 
-export default function EmailMarketingServices() {
+export default function EmailMarketingHero() {
   return (
     <section
-      id="email-marketing-services"
-      className="relative overflow-hidden bg-[#f7f5f1] py-10"
+      id="email-marketing"
+      className="relative overflow-hidden bg-white min-h-[95vh]"
     >
       {/* =========================================================
           BACKGROUND DECORATION
       ========================================================== */}
 
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-40 top-20 h-[420px] w-[420px] rounded-full bg-[#dd0403]/5 blur-3xl" />
-
-        {/* <div className="absolute -left-40 bottom-20 h-[350px] w-[350px] rounded-full bg-[#dd0403]/5 blur-3xl" /> */}
-
-        {/* <div className="absolute left-1/2 top-0 h-full w-px bg-black/[0.035]" /> */}
+        <div className="absolute right-[-180px] top-[100px] h-[420px] w-[420px] rounded-full bg-[#dd0403]/5 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-[90%] px-5 sm:px-8 lg:px-10">
-
+      <div className="relative mx-auto max-w-[1440px] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-10 xl:px-14">
         {/* =========================================================
-            HEADER
-        ========================================================== */}
-   <div className=" flex justify-between ">
-   <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7 }}
-          className="max-w-4xl"
-        >
-          {/* Eyebrow */}
-
-          <div className="mb-6 flex items-center gap-4">
-            <span className="h-px w-10 bg-[#dd0403]" />
-
-            <span className="text-xs font-[500] uppercase tracking-[0.22em] text-[#dd0403]">
-              Email Marketing Services in Rajkot
-            </span>
-          </div>
-
-          {/* Heading */}
-
-         <h2 className="text-4xl font-[500] leading-[0.98] tracking-[-0.045em] sm:text-6xl lg:text-[48px]">
-  Result-Driven{" "}
-  <span className="text-[#dd0403]">
-    Email Marketing
-  </span>{" "}
-  <br />
-  Services in Rajkot
-</h2>
-
-          {/* Description */}
-
-          <p className="mt-6 max-w-2xl text-base leading-5 text-black/55 sm:text-md">
-       Grow your business with strategic email marketing campaigns, automation, personalization and data-driven optimization designed to generate leads, increase engagement and drive conversions.
-          </p>
-        </motion.div>
-    <div className=" flex  space-evenly w-[250px] ">
-    {/* <div className="w-[300px] "> */}
-          <img src={email} alt="Email Marketing" className="w-full h-auto" />
-        </div>
-    {/* </div> */}
-   </div>
-     
-
-        {/* =========================================================
-            MAIN CONTENT
+            HERO
         ========================================================== */}
 
-        <div className="mt-4 grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-
-          {/* =======================================================
-              LEFT — EMAIL VISUAL
-          ======================================================== */}
-
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="relative min-h-[250px]"
-          >
-            {/* Vertical line */}
-
-            <div className="absolute left-4 top-0 h-[70%] w-px bg-black/10" />
-
-            {/* Step 01 */}
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="relative flex gap-5"
-            >
-              <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-black/10 bg-[#f7f5f1]">
-                <span className="h-2 w-2 rounded-full bg-[#dd0403]" />
-              </div>
-
-              <div className="pt-0">
-                {/* <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
-                  Step 01
-                </p> */}
-
-                <h3 className="mt-0 text-xl font-semibold">
-                  Reach
-                </h3>
-
-                <p className="mt-0 max-w-xs text-xs leading-3 text-black/50">
-               Reach the right customers with targeted email campaigns.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Step 02 */}
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.35 }}
-              className="relative mt-8 flex gap-5"
-            >
-              <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-black/10 bg-[#f7f5f1]">
-                <span className="h-2 w-2 rounded-full bg-[#dd0403]" />
-              </div>
-
-              <div className="pt-0">
-                {/* <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
-                  Step 02
-                </p> */}
-
-                <h3 className="mt-0 text-xl font-semibold">
-                  Engage
-                </h3>
-
-                <p className="mt-0 max-w-xs text-xs leading-4 text-black/50">
-                  Build meaningful relationships through personalized email experiences.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Step 03 */}
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="relative mt-4 flex gap-5"
-            >
-              <div className="relative z-10 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border ml-0.5 border-[#dd0403]/30 bg-[#dd0403] text-white">
-                <Check size={17} strokeWidth={3} />
-              </div>
-
-              <div className="">
-                {/* <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dd0403]">
-                  Step 03
-                </p> */}
-
-                <h3 className="mt-0 text-xl font-semibold">
-                  Convert
-                </h3>
-
-                <p className="mt-0 max-w-xs text-xs leading-4 text-black/50">
-              Turn engaged subscribers into qualified leads, sales and loyal customers.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Floating email notification */}
-
-            {/* <motion.div
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute -right-20 bottom-18 hidden w-52 rounded-2xl border border-black/10 bg-transparent p-3 shadow-[0_20px_50px_rgba(0,0,0,0.09)] sm:block"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#dd0403]/10 text-[#dd0403]">
-                  <Mail size={16} />
-                </div>
-
-                <div>
-                  <p className="text-xs font-bold">
-                    Campaign Sent
-                  </p>
-
-                  <p className="mt-0.5 text-[10px] text-black/40">
-                    Right audience · Right time
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-black/5">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "82%" }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.2, delay: 0.5 }}
-                  className="h-full rounded-full bg-[#dd0403]"
-                />
-              </div>
-            </motion.div> */}
-
-          </motion.div>
-
-          {/* =======================================================
-              RIGHT — SERVICES
-          ======================================================== */}
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.95fr] lg:gap-6 xl:gap-10">
+          {/* =====================================================
+              LEFT CONTENT
+          ====================================================== */}
 
           <motion.div
             variants={container}
@@ -283,162 +116,255 @@ export default function EmailMarketingServices() {
             whileInView="show"
             viewport={{
               once: true,
-              amount: 0.15,
+              amount: 0.2,
             }}
-            className="border-t border-black/10"
+            className="relative z-10"
           >
-            {services.map((service) => (
-              <motion.div
-                key={service.number}
-                variants={item}
-                className="group border-b border-black/10 py-1.5"
-              >
-                <div className="flex items-start gap-5 sm:gap-8">
+            {/* Eyebrow */}
 
-                  {/* Number */}
+            <motion.div
+              variants={item}
+              className="mb-5 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.2em] text-black/45"
+            >
+              <span className="h-px w-7 bg-[#dd0403]" />
 
-                  <span className="pt-1 text-xs font-[500] text-black/25">
-                    {service.number}
-                  </span>
+              <span>Email Marketing Agency • Rajkot</span>
+            </motion.div>
 
-                  {/* Content */}
+            {/* Heading */}
 
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between gap-5 ">
-                      <h3 className="text-2xl font-[500] tracking-tight transition-colors duration-300 group-hover:text-[#dd0403] sm:text-[15px] ">
-                        {service.title}
-                      </h3>
+            <motion.h1
+              variants={item}
+              className="max-w-[720px] text-[42px] font-[500] leading-[0.98] tracking-[-0.055em] text-black sm:text-[58px] lg:text-[48px] xl:text-[48px]"
+            >
+              Turn Every Email Into
+              <br />
+              <span className="text-[#dd0403] whitespace-nowrap">
+                A Growth Opportunity.
+              </span>
+            </motion.h1>
 
-                      <motion.div
-                        whileHover={{
-                          rotate: 45,
-                          scale: 1.1,
-                        }}
-                        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-black/10 transition-colors group-hover:border-[#dd0403] group-hover:bg-[#dd0403] group-hover:text-white"
-                      >
-                        <ArrowUpRight size={14} />
-                      </motion.div>
-                    </div>
+            {/* Description */}
 
-                    <p className=" max-w-xl text-sm leading-4 text-black/50 sm:text-xs">
-                      {service.text}
-                    </p>
+            <motion.p
+              variants={item}
+              className="mt-7 max-w-[600px] text-[15px] font-[400] leading-6 text-black/55 sm:text-[16px]"
+            >
+              We create strategic email campaigns that reach the right audience,
+              build stronger relationships, and turn subscribers into loyal
+              customers.
+            </motion.p>
+
+            {/* CTA */}
+
+            {/* =================================================
+                FEATURES
+            ================================================== */}
+
+            <motion.div
+              variants={item}
+              className="mt-10 grid max-w-[550px] gap-y-1 grid-cols-2 border-black/10 gap-x-3   "
+            >
+              {features.map(({ title, point, icon: Icon }, index) => (
+                <div
+                  key={title}
+                  className="  flex  flex-col gap-3 py-1 justify-start"
+                >
+                  <div className="flex gap-2 items-center">
+                    <Icon
+                      size={25}
+                      strokeWidth={1.8}
+                      className="shrink-0 text-[#dd0403]"
+                    />
+                    <span className="block text-[13px] font-medium text-black sm:text-[14px]">
+                      {title}
+                    </span>
+                  </div>
+
+                  <div>
+                    <span className="mt-1 block text-[11px] leading-4 text-black/50 sm:text-[12px]">
+                      {point}
+                    </span>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              ))}
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              variants={item}
+              className="mt-8 flex flex-col gap-3 sm:flex-row"
+            >
+              <motion.a
+                href="#contact"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="group inline-flex h-11 items-center gap-3 rounded-[10px] bg-[#dd0403] px-3 text-[13px] font-medium text-white shadow-[0_14px_35px_rgba(221,4,3,0.17)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#bd0303] md:h-12 md:px-6 md:text-[14px]"
+              >
+                Start Growing With Email
+                <ArrowUpRight
+                  size={20}
+                  strokeWidth={2}
+                  className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+                />
+              </motion.a>
+
+              <motion.a
+                href="#email-marketing-services"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex h-11 items-center rounded-[10px] border border-black/15 bg-white px-3 text-[13px] font-medium text-black transition duration-300 hover:border-[#dd0403]/40 hover:text-[#dd0403] md:h-12 md:px-6 md:text-[14px]"
+              >
+                Explore Our Services
+              </motion.a>
+            </motion.div>
+          </motion.div>
+
+          {/* =====================================================
+              RIGHT IMAGE
+          ====================================================== */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            transition={{
+              duration: 0.9,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="relative flex items-center justify-center lg:min-h-[560px]"
+          >
+            {/* Soft background glow */}
+
+            <div className="absolute right-[5%] top-[15%] h-[380px] w-[380px] rounded-full bg-[#dd0403]/5 blur-3xl" />
+
+            {/* Decorative dashed circle */}
+
+            {/* <div className="absolute right-[4%] top-[12%] hidden h-[360px] w-[360px] rounded-full border border-dashed border-[#dd0403]/25 lg:block" />group inline-flex h-11 items-center gap-3 rounded-[10px] bg-[#dd0403] px-3 text-[13px] font-medium text-white shadow-[0_14px_35px_rgba(221,4,3,0.17)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#bd0303] md:h-12 md:px-6 md:text-[14px] */}
+
+            {/* Email Image */}
+
+            <motion.img
+              src={email}
+              alt="Email Marketing"
+              className="relative z-10 w-full max-w-[550px] object-contain"
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+
+            {/* Floating email badge */}
+
+            <motion.div
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute right-[4%] top-[16%] z-20 hidden h-16 w-16 items-center justify-center rounded-2xl bg-[#dd0403] text-white shadow-[0_15px_35px_rgba(221,4,3,0.25)] sm:flex"
+            >
+              <Mail size={28} strokeWidth={1.8} />
+            </motion.div>
+
+            {/* Floating analytics badge */}
+
+            <motion.div
+              animate={{
+                y: [0, 8, 0],
+              }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute bottom-[10%] left-[5%] z-20 hidden items-center gap-3 rounded-2xl border border-black/10 bg-white px-4 py-3 shadow-[0_15px_40px_rgba(0,0,0,0.08)] sm:flex"
+            >
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dd0403]/10">
+                <BarChart3 size={19} className="text-[#dd0403]" />
+              </div>
+
+              <div>
+                <p className="text-[11px] text-black/40">Campaign Growth</p>
+
+                <p className="text-sm font-semibold text-black">+38.6%</p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
 
         {/* =========================================================
-            BOTTOM PERFORMANCE STRIP
+            BOTTOM BENEFITS
         ========================================================== */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mt-0 border-y border-black/10 py-2"
+        {/* <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.15,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          className="mt-6 overflow-hidden rounded-[32px] border border-[#e7e9f2] bg-[#dd0403]/5 p-2 sm:mt-2"
         >
-          <div className="grid gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {benefits.map(({ title, text, icon: Icon }, index) => (
+              <div
+                key={title}
+                className={`
+                    group flex items-center gap-4 px-5 py-4
+                    lg:px-6 lg:py-2
+                    ${
+                      index !== benefits.length - 1
+                        ? "lg:border-r lg:border-[#dd0403]/25"
+                        : ""
+                    }
+                  `}
+              >
+             
 
-            {/* Item */}
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#dd0403] text-[#dd0403] transition-all duration-300 group-hover:bg-[#dd0403] group-hover:text-white">
+                  <Icon size={23} strokeWidth={1.8} />
+                </div>
 
-            <div className="flex items-center gap-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white">
-                <Mail size={15} />
+
+                <div>
+                  <h3 className="text-[14px] font-semibold tracking-[-0.02em] text-black sm:text-[15px]">
+                    {title}
+                  </h3>
+
+                  <p className="mt-1 text-[12px] leading-5 text-black/55">
+                    {text}
+                  </p>
+                </div>
               </div>
-
-              <div>
-                <p className="text-sm font-semibold">
-                  Personalized
-                </p>
-
-                <p className="text-xs text-black/40">
-                  Messages that matter
-                </p>
-              </div>
-            </div>
-
-            {/* Item */}
-
-            <div className="flex items-center gap-4">
-              <div className="flex h-8 w-8  items-center justify-center rounded-full bg-[#dd0403] text-white">
-                <BarChart3 size={15} />
-              </div>
-
-              <div>
-                <p className="text-sm font-semibold">
-                  Data Driven
-                </p>
-
-                <p className="text-xs text-black/40">
-                  Measure every campaign
-                </p>
-              </div>
-            </div>
-
-            {/* Item */}
-
-            <div className="flex items-center gap-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white">
-                <Sparkles size={15} />
-              </div>
-
-              <div>
-                <p className="text-sm font-semibold">
-                  Conversion Focused
-                </p>
-
-                <p className="text-xs text-black/40">
-                  Built for business growth
-                </p>
-              </div>
-            </div>
-
+            ))}
           </div>
-        </motion.div>
-
-        {/* =========================================================
-            CTA
-        ========================================================== */}
-
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mt-7 flex flex-col justify-between gap-6 sm:flex-row sm:items-center"
-        >
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#dd0403]">
-              Ready to connect?
-            </p>
-
-            <p className="mt-1 text-xl font-semibold tracking-tight">
-              Let's turn your inbox into a growth channel.
-            </p>
-          </div>
-
-          <motion.a
-            href="#contact"
-            whileHover={{
-              scale: 1.03,
-            }}
-            whileTap={{
-              scale: 0.97,
-            }}
-            className="group inline-flex items-center justify-center gap-3 bg-[#dd0403] px-4 py-2.5 text-sm font-semibold text-white transition-shadow hover:shadow-[0_15px_35px_rgba(221,4,3,0.2)]"
-          >
-            Start Your Campaign
-
-            <ArrowUpRight
-              size={18}
-              className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-            />
-          </motion.a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

@@ -92,8 +92,6 @@ const viewport = { once: true, amount: 0.12 };
 function IndustryRow({ industries: rowIndustries, x }) {
   return (
     <div className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-white to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-white to-transparent" />
       <motion.div style={{ x }} className="flex w-max gap-3 px-3">
         {rowIndustries.map((industry, index) => (
           <div
@@ -137,8 +135,8 @@ function IndustriesSection() {
       ref={industryRef}
       className="relative overflow-hidden bg-white py-16 sm:py-16"
     >
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-neutral-200" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-neutral-200" />
 
       <div className="mx-auto max-w-[95%] px-5 sm:px-8 lg:px-10">
         <motion.div
@@ -149,17 +147,15 @@ function IndustriesSection() {
           className="mb-12 flex items-end justify-between gap-3"
         >
           <div>
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#dd0403]" />
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#dd0403]">
-                Industries We Serve
-              </span>
+            <div className="mb-5 flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.2em] text-black/45">
+              <span className="h-px w-7 bg-[#dd0403]" />
+              <span>Industries We Serve</span>
             </div>
             <h2 className="mt-3 text-3xl font-[500] tracking-tight text-neutral-950 sm:text-[48px]">
               Built for{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 text-[#dd0403]">every</span>
-                <svg
+                {/* <svg
                   className="absolute -bottom-1 left-0 w-full"
                   height="4"
                   viewBox="0 0 60 4"
@@ -172,7 +168,7 @@ function IndustriesSection() {
                     fill="none"
                     strokeLinecap="round"
                   />
-                </svg>
+                </svg> */}
               </span>{" "}
               business.
             </h2>

@@ -34,6 +34,31 @@ body {
   font-weight: 100;
   font-style: normal;
 }
+.approach-connector-flow {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #dd0403 0,
+    #dd0403 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  background-position: 0 50%;
+  background-size: 16px 1px;
+  background-repeat: repeat-x;
+  animation: approach-connector-flow 0.8s linear infinite;
+}
+
+@keyframes approach-connector-flow {
+  to {
+    background-position: 16px 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .approach-connector-flow {
+    animation: none;
+  }
+}
 
 .poppins-extralight {
   font-family: "Poppins", sans-serif;
