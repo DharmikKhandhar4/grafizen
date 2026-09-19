@@ -85,7 +85,7 @@ export default function Services() {
 
           {/* Right */}
           <div className="max-w-4xl">
-            <p className="mt-2 sm:mt-6 max-w-3xl text-xs sm:text-base leading-relaxed text-black/55 font-[300]">
+            <p className="mt-2 sm:mt-6 max-w-3xl text-xs sm:text-[14px] leading-tight text-black/55 font-[300]">
               A stunning website gets attention. Our result-driven digital
               marketing turns that attention into traffic, leads, and loyal
               customers.
@@ -179,10 +179,10 @@ function ServiceCardLeft({ item }) {
           <Icon size={20} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2.2} />
         </div>
         <div className="min-w-0 flex-1">
-          <h4 className="text-[13px] sm:text-[16px] font-[500] uppercase tracking-[-0.03em] text-black">
+          <h4 className="text-[13px] sm:text-[16px] font-[400] uppercase tracking-[-0.03em] text-black">
             {item.title}
           </h4>
-          <p className="mt-1 text-[12px] leading-relaxed sm:leading-5 text-[#5d5b5b] sm:text-[13px]">
+          <p className="mt-1 text-[12px] leading-relaxed sm:leading-5 font-[300] text-black/55 sm:text-[13px]">
             {item.description}
           </p>
         </div>
@@ -201,10 +201,10 @@ function ServiceCardRight({ item }) {
           <Icon size={20} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2.2} />
         </div>
         <div className="min-w-0 flex-1">
-          <h4 className="text-[13px] sm:text-[16px] font-black uppercase tracking-[-0.03em] text-black">
+          <h4 className="text-[13px] sm:text-[16px] font-[300] uppercase tracking-[-0.03em] text-black">
             {item.title}
           </h4>
-          <p className="mt-1 text-[12px] leading-relaxed sm:leading-5 text-[#5d5b5b] sm:text-[13px]">
+          <p className="mt-1 text-[12px] leading-relaxed sm:leading-5 text-black/55 sm:text-[13px]">
             {item.description}
           </p>
         </div>

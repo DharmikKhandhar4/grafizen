@@ -195,7 +195,7 @@ export default function SocialMediaHero() {
           {/* 1. TITLE & TAGLINE (order-1) */}
           <div className="order-1 flex flex-col items-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full">
-              <span className="rounded-full border border-[#dd0403]/20 px-3.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#dd0403]">
+              <span className="rounded-full border border-[#dd0403]/20 px-3.5 py-1 text-[10px] sm:text-[11px] font-[400] uppercase tracking-[0.2em] text-[#dd0403]">
                 SOCIAL MEDIA MARKETING AGENCY
               </span>
             </div>
@@ -255,11 +255,11 @@ export default function SocialMediaHero() {
                   alt={label}
                   className="mx-auto h-9 w-9 sm:h-14 sm:w-14 object-contain"
                 />
-                <div className="mt-1.5 flex items-center justify-center gap-1.5 sm:gap-2 text-neutral-800">
+                <div className="mt-1.5 flex items-center justify-center gap-1.5 sm:gap-2 text-black">
                   {/* <Icon size={16} className="text-[#dd0403] sm:w-5 sm:h-5 shrink-0" /> */}
-                  <span className="text-lg sm:text-2xl font-black">{val}</span>
+                  <span className="text-lg sm:text-2xl font-[400]">{val}</span>
                 </div>
-                <p className="mt-1 text-[9px] sm:text-[11px] md:text-[12px] font-bold uppercase tracking-wider text-neutral-700">
+                <p className="mt-1 text-[9px] sm:text-[11px] md:text-[12px] font-[300] uppercase tracking-wider text-black/55">
                   {label}
                 </p>
               </div>
@@ -267,7 +267,7 @@ export default function SocialMediaHero() {
           </div>
 
           {/* 4. DESCRIPTION CONTENT (order-4 on mobile, lg:order-2 on desktop) */}
-          <p className="order-4 lg:order-2 mt-0 sm:mt-6 text-xs sm:text-base leading-relaxed text-neutral-500 max-w-xl mx-auto">
+          <p className="order-4 lg:order-2 mt-0 sm:mt-6 text-xs sm:text-base leading-relaxed text-black/55 max-w-xl mx-auto font-[300]">
             We create strategic social media campaigns, engaging content, and
             targeted advertising that help businesses build visibility, generate
             leads, and grow online.

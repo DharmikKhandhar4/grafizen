@@ -59,7 +59,7 @@ export default function MarketingConsultingService() {
 
           {/* Right */}
           <div className="max-w-4xl">
-            <p className="mt-6 max-w-3xl text-base leading-5 text-neutral-500 sm:text-md text-black/55 text-[13px] font-[300]">
+            <p className="mt-6 max-w-3xl text-base leading-5  sm:text-md text-black/55 text-[13px] font-[300]">
               Build a clear growth strategy with data-driven marketing
               campaigns, sales funnels, and personal guidance designed to
               increase visibility, attract qualified leads, and maximize
@@ -109,10 +109,10 @@ export default function MarketingConsultingService() {
                     />
                   </div>
                   <div>
-                    <h4 className="mb-1 text-[14px] font-semibold leading-tight text-gray-900">
+                    <h4 className="mb-1 text-[14px] font-[400] leading-tight text-black">
                       {card.title}
                     </h4>
-                    <p className="text-[13px] leading-tight text-black/55">
+                    <p className="text-[13px] leading-tight text-black/55 font-[300]">
                       {card.desc}
                     </p>
                   </div>
@@ -138,10 +138,10 @@ export default function MarketingConsultingService() {
                 />
               </div>
               <div>
-                <h4 className="mb-1 text-[14px] font-semibold leading-tight text-gray-900">
+                <h4 className="mb-1 text-[14px] font-[400] leading-tight text-black">
                   Strategic Growth Planning
                 </h4>
-                <p className="text-[13px] leading-tight text-black/55">
+                <p className="text-[13px] leading-tight text-black/55 font-[300]">
                   Custom digital roadmaps tailored around your specific business
                   goals, target audience, and local market.
                 </p>
@@ -157,10 +157,10 @@ export default function MarketingConsultingService() {
                 />
               </div>
               <div>
-                <h4 className="mb-1 text-[14px] font-semibold leading-tight text-gray-900">
+                <h4 className="mb-1 text-[14px] font-[400] leading-tight text-black">
                   Targeted Multi-Channel Campaigns
                 </h4>
-                <p className="text-[13px] leading-tight text-black/55">
+                <p className="text-[13px] leading-tight text-black/55 font-[300]">
                   Data-driven strategy across Google, Meta, and Email to reach
                   high-intent prospects at the right time.
                 </p>
@@ -191,10 +191,10 @@ export default function MarketingConsultingService() {
               </div>
 
               <div>
-                <h4 className="mb-1 text-[14px] font-semibold leading-tight text-gray-900">
+                <h4 className="mb-1 text-[14px] font-[400] leading-tight text-black">
                   Turn Visitors Into Clients
                 </h4>
-                <p className="text-[13px] leading-tight text-gray-600">
+                <p className="text-[13px] leading-tight text-black/55 font-[300] font-[300]">
                   Optimize landing pages and sales paths to turn casual website
                   visitors into real, more  paying clients.
                 </p>
@@ -211,10 +211,10 @@ export default function MarketingConsultingService() {
               </div>
 
               <div>
-                <h4 className="mb-1 text-[14px] font-semibold leading-tight text-gray-900">
+                <h4 className="mb-1 text-[14px] font-[400] leading-tight text-black">
                   Performance Tracking
                 </h4>
-                <p className="text-[13px] leading-tight text-black/55">
+                <p className="text-[13px] leading-tight text-black/55 font-[300]">
                   Transparent 1-on-1 reporting focused purely on sales, cost per
                   lead, and bottom-line business growth.
                 </p>

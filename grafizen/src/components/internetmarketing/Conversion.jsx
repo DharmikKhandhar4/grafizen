@@ -62,11 +62,11 @@ export default function Conversion() {
               </span>
             </h2>
 
-            <h3 className="max-w-[620px] text-[20px] sm:text-[24px] md:text-[28px] lg:text-3xl leading-[1.1] lg:leading-[0.98] tracking-[-0.05em] lg:tracking-[-0.06em] text-black/90">
+            <h3 className="max-w-[620px] text-[20px] sm:text-[18px] md:text-[28px] lg:text-2xl leading-[1.1] lg:leading-[0.98] tracking-[-0.05em] lg:tracking-[-0.06em] text-black/70">
               What Real Digital Growth Looks Like For Your Business.
             </h3>
 
-            <p className="max-w-[620px] text-[15px] sm:text-[16px] lg:text-[18px] leading-relaxed lg:leading-[1.08] text-black/80">
+            <p className="max-w-[620px] text-[15px] sm:text-[16px] lg:text-[15px] leading-relaxed lg:leading-[1.08] text-black/55">
               Turn clicks into revenue with data-driven strategies tailored for growing businesses.
             </p>
 
@@ -101,11 +101,11 @@ export default function Conversion() {
                   </div>
 
                   <div className="rounded-[15px] border border-black/10 bg-white p-4 sm:p-5 shadow-[0_12px_30px_rgba(17,17,17,0.04)] sm:shadow-[0_18px_40px_rgba(17,17,17,0.04)] transition-all duration-300 hover:border-[#dd0403]/30">
-                    <div className="mb-1.5 flex items-center gap-3 text-[15px] sm:text-[16px] font-[500] leading-[1.2] tracking-[-0.04em] sm:tracking-[-0.05em] text-black">
+                    <div className="mb-1.5 flex items-center gap-3 text-[15px] sm:text-[16px] font-[400] leading-[1.2] tracking-[-0.04em] sm:tracking-[-0.01em] text-black">
                       <span>{title}</span>
                     </div>
 
-                    <p className="max-w-[620px] text-[13px] sm:text-[14px] leading-relaxed text-black/60 sm:text-black/55">
+                    <p className="max-w-[620px] text-[13px] sm:text-[14px] leading-relaxed text-black/60 sm:text-black/55  font-[300]">
                       {text}
                     </p>
                   </div>

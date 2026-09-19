@@ -19,7 +19,6 @@ import {
   Layers,
   Award,
   GitBranch,
-
 } from "lucide-react";
 
 export default function SeoService() {
@@ -28,11 +27,6 @@ export default function SeoService() {
   const [auditUrl, setAuditUrl] = useState("");
   const [auditEmail, setAuditEmail] = useState("");
   const [auditSubmitted, setAuditSubmitted] = useState(false);
-
-  
-
-
- 
 
   // Depth extrusion count for 3D Google logo
   const depthLayers = Array.from({ length: 20 }, (_, i) => i);
@@ -316,7 +310,7 @@ export default function SeoService() {
             </div>
 
             {/* 4. Subheading / Content */}
-            <p className="mt-4 sm:mt-6 text-[#555048] text-sm sm:text-base md:text-lg max-w-xl leading-relaxed font-normal">
+            <p className="mt-4 sm:mt-6 text-black/70 text-sm sm:text-base md:text-[15px] max-w-xl leading-relaxed font-[300]">
               Our SEO services help businesses improve Google visibility,
               attract high-intent customers, and generate sustainable organic
               traffic through data-driven strategies.
@@ -618,7 +612,7 @@ export default function SeoService() {
 
             {/* Right */}
             <div className="max-w-4xl">
-              <p className="mt-2 sm:mt-6 max-w-3xl text-xs sm:text-base leading-relaxed sm:leading-5 text-black/55 font-[300]">
+              <p className="mt-2 sm:mt-6 max-w-3xl text-xs sm:text-[14px] leading-relaxed sm:leading-5 text-black/55 font-[300]">
                 Instead of burning budget competing broadly, we construct
                 high-authority dedicated pillar clusters targeting immediate,
                 high-intent local and niche commercial searches.
@@ -636,21 +630,22 @@ export default function SeoService() {
                     <img src={seo} alt="Keyword" className="w-7 h-7" />
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-[500] text-[#111111] leading-tight">
+                    <h3 className="text-base sm:text-lg font-[400] text-[#111111] leading-tight">
                       Recommendation for SEO Boost
                     </h3>
-                    <span className="text-xs text-[#dd0403] font-semibold">
+                    <span className="text-xs text-[#dd0403] font-[300]">
                       Achievable & High-ROI Strategy
                     </span>
                   </div>
                 </div>
 
-                <div className="space-y-4 text-xs sm:text-sm text-[#444038] leading-relaxed">
-                  <p className="bg-[#f7f3ec] p-3.5 sm:p-4 rounded-2xl border border-[#e8ded0]">
-                    <strong>Strategic Realism:</strong> Rather than attempting
-                    to rank only for the broad keyword <em>“SEO Services”</em>,
-                    SEO Boost focuses first on <strong>“SEO Services ”</strong>{" "}
-                    and <strong>“SEO Company ”</strong>.
+                <div className="space-y-4 text-xs sm:text-sm text-black/55 leading-relaxed">
+                  <p className="bg-[#f7f3ec] p-3.5 sm:p-4 rounded-2xl font-[300] border border-[#e8ded0]">
+                    <span className=" text-black font-[400]">Strategic Realism:</span>{" "}
+                    Rather than attempting to rank only for the broad keyword{" "}
+                    <em>“SEO Services”</em>, SEO Boost focuses first on{" "}
+                    <span className=" text-black fon-[400]">“SEO Services ”</span> and{" "}
+                    <span className=" text-black font-[400]">“SEO Company ”</span>.
                   </p>
 
                   <div className="space-y-2.5 pt-2">
@@ -658,9 +653,11 @@ export default function SeoService() {
                       <div className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
                         ✓
                       </div>
-                      <p className="text-xs text-gray-700">
-                        <strong>Topical Relevance:</strong> Real local clients
-                        ready to hire an agency immediately.
+                      <p className="text-xs text-black/55">
+                        <span className=" text-black fon-[400]">
+                          Topical Relevance:
+                        </span>{" "}
+                        Real local clients ready to hire an agency immediately.
                       </p>
                     </div>
 
@@ -668,20 +665,25 @@ export default function SeoService() {
                       <div className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
                         ✓
                       </div>
-                      <p className="text-xs text-gray-700">
-                        <strong>Fast Organic Traction:</strong> Realistic top 3
-                        ranking in 3 to 5 months vs 18+ months for broad terms.
+                      <p className="text-xs text-black/55">
+                        <span className=" text-black fon-[400]">
+                          Fast Organic Traction:
+                        </span>{" "}
+                        Realistic top 3 ranking in 3 to 5 months vs 18+ months
+                        for broad terms.
                       </p>
                     </div>
 
                     <div className="flex items-start gap-2.5">
-                      <div className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+                      <div className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0 mt-0.5 font-[300] text-xs">
                         ✓
                       </div>
-                      <p className="text-xs text-gray-700">
-                        <strong>Authority Stepping Stone:</strong> Dominating
-                        local clusters builds internal link equity to rank for
-                        broader national terms.
+                      <p className="text-xs text-black/55">
+                        <span className=" text-black fon-[400]">
+                          Authority Stepping Stone:
+                        </span>{" "}
+                        Dominating local clusters builds internal link equity to
+                        rank for broader national terms.
                       </p>
                     </div>
                   </div>
@@ -691,16 +693,16 @@ export default function SeoService() {
               {/* Bottom Callout */}
               <div className="mt-6 pt-5 border-t border-[#e8ded0] flex flex-wrap sm:flex-nowrap items-center justify-between gap-3">
                 <div>
-                  <span className="text-[11px] text-gray-500 uppercase tracking-wider block font-semibold">
+                  <span className="text-[11px] text-[black]/55 uppercase tracking-wider block font-[300]">
                     Target Primary Intent
                   </span>
-                  <span className="text-sm font-bold text-[#dd0403]">
+                  <span className="text-sm font-[400] text-[#dd0403]">
                     Global Market
                   </span>
                 </div>
                 <button
-                 href="https://grafizen.com/contact-us"
-                  className="bg-[#dd0403] hover:bg-[#dd0403] text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors cursor-pointer w-full sm:w-auto text-center"
+                  href="https://grafizen.com/contact-us"
+                  className="bg-[#dd0403] hover:bg-[#dd0403] text-white text-xs font-[400] px-4 py-2.5 rounded-xl transition-colors cursor-pointer w-full sm:w-auto text-center"
                 >
                   Start Plan
                 </button>
@@ -711,109 +713,106 @@ export default function SeoService() {
             <div className="lg:col-span-7 bg-white/95 lg:rounded-3xl rounded-2xl  sm:p-6 lg:border lg:border-[#e8ded0]">
               <div className="flex items-start justify-between gap-4 mb-5 px-1 md:px-0">
                 <div>
-                  <h3 className="text-base sm:text-lg font-[500] text-[#111111] flex items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-[400] text-[#111111] flex items-center gap-2">
                     <GitBranch className="w-5 h-5 text-[#dd0403] shrink-0" />
                     <span>SEO Growth Roadmap</span>
                   </h3>
-                  <p className="text-xs text-gray-500 mt-0.5">
+                  <p className="text-xs text-black/55 mt-0.5 font-[300]">
                     A focused process built to improve visibility and generate
                     qualified leads
                   </p>
                 </div>
-                <span className="shrink-0 rounded-full bg-[#fdeaea] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#dd0403]">
+                <span className="shrink-0 rounded-full bg-[#fdeaea] px-3 py-1 text-[10px] font-[400] uppercase tracking-wider text-[#dd0403]">
                   90-Day Plan
                 </span>
               </div>
 
-          <div className="grid grid-cols-2 gap-2.5 lg:grid-cols-1 lg:gap-3">
-  {[
-    {
-      number: "01",
-      title: "Discover",
-      text: "Audit your website, competitors, and highest-value search opportunities.",
-      icon: Search,
-    },
-    {
-      number: "02",
-      title: "Build",
-      text: "Create a technical foundation and content structure that Google can understand.",
-      icon: Layers,
-    },
-    {
-      number: "03",
-      title: "Optimize",
-      text: "Improve pages, local signals, internal links, and conversion-focused content.",
-      icon: Target,
-    },
-    {
-      number: "04",
-      title: "Grow",
-      text: "Earn authority through relevant content, digital PR, and quality backlinks.",
-      icon: TrendingUp,
-    },
-    {
-      number: "05",
-      title: "Measure",
-      text: "Track rankings, traffic, leads, and monthly opportunities for continuous growth.",
-      icon: BarChart3,
-    },
-  ].map((step) => {
-    const StepIcon = step.icon;
+              <div className="grid grid-cols-2 gap-2.5 lg:grid-cols-1 lg:gap-3">
+                {[
+                  {
+                    number: "01",
+                    title: "Discover",
+                    text: "Audit your website, competitors, and highest-value search opportunities.",
+                    icon: Search,
+                  },
+                  {
+                    number: "02",
+                    title: "Build",
+                    text: "Create a technical foundation and content structure that Google can understand.",
+                    icon: Layers,
+                  },
+                  {
+                    number: "03",
+                    title: "Optimize",
+                    text: "Improve pages, local signals, internal links, and conversion-focused content.",
+                    icon: Target,
+                  },
+                  {
+                    number: "04",
+                    title: "Grow",
+                    text: "Earn authority through relevant content, digital PR, and quality backlinks.",
+                    icon: TrendingUp,
+                  },
+                  {
+                    number: "05",
+                    title: "Measure",
+                    text: "Track rankings, traffic, leads, and monthly opportunities for continuous growth.",
+                    icon: BarChart3,
+                  },
+                ].map((step) => {
+                  const StepIcon = step.icon;
 
-    return (
-      <div
-        key={step.number}
-        className={`group flex items-start gap-2 rounded-2xl border border-[#e8ded0] bg-[#fbf9f5] p-2 transition-all hover:border-[#dd0403]/50 hover:bg-white hover:shadow-sm sm:items-center sm:gap-3 sm:p-2.5 lg:p-3 ${
-          step.number === "05" ? "col-span-2 sm:col-span-1" : ""
-        }`}
-      >
-        <div className=" h-6 w-6 shrink-0 items-center justify-center rounded-xl bg-[#dd0403] text-white md:h-8 md:w-8 sm:h-9 sm:w-9 lg:h-10 lg:w-10 hidden md:flex">
-          <StepIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-        </div>
+                  return (
+                    <div
+                      key={step.number}
+                      className={`group flex items-start gap-2 rounded-2xl border border-[#e8ded0] bg-[#fbf9f5] p-2 transition-all hover:border-[#dd0403]/50 hover:bg-white hover:shadow-sm sm:items-center sm:gap-3 sm:p-2.5 lg:p-3 ${
+                        step.number === "05" ? "col-span-2 sm:col-span-1" : ""
+                      }`}
+                    >
+                      <div className=" h-6 w-6 shrink-0 items-center justify-center rounded-xl bg-[#dd0403] text-white md:h-8 md:w-8 sm:h-9 sm:w-9 lg:h-10 lg:w-10 hidden md:flex">
+                        <StepIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                      </div>
 
-        <div className=" flex md:hidden flex-col ">
+                      <div className=" flex md:hidden flex-col ">
+                        <div className=" flex gap-3 items-center  ">
+                          <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-xl bg-[#dd0403] text-white md:h-8 md:w-8 sm:h-9 sm:w-9 lg:h-10 lg:w-10">
+                            <StepIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                          </div>
+                          <h4 className="text-xs font-[400] text-[#111111] sm:text-sm">
+                            {step.title}
+                          </h4>
+                        </div>
 
-       <div className=" flex gap-3 items-center  ">
-            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-xl bg-[#dd0403] text-white md:h-8 md:w-8 sm:h-9 sm:w-9 lg:h-10 lg:w-10">
-          <StepIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-        </div>
-          <h4 className="text-xs font-semibold text-[#111111] sm:text-sm">
-              {step.title}
-            </h4>
-       </div>
+                        <p className="mt-2 text-[10.5px] leading-snug text-black/55 font-[300] sm:text-[11.5px]">
+                          {step.text}
+                        </p>
+                      </div>
 
+                      <div className="min-w-0 flex-1 hidden md:block">
+                        <div className="flex items-center gap-2">
+                          <h4 className="text-xs font-[400] text-[#111111] sm:text-sm">
+                            {step.title}
+                          </h4>
+                        </div>
 
-             <p className="mt-2 text-[10.5px] leading-snug text-gray-600 sm:text-[11.5px]">
-            {step.text}
-          </p>
-         </div>
-         
-
-        <div className="min-w-0 flex-1 hidden md:block">
-          <div className="flex items-center gap-2">
-            <h4 className="text-xs font-semibold text-[#111111] sm:text-sm">
-              {step.title}
-            </h4>
-          </div>
-
-          <p className="mt-0.5   text-[10.5px] leading-snug text-gray-600 sm:text-[11.5px]">
-            {step.text}
-          </p>
-        </div>
-      </div>
-    );
-  })}
-</div>
+                        <p className="mt-0.5   text-[10.5px] leading-snug text-black/55 sm:text-[11.5px]">
+                          {step.text}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
           {/* ── TARGET KEYWORDS QUICK LIST ── */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-3 sm:p-6 border border-dashed border-[#e8ded0] mb-5">
-            <h4 className="text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">
+            <h4 className="text-xs sm:text-sm font-[400] text-black uppercase tracking-widest mb-2">
               SEO Strategy Built Around Your Business
             </h4>
 
-            <p className="text-xs leading-5 text-gray-600">
+            <p className="text-xs leading-5 text-black/55 font-[300]">
               We shape our SEO services around your business model, target
               audience, and growth goals. Whether you are a local service
               provider, B2B company, ecommerce brand, or growing startup, we
@@ -836,10 +835,10 @@ export default function SeoService() {
               <div className="w-10 h-10 rounded-xl bg-[#fdeaea] text-[#dd0403] flex items-center justify-center mb-3.5 group-hover:scale-110 transition-transform">
                 <Search className="w-5 h-5" />
               </div>
-              <h4 className="text-sm sm:text-base font-bold text-[#111111] group-hover:text-[#dd0403] transition-colors">
+              <h4 className="text-sm sm:text-base font-[300] text-[#111111] group-hover:text-[#dd0403] transition-colors">
                 Technical SEO Audit
               </h4>
-              <p className="text-xs text-[#666055] mt-1.5 leading-relaxed">
+              <p className="text-xs text-black/55 mt-1.5 leading-relaxed">
                 In-depth crawling, site architecture fixes, Core Web Vitals
                 optimization, and indexing speed improvements.
               </p>
@@ -852,10 +851,10 @@ export default function SeoService() {
               <div className="w-10 h-10 rounded-xl bg-[#fdeaea] text-[#dd0403] flex items-center justify-center mb-3.5 group-hover:scale-110 transition-transform">
                 <BarChart3 className="w-5 h-5" />
               </div>
-              <h4 className="text-sm sm:text-base font-bold text-[#111111] group-hover:text-[#dd0403] transition-colors">
+              <h4 className="text-sm sm:text-base  font-[300] text-black group-hover:text-[#dd0403] transition-colors">
                 Keyword & Competitor Intel
               </h4>
-              <p className="text-xs text-[#666055] mt-1.5 leading-relaxed">
+              <p className="text-xs text-black/55 mt-1.5 leading-relaxed">
                 Pinpoint high-intent commercial search queries to capture
                 ready-to-buy customers before your competitors do.
               </p>
@@ -868,10 +867,10 @@ export default function SeoService() {
               <div className="w-10 h-10 rounded-xl bg-[#fdeaea] text-[#dd0403] flex items-center justify-center mb-3.5 group-hover:scale-110 transition-transform">
                 <Globe2 className="w-5 h-5" />
               </div>
-              <h4 className="text-sm sm:text-base font-bold text-[#111111] group-hover:text-[#dd0403] transition-colors">
+              <h4 className="text-sm sm:text-base font-[300] text-[#111111] group-hover:text-[#dd0403] transition-colors">
                 Local SEO & Google Maps
               </h4>
-              <p className="text-xs text-[#666055] mt-1.5 leading-relaxed">
+              <p className="text-xs text-black/55 mt-1.5 leading-relaxed">
                 Dominate Google Map Pack (Local 3-Pack) for high-intent searches
                 in Rajkot, Gujarat, and across India.
               </p>
@@ -884,10 +883,10 @@ export default function SeoService() {
               <div className="w-10 h-10 rounded-xl bg-[#fdeaea] text-[#dd0403] flex items-center justify-center mb-3.5 group-hover:scale-110 transition-transform">
                 <Sparkles className="w-5 h-5" />
               </div>
-              <h4 className="text-sm sm:text-base font-bold text-[#111111] group-hover:text-[#dd0403] transition-colors">
+              <h4 className="text-sm sm:text-base  font-[300] text-black group-hover:text-[#dd0403] transition-colors">
                 Authority Backlinks & PR
               </h4>
-              <p className="text-xs text-[#666055] mt-1.5 leading-relaxed">
+              <p className="text-xs text-black/55 mt-1.5 leading-relaxed">
                 Earn high-authority editorial backlinks and digital PR mentions
                 that multiply domain rating and rankings.
               </p>
@@ -897,7 +896,6 @@ export default function SeoService() {
       </div>
 
       {/* ================= MODAL: INSTANT SEO AUDIT / GET STARTED ================= */}
-  
     </section>
   );
 }

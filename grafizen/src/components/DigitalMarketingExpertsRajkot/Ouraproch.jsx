@@ -57,7 +57,7 @@ export default function OurApproach() {
 
           <p
             className=" mt-4
-md:mt-6 md:ml-auto max-w-md text-base leading-5 text-neutral-500 sm:text-md text-black/55 text-[13px] font-[300] md:text-right"
+md:mt-6 md:ml-auto max-w-md text-base leading-5  sm:text-md text-black/55 text-[13px] font-[300] md:text-right"
           >
             A focused growth process built around clarity, creative execution,
             and measurable progress.
@@ -132,11 +132,11 @@ md:mt-6 md:ml-auto max-w-md text-base leading-5 text-neutral-500 sm:text-md text
                         />
                       </div>
 
-                      <h3 className="text-[13px] font-extrabold uppercase leading-tight text-black">
+                      <h3 className="text-[13px] font-[400] uppercase leading-tight text-black">
                         {step.title}
                       </h3>
 
-                      <p className="mt-2 max-w-[145px] text-[10px] font-medium leading-snug text-black/60">
+                      <p className="mt-2 max-w-[145px] text-[10px] font-[300] leading-snug text-black/58">
                         {step.description}
                       </p>
                     </div>

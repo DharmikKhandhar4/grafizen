@@ -149,7 +149,7 @@ function WhyDigitalMarketing() {
                   <span className="h-2.5 w-2.5 rounded-full bg-[#d6a33c]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#6f8f40]" />
                 </div>
-                <div className="mx-auto flex h-7 w-[min(420px,75%)] items-center gap-2 border border-black/10 bg-white px-3 text-[10px] text-neutral-500 rounded-2xl">
+                <div className="mx-auto flex h-7 w-[min(420px,75%)] items-center gap-2 border border-black/10 bg-white px-3 text-[10px] text-black/55 rounded-2xl">
                   <BrowserIcon />
                   <span className="truncate">{query}</span>
                   <span className="h-3 w-px shrink-0 animate-pulse bg-[#dd0403]" />
@@ -160,17 +160,17 @@ function WhyDigitalMarketing() {
                 <span className="text-[10px] uppercase tracking-[0.22em] text-[#dd0403]">
                   Why digital marketing
                 </span>
-                <h1 className="mt-3 sm:mt-5 max-w-3xl text-[22px] sm:text-4xl md:text-5xl font-[500] leading-[1.05] sm:leading-[0.94] tracking-[-0.045em] lg:text-[38px]">
+                <h1 className="mt-3 sm:mt-5 max-w-3xl text-[22px] sm:text-4xl md:text-5xl font-[400] leading-[1.05] sm:leading-[0.94] tracking-[-0.045em] lg:text-[38px]">
                   Your customers are already{" "}
                   <span className="text-[#dd0403]">online.</span>
                 </h1>
-                <p className="mt-3 sm:mt-4 max-w-2xl text-xs sm:text-sm leading-relaxed text-neutral-600 lg:text-[13px]">
+                <p className="mt-3 sm:mt-4 max-w-2xl text-xs sm:text-sm leading-relaxed text-black/55 lg:text-[13px] font-[300]">
                   Customers increasingly use search engines, social media and
                   websites to discover and evaluate businesses. Without a strong
                   digital presence, they&apos;ll discover your competitors
                   first.
                 </p>
-                <p className="mt-2 sm:mt-3 max-w-2xl text-xs sm:text-sm leading-relaxed text-neutral-500 lg:text-[13px]">
+                <p className="mt-2 sm:mt-3 max-w-2xl text-xs sm:text-sm leading-relaxed text-black/55 lg:text-[13px] font-[300]">
                   A well-planned digital marketing strategy puts your business
                   in front of the right people, at the right moment, with the
                   right message.
@@ -182,8 +182,8 @@ function WhyDigitalMarketing() {
                   <span className="text-xl sm:text-3xl font-bold tabular-nums text-[#dd0403] lg:text-4xl">
                     {searches.toLocaleString()}
                   </span>
-                  <span className="text-[10px] uppercase leading-4 tracking-[0.12em] text-neutral-500 hidden
-                  md:flex">
+                  <span className="text-[10px] uppercase leading-4 tracking-[0.12em] text-black/55 hidden
+                  md:flex ">
                     local searches like these
                     <br />
                     happening right now
@@ -194,7 +194,7 @@ function WhyDigitalMarketing() {
 
             {/* Floating Search Interest Card */}
             <div className="sm:mt-4 mt-6 absolute sm:bottom-6 sm:right-4 lg:bottom-10 lg:right-8 z-20 sm:w-52 w-36 border bottom-2 right-1 border-black/10 bg-white md:p-4 p-2  shadow-[6px_6px_0_#dd0403] lg:shadow-[8px_8px_0_#dd0403] rounded-xl">
-              <div className="flex items-center justify-between md:text-[10px] text-[9px] uppercase tracking-[0.12em] text-neutral-500">
+              <div className="flex items-center justify-between md:text-[10px] text-[9px] uppercase tracking-[0.12em] text-black/55">
                 <span>Search interest</span>
                 <TrendingUp size={15} className="text-[#dd0403]" />
               </div>
@@ -222,7 +222,7 @@ function WhyDigitalMarketing() {
             <div className="bg-white rounded-3xl shadow-sm p-4 relative border border-gray-100">
               <div className="flex items-start justify-between mb-0">
                 <div>
-                  <p className="text-xs font-bold tracking-wide text-gray-800">
+                  <p className="text-xs font-[400] tracking-wide text-black">
                     ORGANIC TRAFFIC GROWTH
                   </p>
                 </div>
@@ -235,10 +235,10 @@ function WhyDigitalMarketing() {
                 <div className="flex items-center justify-end gap-2">
                   <img src="/image/growth.png" alt="Growth" className="h-7 w-7 object-contain" />
                   <div>
-                    <h2 className="text-md font-extrabold text-red-600 leading-none">
+                    <h2 className="text-md font-[400] text-red-600 leading-none">
                       +42.8%
                     </h2>
-                    <p className="text-gray-700 text-[12px]">
+                    <p className="text-[black]/55 font-[300] text-[12px]">
                       Organic Growth
                     </p>
                   </div>
@@ -323,10 +323,10 @@ function WhyDigitalMarketing() {
             <div className="mt-2 rounded-2xl border border-black/10 bg-white p-4 shadow-sm sm:p-4">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-base font-bold leading-tight text-gray-900">
+                  <p className="text-base font-[400] leading-tight text-black">
                     More visibility. More growth.
                   </p>
-                  <p className="mt-1 text-xs leading-4 text-gray-500">
+                  <p className="mt-1 text-xs  font-[300] leading-4 text-black/55">
                     One connected strategy across every important digital
                     touchpoint.
                   </p>
@@ -335,7 +335,7 @@ function WhyDigitalMarketing() {
                 <div className="grid grid-cols-3 gap-2 sm:shrink-0 sm:gap-3">
                   <div className="flex min-w-0 flex-col items-center gap-1.5 rounded-xl bg-blue-50 px-2 py-2.5 text-center">
                     <Search className="h-4 w-4 text-blue-500" />
-                    <span className="text-[10px] font-bold tracking-wide text-gray-600">
+                    <span className="text-[10px] font-[400] tracking-wide text-black/55">
                       SEARCH
                     </span>
                   </div>
@@ -345,13 +345,13 @@ function WhyDigitalMarketing() {
                       alt="Instagram"
                       className="h-4 w-4 object-contain"
                     />
-                    <span className="text-[10px] font-bold tracking-wide text-gray-600">
+                    <span className="text-[10px] font-[400] tracking-wide text-black/55">
                       SOCIAL
                     </span>
                   </div>
                   <div className="flex min-w-0 flex-col items-center gap-1.5 rounded-xl bg-cyan-50 px-2 py-2.5 text-center">
                     <Globe className="h-4 w-4 text-cyan-500" />
-                    <span className="text-[10px] font-bold tracking-wide text-gray-600">
+                    <span className="text-[10px] font-[400] tracking-wide text-black/55">
                       WEBSITE
                     </span>
                   </div>

@@ -189,7 +189,7 @@ export default function PainPointsSection() {
                     {/* <span className="text-xs font-mono text-[#777065] font-semibold uppercase tracking-widest">
                       0{item.id} / ISSUE
                     </span> */}
-                    <h3 className="lg:text-xl  text-[14px] font-semibold text-[#111111] mb-1 group-hover:text-[#dd0403] transition-colors leading-tight">
+                    <h3 className="lg:text-xl  text-[14px] font-[400] text-[#111111] mb-1 group-hover:text-[#dd0403] transition-colors leading-tight">
                       {item.title}
                     </h3>
                   </div>
@@ -199,15 +199,15 @@ export default function PainPointsSection() {
                     {item.title}
                   </h3> */}
 
-                  <p className="text-[#555048] lg:text-sm text-[13px] md:leading-relaxed mb-3">
+                  <p className="text-[black]/55 lg:text-sm text-[13px] font-[300] md:leading-relaxed mb-3">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Card Footer Badge */}
                 <div className="pt-3 border-t border-[#e6e1d7] flex lg:items-center items-start justify-between">
-                  <span className="md:text-xs text-[11px] font-medium text-[#555048] flex lg:items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#dd0403] group-hover:bg-[#111111] transition-colors shrink-0 mt-1 lg:mt-0 " />
+                  <span className="md:text-xs text-[11px] font-medium text-[black]/55 flex lg:items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#dd0403] group-hover:bg-[#111111] transition-colors shrink-0 mt-1 lg:mt-0  font-[300]" />
                     {item.stat}
                   </span>
             

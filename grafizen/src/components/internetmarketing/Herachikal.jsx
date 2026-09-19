@@ -117,11 +117,11 @@ export default function Herachikal() {
                 />
               </div>
 
-              <h3 className="mb-1 text-[18px] sm:text-[20px] font-medium leading-tight tracking-[-0.04em] text-[#dd0403]">
+              <h3 className="mb-1 text-[18px] sm:text-[20px] font-[400] leading-tight tracking-[-0.04em] text-[#dd0403]">
                 {title}
               </h3>
 
-              <p className="max-w-full md:max-w-[350px] text-[13px] sm:text-[14px] leading-[1.35] sm:leading-[1.30] text-black/60 md:text-black/55">
+              <p className="max-w-full md:max-w-[350px] font-[300] text-[13px] sm:text-[14px] leading-[1.35] sm:leading-[1.30] text-black/60 md:text-black/55">
                 {description}
               </p>
             </motion.article>

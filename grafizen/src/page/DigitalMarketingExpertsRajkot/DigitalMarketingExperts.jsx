@@ -113,7 +113,7 @@ export default function DigitalMarketingExperts() {
             </h1>
 
             {/* Subtitle */}
-            <p className="order-3 mt-5 max-w-lg text-[13px] font-normal leading-tight text-[#555048] sm:text-lg lg:order-none">
+            <p className="order-3 mt-5 max-w-lg text-[13px]  leading-tight text-black/55 sm:text-[15px]  lg:order-none font-[300]">
               We help businesses grow online, generate quality leads and achieve
               measurable success.
             </p>

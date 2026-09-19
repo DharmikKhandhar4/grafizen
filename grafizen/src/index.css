@@ -1,6 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  src: url("/font/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/font/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
 :root {
   font-family: Inter, sans-serif;
   color: #111827;
@@ -24,6 +42,20 @@ body {
 @theme {
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+  --font-playfair: "PlayfairDisplay-Regular", serif;
+  --font-playfair-regular: "PlayfairDisplay-Regular", serif;
+}
+
+.font-playfair {
+  font-family: "PlayfairDisplay-Regular", "Playfair Display", serif;
+}
+
+.playfair-regular {
+  font-family: "PlayfairDisplay-Regular", "Playfair Display", serif;
+}
+
+.font-playfair-regular {
+  font-family: "PlayfairDisplay-Regular", "Playfair Display", serif;
 }
 
 * {
@@ -160,4 +192,16 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-style: italic;
+}
+
+@theme inline {
+  --animate-ripple: ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite;
+  @keyframes ripple {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
 }

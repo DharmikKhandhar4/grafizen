@@ -127,7 +127,7 @@ export default function SocialMediaServices() {
           {/* RIGHT */}
           <div className="lg:pb-2">
             <p className="
-mt-6 max-w-3xl text-base leading-5 text-neutral-500 sm:text-md text-black/55 text-[13px] font-[300]">
+mt-6 max-w-3xl text-base leading-5  sm:text-md text-black/55 text-[13px] font-[300]">
               {/* We help your brand stay consistent, active, and professional
               across social platforms with planned content, creative visuals,
               optimized profiles, and result-focused management. */}
@@ -305,7 +305,7 @@ function ServiceCard({ service, index, isVisible }) {
 
       <div className="relative z-10 flex items-start justify-between gap-4">
         <div className="flex flex-col gap-3  absolute  -left-2 -top-0">
-          <span className="inline-flex w-fit rounded-full border border-black/5 bg-white/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#DD0403] backdrop-blur-sm">
+          <span className="inline-flex w-fit rounded-full border border-black/5 bg-white/80 px-2.5 py-1 text-[10px] font-[400] uppercase tracking-[0.1em] text-[#DD0403] backdrop-blur-sm">
             {/* <span className="text-[10px] font-semibold tracking-[0.24em] text-[#DD0403] transition-colors duration-300 pr-1">
               {service.number}
             </span> */}
@@ -329,17 +329,17 @@ function ServiceCard({ service, index, isVisible }) {
       </div>
 
       <div className="relative z-10 mt-8 sm:mt-10">
-        <h3 className="max-w-md text-xl font-medium tracking-tight text-[#111111] transition-colors duration-300 sm:text-2xl">
+        <h3 className="max-w-md text-xl font-[400] tracking-tight text-[#111111] transition-colors duration-300 sm:text-2xl">
           {service.title}
         </h3>
 
-        <p className="md:mt-3 mt-1 max-w-lg text-sm leading-5 text-neutral-500 transition-colors duration-300 sm:text-[14px] sm:leading-6 ">
+        <p className="md:mt-3 mt-1 max-w-lg text-sm leading-5 text-black/55 transition-colors duration-300 sm:text-[14px] sm:leading-6 font-[300] ">
           {service.description}
         </p>
       </div>
 
       <div className="relative z-10 md:mt-3 mt-1 flex items-center justify-between">
-        <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 transition-colors duration-300">
+        <span className="text-[10px] uppercase tracking-[0.2em] text-black/55 transition-colors duration-300">
           Explore service
         </span>
 

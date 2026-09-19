@@ -76,7 +76,7 @@ export default function UnifiedDigitalGrowth() {
         </div>
       </div>
 
-      <div className="absolute -bottom-2 md:left-1/2 left-26 -translate-x-1/2 xs:left-2 xs:translate-x-0 z-10 flex w-[200px] xs:w-[270px] items-center gap-1.5 sm:gap-2 rounded-xl border border-stone-200 bg-white/90 backdrop-blur-md p-1.5 sm:p-2 shadow-lg sm:left-4">
+      <div className="absolute -bottom-2 md:left-1/2 left-26 -translate-x-1/2 xs:left-2 xs:translate-x-0 z-10 flex w-[200px] xs:w-[270px] lg:w-[250px] items-center gap-1.5 sm:gap-2 rounded-xl border border-stone-200 bg-white/90 backdrop-blur-md p-1.5 sm:p-2 shadow-lg sm:left-4">
         <div className="relative h-[100px] w-[100px] sm:h-[122px] sm:w-[122px] shrink-0">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
@@ -128,7 +128,7 @@ export default function UnifiedDigitalGrowth() {
   const CTAButton = () => (
     <a
       href="https://grafizen.com/contact-us"
-      className="flex items-center gap-3 px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 bs-grafizen text-white text-sm sm:text-base font-semibold rounded-[10px] md:rounded-xl shadow-md shadow-orange-500/20 bg-[#dd0403] w-fit"
+      className="flex items-center gap-3 px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 bs-grafizen text-white text-sm sm:text-base font-bold rounded-[10px] md:rounded-xl shadow-md shadow-orange-500/20 bg-[#dd0403] w-fit"
     >
       <span>Build Your Growth System</span>
       <span className="text-base">
@@ -254,10 +254,10 @@ export default function UnifiedDigitalGrowth() {
                 variants={fadeUp}
                 className="border-l-2 border-stone-200 pl-5 transition-colors duration-300 hover:border-[#dd0403]"
               >
-                <h3 className="mt-1 text-base font-bold text-[#111]">
+                <h3 className="mt-1 text-base font-[400] text-[#111]">
                   Stop Wasting Ad Spend
                 </h3>
-                <p className="mt-1 text-xs leading-relaxed text-black/60 sm:text-sm max-w-md">
+                <p className="mt-1 text-xs leading-relaxed text-black/55 font-[300] sm:text-sm max-w-md">
                   If your current presence isn’t building visibility or scaling
                   leads, it's time to align creativity with performance.
                 </p>
@@ -267,10 +267,10 @@ export default function UnifiedDigitalGrowth() {
                 variants={fadeUp}
                 className="border-l-2 border-stone-200 pl-5 transition-colors duration-300 hover:border-[#dd0403]"
               >
-                <h3 className="mt-1 text-base font-bold text-[#111]">
+                <h3 className="mt-1 text-base font-[400] text-[#111]">
                   Active Community Engagement
                 </h3>
-                <p className="mt-1 text-xs leading-relaxed text-black/60 sm:text-sm max-w-md">
+                <p className="mt-1 text-xs leading-relaxed font-[300] text-black/55 sm:text-sm max-w-md">
                   We don't just post photos—we interact with your audience, reply
                   to comments, and build an active online community around your
                   brand.

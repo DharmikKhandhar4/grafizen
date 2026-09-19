@@ -34,12 +34,12 @@ export default function ReplicatedHero() {
         </div>
         <div className="lg:mt-3 flex gap-2">
           <Quote className="h-4 w-4 shrink-0 fill-[#dd0403] text-[#dd0403]" />
-          <p className="text-[10px] sm:text-[11px] font-semibold leading-snug text-[#1f1f1f]">
+          <p className="text-[10px] sm:text-[11px] font-[300] leading-snug text-black/55">
             "Working with the right digital marketing strategy helped us
             increase our online leads and achieve measurable growth."
           </p>
         </div>
-        <p className="lg:mt-2 text-[9px] sm:text-[10px] font-semibold text-[#111111]">
+        <p className="lg:mt-2 text-[9px] sm:text-[10px] font-[400] text-[#111111]">
           — Happy Client
         </p>
       </motion.div>
@@ -159,7 +159,7 @@ export default function ReplicatedHero() {
               </span>
             </div>
 
-            <h1 className="mt-5 text-[28px] font-semibold leading-[1.05] text-[#111111] sm:text-[52px] sm:leading-[1.08] lg:text-[48px]">
+            <h1 className="mt-5 text-[28px] font-[600] leading-[1.05] text-[#111111] sm:text-[52px] sm:leading-[1.08] lg:text-[48px]">
               Digital Marketing
               <span className="block text-[#dd0403]">
                 Consultant
@@ -167,12 +167,13 @@ export default function ReplicatedHero() {
               </span>
             </h1>
 
-            <h2 className="mt-3 text-[18px] font-bold leading-[1.1] text-[#111111] sm:text-[24px] lg:text-[20px]">
+            <h2 className="mt-3 text-[18px] font-[400] leading-[1.1] text-[#111111] sm:text-[24px] lg:text-[20px]">
               Driving Growth,
               <span className=" sm:inline"> Delivering Results!</span>
             </h2>
 
-            <p className="lg:mt-0.5-5 max-w-[620px] text-[13px] mt-3 font-medium leading-[1.35] text-[#171717] sm:text-[15px] sm:leading-[1.2]">
+            <p className="lg:mt-0.5-5 max-w-[620px] text-[13px] mt-3  leading-[1.35] 
+            text-black/58 sm:text-[15px] sm:leading-[1.2] font-[300]">
               Looking for a trusted Digital Marketing Consultant ? We create
               data-driven marketing strategies that help businesses increase
               online visibility, generate quality leads, and achieve measurable
@@ -186,10 +187,10 @@ export default function ReplicatedHero() {
             <div className="mt-6 grid w-full max-w-[360px] grid-cols-3 gap-2 border-t border-black/10 pt-5 sm:gap-7">
               {stats.map(([value, lineOne, lineTwo]) => (
                 <div key={value} className="min-w-0">
-                  <p className="text-[20px] font-extrabold text-center lg:text-start leading-none tracking-tight text-[#111111] sm:text-[31px]">
+                  <p className="text-[20px] font-bold text-center lg:text-start leading-none tracking-tight text-[#111111] sm:text-[31px]">
                     {value}
                   </p>
-                  <p className="mt-1 break-words text-[9px] text-center lg:text-start   font-medium leading-[1.1] text-[#171717] sm:text-[11px] sm:leading-[1.05]">
+                  <p className="mt-1 break-words text-[9px] text-center lg:text-start   font-medium leading-[1.1] text-black/55 sm:text-[11px] sm:leading-[1.05]">
                     {lineOne}
                     {lineTwo && <span className="block">{lineTwo}</span>}
                   </p>

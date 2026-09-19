@@ -322,13 +322,13 @@ export default function InternetMarketing() {
           >
             {/* Intro */}
             <div className="max-w-[700px]">
-              <h2 className="font-semibold leading-tight text-[#241818] sm:text-2xl md:text-xl">
+              <h2 className="font-[400] leading-tight text-black sm:text-2xl md:text-xl">
                 Grow Your Business With Strategic Marketing
               </h2>
 
-              <p className="mt-4 text-[13px] leading-5 text-gray-700 sm:text-[15px]">
+              <p className="mt-4 text-[13px] leading-5 text-black/55 font-[300] sm:text-[15px]">
                 Looking for trusted{" "}
-                <span className="font-semibold text-gray-900">
+                <span className="font-[400] text-black">
                   Internet Marketing Experts ?
                 </span>{" "}
                 We create data-driven digital marketing strategies that help
@@ -336,10 +336,10 @@ export default function InternetMarketing() {
                 generate quality leads, and grow online.
               </p>
 
-              <p className="mt-3 text-[13px] leading-5 text-gray-700 sm:text-[15px] md:mt-4">
+              <p className="mt-3 text-[13px] leading-5 font-[300] text-black/55 sm:text-[15px] md:mt-4">
                 Google Ads to social media, content marketing, and performance
                 campaigns, we focus on{" "}
-                <span className="font-semibold text-gray-900">
+                <span className="font-[400] text-black ">
                   measurable results and sustainable business growth.
                 </span>
               </p>
@@ -358,7 +358,7 @@ export default function InternetMarketing() {
                     95<span className="text-[#dd0403]">%</span>
                   </div>
                 </div>
-                <p className="mt-1 text-center text-xs text-gray-700 md:mt-2 md:text-left md:text-sm md:leading-5">
+                <p className="mt-1 text-center text-xs text-black/55 md:mt-2 md:text-left md:text-sm md:leading-5 font-[300]">
                   Client Satisfaction
                 </p>
               </div>
@@ -375,7 +375,7 @@ export default function InternetMarketing() {
                   </div>
                 </div>
 
-                <p className="mt-2 text-center text-xs text-gray-700 md:text-left md:text-sm md:leading-5">
+                <p className="mt-2 text-center text-xs text-black/55 md:text-left md:text-sm md:leading-5font-[300]">
                   Average ROI Growth
                 </p>
               </div>
@@ -391,7 +391,8 @@ export default function InternetMarketing() {
                     120<span className="text-[#dd0403]">+</span>
                   </div>
                 </div>
-                <p className="mt-2 text-center text-xs text-gray-700 md:text-left md:text-sm md:leading-5">
+                <p className="mt-2 text-center text-xs text-black/55 md:text-left md:text-sm md:leading-5
+                font-[300]">
                   Campaigns Managed
                 </p>
               </div>

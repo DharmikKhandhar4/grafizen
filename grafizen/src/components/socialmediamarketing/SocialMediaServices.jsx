@@ -96,7 +96,7 @@ export default function SocialMediaServices() {
                     >
                       {service.id}
                     </span> */}
-                    <div className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-xl">
+                    <div className="flex h-7 w-7 sm:h-6 sm:w-6 shrink-0 items-center justify-center rounded-xl">
                       <img
                         src={service.image}
                         alt={service.title}
@@ -104,7 +104,7 @@ export default function SocialMediaServices() {
                       />
                     </div>
                     <h3
-                      className={`text-xs xs:text-sm sm:text-[14px] font-semibold transition-colors duration-200 leading-snug ${
+                      className={`text-xs xs:text-sm sm:text-[14px] font-[400] transition-colors duration-200 leading-snug ${
                         isActive
                           ? "text-[#111]"
                           : "text-black/50 group-hover:text-black/80"
@@ -159,18 +159,18 @@ export default function SocialMediaServices() {
                     </div>
 
                     {/* Active Title */}
-                    <h3 className="mb-2 sm:mb-3 text-lg xs:text-xl sm:text-2xl font-bold leading-snug sm:leading-tight text-[#111]">
+                    <h3 className="mb-2 sm:mb-3 text-lg xs:text-xl sm:text-2xl font-[400] leading-snug sm:leading-tight text-[#111]">
                       {services[activeIndex].title}
                     </h3>
 
                     {/* Active Description */}
-                    <p className="text-xs xs:text-sm sm:text-base leading-relaxed text-black/70 font-normal">
+                    <p className="text-xs xs:text-sm sm:text-[14px] leading-relaxed text-black/55 font-[300]">
                       {services[activeIndex].description}
                     </p>
                   </div>
 
                   {/* Footer Stats */}
-                  <div className="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-[10px] sm:text-xs font-semibold tracking-wider text-black/40">
+                  <div className="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-[10px] sm:text-xs font-[300] tracking-wider text-black/40">
                     <span>STRATEGY & EXECUTION</span>
                     {/* <span className="text-[#dd0403]">
                       0{activeIndex + 1} / 0{services.length}

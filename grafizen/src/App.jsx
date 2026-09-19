@@ -5,6 +5,12 @@ import MainDExpertsRajkot from "./page/DigitalMarketingExpertsRajkot/MainDExpert
 import MainSeoPage from "./page/seoservice/MainSeoPage";
 
 import MainSocialMediaMarketing from "./page/socialmedia/MainSocialMediaMarketing";
+// import CustomSoftwear from "./page/customsoftwear/CustomSoftware"
+import MainCustomSoftwear  from "./page/customsoftwear/MainCustomSoftwear";
+import PpcWhyChooseUS from "./page/ppc/PpcWhyChooseUs"
+import MainSoftwaerDevelopmentCompany from  "./page/softwaredevelopmentcompany/MainSoftwareDevelopmentCompany"
+import MainEnterpriseSoftware from "./page/enterprisesoftware/MainEnterpriseSoftware";
+import MobileAppDevlopment from "./page/mobileapphero/MobileAppDevlopment";
 
 function App() {
   return (
@@ -12,11 +18,16 @@ function App() {
       {/* final ready page */}
       {/* <MainDigitalMarketingConsultant /> */}
       {/* <MainDExpertsRajkot /> */}
-      {/* <MainSeoPage />  */}
+      {/* <MainSeoPage />    */}
 
       {/* <MainInternetMarketingRajkot /> */}
 
       {/* <MainSocialMediaMarketing /> */}
+      {/* <MainSoftwaerDevelopmentCompany /> */}
+      <MainCustomSoftwear />
+      {/* <MainEnterpriseSoftware /> */}
+      {/* <MobileAppDevlopment /> */}
+    
     </>
 
 

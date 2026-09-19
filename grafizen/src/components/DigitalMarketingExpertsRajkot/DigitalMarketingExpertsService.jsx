@@ -94,14 +94,14 @@ export default function EmailServices() {
               <span> OUR SERVICES</span>
             </div>
 
-            <h2 className="max-w-2xl text-3xl font-medium  tracking-[-0.05em] text-black sm:text-4xl lg:text-[48px]">
+            <h2 className="max-w-2xl text-3xl font-[600]  tracking-[-0.05em] text-black sm:text-4xl lg:text-[48px]">
               Everything Your Growth <br />
               <span> Strategy</span>
               <span className="text-[#dd0403] ml-2">Needs.</span>
             </h2>
           </div>
 
-          <p className="mt-6 max-w-xl text-base leading-5 text-neutral-500 sm:text-md text-black/55 text-[13px] font-[300]">
+          <p className="mt-6 max-w-xl  leading-5  sm:text-md text-black/55 text-[14px] font-[300]">
             From search optimization to targeted ads and conversions, we build
             full-funnel digital marketing systems tailored around your target
             audience.
@@ -171,10 +171,10 @@ export default function EmailServices() {
                             }}
                             className={`
                               text-[16px]
-                              font-medium
+                              font-[400]
                               tracking-[-0.025em]
-                              sm:text-[19px]
-                              ${isActive ? "text-[#dd0403]" : "text-gray-500"}
+                              sm:text-[16px]
+                              ${isActive ? "text-[#dd0403]" : "text-black/55"}
                             `}
                           >
                             {service.title}
@@ -189,7 +189,7 @@ export default function EmailServices() {
                               color: isActive ? "#ffffff" : "#d1d5db",
                               rotate: isActive ? 0 : 0,
                             }}
-                            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full"
+                            className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full"
                           >
                             <ArrowUpRight className="h-4 w-4" />
                           </motion.div>

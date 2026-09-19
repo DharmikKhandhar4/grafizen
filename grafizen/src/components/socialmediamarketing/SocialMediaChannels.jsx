@@ -100,7 +100,7 @@ export default function SocialMediaChannels() {
 
           <motion.p
             variants={fadeUp}
-            className="mx-auto mt-3 md:mt-1 max-w-[620px] text-xs xs:text-sm sm:text-[14px] font-[300] leading-relaxed sm:leading-4 text-black/50"
+            className="mx-auto mt-3 md:mt-1 max-w-[620px] text-xs xs:text-sm sm:text-[14px] font-[300] leading-relaxed sm:leading-4 text-black/55"
           >
             We create platform-specific social media strategies that help
             businesses build visibility, engage the right audience, generate
@@ -139,10 +139,10 @@ export default function SocialMediaChannels() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 items-center rounded-2xl border border-stone-200/80 bg-stone-50/50 p-3 sm:p-5 lg:p-6 transition-all duration-300 hover:border-[#dd0403]/30 hover:bg-white hover:shadow-md">
                   {/* Content */}
                   <div className="lg:col-span-9">
-                    <h3 className="text-lg xs:text-xl sm:text-2xl font-bold tracking-tight text-[#111]">
+                    <h3 className="text-lg xs:text-xl sm:text-2xl font-[400] tracking-tight text-[#111]">
                       {channel.title}
                     </h3>
-                    <p className="md:mt-1 text-xs xs:text-sm sm:text-[14px] leading-tight sm:leading-tight text-black/55">
+                    <p className="md:mt-1 text-xs xs:text-sm sm:text-[14px] font-[300] leading-tight sm:leading-tight text-black/55">
                       {channel.description}
                     </p>
                   </div>

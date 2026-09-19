@@ -80,11 +80,11 @@ export default function Empaty() {
                 />
               </div>
 
-              <h3 className="text-[18px] sm:text-[20px] font-semibold leading-snug text-[#111111] group-hover:text-[#dd0403] transition-colors">
+              <h3 className="text-[18px] sm:text-[20px] font-[400] leading-snug text-[#111111] group-hover:text-[#dd0403] transition-colors">
                 {title}
               </h3>
 
-              <p className="mt-2 text-[13px] sm:text-[14px] leading-relaxed text-black/75">
+              <p className="mt-2 text-[13px] sm:text-[14px] font-[300] leading-relaxed text-black/55">
                 {description}
               </p>
             </motion.div>

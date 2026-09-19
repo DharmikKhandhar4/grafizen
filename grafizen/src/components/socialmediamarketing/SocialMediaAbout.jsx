@@ -131,7 +131,8 @@ export default function SocialMediaAbout() {
               </span>
             </h2>
 
-            <p className="mt-3  sm:mt-6 text-sm sm:text-base leading-relaxed text-black/80 lg:text-lg ">
+            <p className="mt-3  sm:mt-6 text-sm sm:text-base   lg:text-md 
+            font-[300] leading-[20px] md:leading-6 text-black/58">
               At <strong className="font-bold text-[#dd0403]">Grafizen</strong>,
               we help businesses turn ideas into powerful digital experiences
               and meaningful growth. From digital marketing and social media
@@ -139,7 +140,7 @@ export default function SocialMediaAbout() {
               together.
             </p>
 
-            <p className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed text-black/60 lg:text-base">
+            <p className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed font-[300] text-black/60 lg:text-base">
               We believe successful digital growth is more than simply being
               visible online. Our team combines strategic marketing with modern
               technology to connect businesses with the right audience and
@@ -148,19 +149,19 @@ export default function SocialMediaAbout() {
 
             <div className="mt-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-4">
               <div className="rounded-xl bg-stone-50/60 px-4 py-3 transition-all duration-300 hover:border-[#dd0403]/40 hover:bg-white hover:shadow-sm border-l-4 border-l-[#dd0403]">
-                <h3 className="text-[14px] sm:text-[15px] font-bold text-[#111]">
+                <h3 className="text-[14px] sm:text-[15px] font-[400] text-[#111]">
                   Targeted Audience
                 </h3>
-                <p className="mt-1 text-xs leading-relaxed text-black/60">
+                <p className="mt-1 text-xs leading-relaxed text-black/55 font-[300]">
                   Connecting your brand with relevant, high-intent customers.
                 </p>
               </div>
 
               <div className="rounded-xl bg-stone-50/60 px-4 py-1 transition-all duration-300 hover:border-[#dd0403]/40 hover:bg-white hover:shadow-sm border-l-4 border-l-[#dd0403]">
-                <h3 className="text-[14px] sm:text-[15px] font-bold text-[#111]">
+                <h3 className="text-[14px] sm:text-[15px] font-[400] text-[#111]">
                   Measurable Growth
                 </h3>
-                <p className="mt-1 text-xs md:leading-relaxed leading-tight text-black/60">
+                <p className="mt-1 text-xs md:leading-relaxed  font-[300] leading-tight text-black/55">
                   Data-backed campaigns focused on long-term ROI.
                 </p>
               </div>

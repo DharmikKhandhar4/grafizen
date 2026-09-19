@@ -95,7 +95,7 @@ export default function SeoServiceInfo() {
 
           {/* Right */}
           <div className="max-w-4xl">
-            <p className="mt-2 sm:mt-6 max-w-3xl text-xs sm:text-base leading-relaxed sm:leading-5 text-black/55 font-[300]">
+            <p className="mt-2 sm:mt-6 max-w-3xl text-xs sm:text-[14px] leading-relaxed sm:leading-5 text-black/55 font-[300]">
               A stunning website gets attention, but structured search hubs turn
               that traffic into consistent leads, sales, and ranking growth.
             </p>
@@ -136,10 +136,10 @@ export default function SeoServiceInfo() {
                   alt="seo-hub"
                   className="mb-2 sm:mb-4 h-14 w-14 sm:h-20 sm:w-20 object-contain animate-[pulse_2.5s_ease-in-out_infinite] lg:animate-none"
                 />
-                <h3 className="text-lg sm:text-[24px] lg:text-[20px] font-[500] leading-none tracking-[-0.05em] text-black">
+                <h3 className="text-lg sm:text-[24px] lg:text-[20px] font-[400] leading-none tracking-[-0.05em] text-black">
                   Connected
                 </h3>
-                <h3 className="mt-1 text-xl sm:text-[28px] lg:text-[20px] font-[500] leading-none tracking-[-0.05em] text-black">
+                <h3 className="mt-1 text-xl sm:text-[28px] lg:text-[20px] font-[400] leading-none tracking-[-0.05em] text-black">
                   Content Hub
                 </h3>
               </div>
@@ -160,7 +160,7 @@ export default function SeoServiceInfo() {
               <div className="hidden lg:block w-20 h-28 border-t border-dashed border-[#dd0403] absolute left-[-80px] rounded-[0px] top-40" />
               <div className="hidden lg:block w-40 h-28 border-b border-dashed border-[#dd0403] absolute left-[-130px] rounded-[100px] bottom-0.5" />
               <ServiceCardRight item={services[3]} />
-              <ServiceCardRight item={services[4]} /> 
+              <ServiceCardRight item={services[4]} />
               <ServiceCardRight item={services[5]} />
             </div>
           </div>
@@ -177,13 +177,17 @@ function ServiceCardLeft({ item }) {
     <div className="relative mx-auto w-full max-w-full lg:max-w-[420px] rounded-[15px] sm:rounded-[60px] border border-[#ece3dc] bg-white/90 p-3 shadow-[0_12px_30px_rgba(17,17,17,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_38px_rgba(17,17,17,0.06)] lg:p-3 px-4">
       <div className="flex items-center gap-3.5 sm:gap-4 sm:ml-3">
         <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-full bg-[#dd0403] text-white shadow-[0_10px_20px_rgba(44,29,93,0.18)]">
-          <Icon size={20} strokeWidth={2.2} className="sm:w-[22px] sm:h-[22px]" />
+          <Icon
+            size={20}
+            strokeWidth={2.2}
+            className="sm:w-[22px] sm:h-[22px]"
+          />
         </div>
         <div className="min-w-0 flex-1">
-          <h4 className="text-[13px] sm:text-[16px] font-[500] uppercase tracking-[-0.03em] text-black">
+          <h4 className="text-[13px] sm:text-[16px] font-[300] uppercase tracking-[-0.03em] text-black">
             {item.title}
           </h4>
-          <p className="mt-0.5 sm:mt-1 text-[11px] sm:text-[13px] leading-relaxed sm:leading-5 text-[#5d5b5b]">
+          <p className="mt-0.5 sm:mt-1 text-[11px] sm:text-[13px] leading-relaxed sm:leading-5 text-black/55">
             {item.description}
           </p>
         </div>
@@ -199,13 +203,17 @@ function ServiceCardRight({ item }) {
     <div className="relative mx-auto w-full max-w-full lg:max-w-[420px] rounded-[15px] sm:rounded-[60px] border border-[#ece3dc] bg-white/90 p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_2px_38px_rgba(17,17,17,0.06)] lg:p-3 px-4">
       <div className="flex items-center gap-3.5 sm:gap-4 sm:ml-3">
         <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-full bg-[#dd0403] text-white shadow-[0_10px_20px_rgba(44,29,93,0.18)]">
-          <Icon size={20} strokeWidth={2.2} className="sm:w-[22px] sm:h-[22px]" />
+          <Icon
+            size={20}
+            strokeWidth={2.2}
+            className="sm:w-[22px] sm:h-[22px]"
+          />
         </div>
         <div className="min-w-0 flex-1">
-          <h4 className="text-[13px] sm:text-[16px] font-black uppercase tracking-[-0.03em] text-black">
+          <h4 className="text-[13px] sm:text-[16px] font-[300]] uppercase tracking-[-0.03em] text-black">
             {item.title}
           </h4>
-          <p className="mt-0.5 sm:mt-1 text-[11px] sm:text-[13px] leading-relaxed sm:leading-5 text-[#5d5b5b]">
+          <p className="mt-0.5 sm:mt-1 text-[11px] sm:text-[13px] leading-relaxed sm:leading-5 text-black/55">
             {item.description}
           </p>
         </div>
