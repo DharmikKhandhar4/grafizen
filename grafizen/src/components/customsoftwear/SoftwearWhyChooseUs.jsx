@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import  { useState } from "react";
 
 export default function WhyChooseUs() {
   // Data for the left column features
@@ -46,9 +48,11 @@ export default function WhyChooseUs() {
       offset: "lg:-translate-x-12",
     },
   ];
+  const [openFeature, setOpenFeature] = useState(null);
+  const [openRightFeature, setOpenRightFeature] = useState(null);
 
   return (
-    <section className="bg-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden  min-h-screen flex flex-col justify-center">
+    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8 overflow-hidden  min-h-screen flex flex-col justify-center">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Title */}
         <div className="mb-4 sm:mb-16 grid gap-2 lg:gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
@@ -66,39 +70,80 @@ export default function WhyChooseUs() {
 
           {/* Right - Description */}
           <div className="max-w-4xl">
-            <p className="mt-2 sm:mt-6 max-w-3xl text-xs sm:text-[14px] leading-relaxed sm:leading-5 text-black/55 font-[300]">
+            <p className="mt-2 sm:mt-6 max-w-3xl text-[13px] sm:text-[14px] sm:leading-5 text-black/55 font-[300]">
              Choosing a custom software development company takes trust. Our enterprise expertise, secure solutions, and innovative approach help businesses build scalable software for lasting growth.
             </p>
           </div>
         </div>
 
         {/* 3-Column Layout Grid */}
-        <div className="grid grid-cols-1 mt-16 lg:grid-cols-[1.1fr_0.8fr_1.1fr] gap-10 lg:gap-4 items-center">
+        <div className="grid grid-cols-1 md:mt-16 mt-5 lg:grid-cols-[1.1fr_0.8fr_1.1fr] gap-6 lg:gap-4 items-center">
           {/* LEFT COLUMN */}
-          <div className="flex flex-col gap-8 lg:gap-8 w-full max-w-md mx-auto">
-            {leftFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className={`
-                  bg-[#feebeb] px-8 py-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)]
-                  rounded-tl-[6rem] rounded-br-[6rem] rounded-tr-2xl rounded-bl-2xl
-                  ${feature.offset} relative z-10 shadow-md transition-shadow
-                `}
-              >
-                <h3 className="text-lg font-[400] text-[#dd0403] mb-1 text-center">
-                  {feature.title}
-                </h3>
+         <div className="flex flex-col gap-4 lg:gap-8 w-full max-w-md mx-auto">
+  {leftFeatures.map((feature, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      className={`
+        bg-[#feebeb] px-8 md:py-4 py-3
+        shadow-[0_8px_30px_rgb(0,0,0,0.04)]
+        md:rounded-tl-[6rem] md:rounded-br-[6rem]
+        rounded-tl-[3rem] rounded-br-[3rem]
+        rounded-tr-2xl rounded-bl-2xl
+        ${feature.offset}
+        relative z-10 shadow-md transition-shadow
+      `}
+    >
+      {/* Mobile */}
+      <button
+        type="button"
+        onClick={() =>
+          setOpenFeature(openFeature === index ? null : index)
+        }
+        className="lg:hidden w-full flex items-center justify-between gap-3"
+      >
+        <h3 className="text-base font-[400] text-[#dd0403] text-left">
+          {feature.title}
+        </h3>
 
-                <p className="text-black/55 text-xs text-center leading-tight font-[300]">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+        <ChevronDown
+          size={18}
+          className={`text-[#dd0403] shrink-0 transition-transform duration-300 ${
+            openFeature === index ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      {/* Mobile Description */}
+      <motion.div
+        initial={false}
+        animate={{
+          height: openFeature === index ? "auto" : 0,
+          opacity: openFeature === index ? 1 : 0,
+        }}
+        className="lg:hidden overflow-hidden"
+      >
+        <p className="pt-2 text-black/55 text-xs leading-tight font-[300]">
+          {feature.description}
+        </p>
+      </motion.div>
+
+      {/* Desktop - unchanged */}
+      <div className="hidden lg:block">
+        <h3 className="text-lg font-[400] text-[#dd0403] mb-1 text-center">
+          {feature.title}
+        </h3>
+
+        <p className="text-black/55 text-xs text-center leading-tight font-[300]">
+          {feature.description}
+        </p>
+      </div>
+    </motion.div>
+  ))}
+</div>
 
           {/* CENTER IMAGE (ASTRONAUT) */}
           <motion.div
@@ -106,7 +151,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}
-            className="flex justify-center relative z-0 py-10 lg:py-0"
+            className="flex justify-center relative z-0  lg:py-0"
           >
             <motion.img
               animate={{ y: [0, -15, 0] }}
@@ -122,30 +167,73 @@ export default function WhyChooseUs() {
           </motion.div>
 
           {/* RIGHT COLUMN */}
-          <div className="flex flex-col gap-8 lg:gap-8 w-full max-w-md mx-auto">
-            {rightFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className={`
-                  bg-[#feebeb] px-8 py-4 shadow-[0_8px_30px_rgb(0,0,0,0.04)]
-                  rounded-tr-[6rem] rounded-bl-[6rem] rounded-tl-2xl rounded-br-2xl
-                  ${feature.offset} relative z-10 shadow-md transition-shadow
-                `}
-              >
-                <h3 className="text-lg font-[400] text-[#dd0403] mb-1 text-center">
-                  {feature.title}
-                </h3>
+         <div className="flex flex-col gap-4 lg:gap-8 w-full max-w-md mx-auto">
+  {rightFeatures.map((feature, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      className={`
+        bg-[#feebeb] px-8 md:py-4 py-3
+        shadow-[0_8px_30px_rgb(0,0,0,0.04)]
+        md:rounded-tr-[6rem] md:rounded-bl-[6rem]
+         rounded-tr-[3rem] rounded-bl-[3rem]
+        rounded-tl-2xl rounded-br-2xl
+        ${feature.offset}
+        relative z-10 shadow-md transition-shadow
+      `}
+    >
+      {/* Mobile */}
+      <button
+        type="button"
+        onClick={() =>
+          setOpenRightFeature(
+            openRightFeature === index ? null : index
+          )
+        }
+        className="lg:hidden w-full flex items-center justify-between gap-3"
+      >
+        <h3 className="text-base font-[400] text-[#dd0403] text-left">
+          {feature.title}
+        </h3>
 
-                <p className="text-black/55  text-xs text-center leading-tight font-[300]">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+        <ChevronDown
+          size={18}
+          className={`text-[#dd0403] shrink-0 transition-transform duration-300 ${
+            openRightFeature === index ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      {/* Mobile Description */}
+      <motion.div
+        initial={false}
+        animate={{
+          height: openRightFeature === index ? "auto" : 0,
+          opacity: openRightFeature === index ? 1 : 0,
+        }}
+        className="lg:hidden overflow-hidden"
+      >
+        <p className="pt-2 text-black/55 text-xs text-left leading-tight font-[300]">
+          {feature.description}
+        </p>
+      </motion.div>
+
+      {/* Desktop */}
+      <div className="hidden lg:block">
+        <h3 className="text-lg font-[400] text-[#dd0403] mb-1 text-center">
+          {feature.title}
+        </h3>
+
+        <p className="text-black/55 text-xs text-center leading-tight font-[300]">
+          {feature.description}
+        </p>
+      </div>
+    </motion.div>
+  ))}
+</div>
         </div>
       </div>
     </section>

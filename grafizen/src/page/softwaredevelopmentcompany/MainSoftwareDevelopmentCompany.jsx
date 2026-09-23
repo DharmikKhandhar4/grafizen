@@ -10,29 +10,135 @@ import WhyChooseSoftware from "../../components/softwaredevelopmentcompany/WhyCh
 // Hero Image import - fallback or use from public image
 import heroIllustration from "../../../public/image/software/bg-2.png";
 
+const stats = [
+  ["99.8%", "On-Time Sprint", "Delivery"],
+  ["50+", "Enterprise Digital", "Products"],
+  ["10+", "Years of Core", "Engineering"],
+];
+
 const SoftwareHero = () => {
+  const CTAButtons = ({ isMobile = false }) => (
+    <div
+      className={`flex ${
+        isMobile
+          ? " sm:flex-row w-full grid grid-cols-2  justify-center sm:justify-start gap-3 sm:gap-4"
+          : "flex-wrap items-center gap-4 sm:gap-6 mt-8 "
+      }`}
+    >
+      <motion.a
+        href="#contact"
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.98 }}
+        className="group inline-flex md:min-h-11 w-full sm:w-auto items-center justify-center sm:justify-between gap-3 md:rounded-full rounded-xl border-2 border-[#dd0403] bg-[#dd0403] md:px-6 px-4 md:py-2.5 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#dd0403]/20 transition-all duration-300 hover:bg-black hover:border-black "
+      >
+        <span className=" flex gap-1"><span className=" hidden sm:flex">Book a Free </span> <span>Consultation</span></span>
+        <span className="flex h-7 w-7 items-center justify-center rounded-full  text-white transition-all duration-300 group-hover:bg-[#dd0403] group-hover:text-white">
+          <ArrowRight size={18} strokeWidth={2.5} />
+        </span>
+      </motion.a>
+
+      <motion.a
+        href="#solutions"
+        whileHover={{ x: 4 }}
+        className="group inline-flex md:min-h-11 w-full sm:w-auto items-center justify-center gap-2 md:rounded-full rounded-xl border-2 border-[#dd0403] bg-white md:px-6 px-4 md:py-2.5 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#dd0403] transition-colors hover:bg-[#dd0403] hover:text-white"
+      >
+        <span className=" flex gap-1"> <sapn className="hidden sm:flex">View Our </sapn> Solutions</span>
+        <ArrowRight
+          size={16}
+          className="transition-transform duration-300 group-hover:translate-x-1"
+        />
+      </motion.a>
+    </div>
+  );
+
   return (
-    <section className="relative w-full max-h-screen bg-white overflow-hidden py-12 sm:py-16 lg:py-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 ">
+    <section className="relative w-full min-h-[auto] lg:min-h-screen flex items-center justify-center bg-white overflow-hidden py-10 sm:py-14 lg:py-20 px-5    sm:px-6 md:px-10 lg:px-16 xl:px-20">
       {/* Background Subtle Grid Texture */}
       <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(#1111110a_1px,transparent_1px),linear-gradient(90deg,#1111110a_1px,transparent_1px)] [background-size:48px_48px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
-          
+      <div className="relative z-10 mx-auto max-w-7xl w-full">
+        {/* ============================================================ */}
+        {/* MOBILE & TABLET VIEW (< lg) - Modeled on Digital Marketing Consultant */}
+        {/* ============================================================ */}
+        <div className="flex flex-col lg:hidden space-y-4 sm:space-y-5">
+          {/* Top Tagline Badge */}
+          {/* <div className="inline-flex w-fit items-center gap-2 rounded-full bg-[#dd0403]/10 px-3.5 py-1 text-[#dd0403]">
+            <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.16em] sm:tracking-[0.2em]">
+              SOFTWARE SOLUTIONS COMPANY
+            </span>
+          </div> */}
+              <div className="mb-4 sm:mb-5 flex items-center gap-3 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.2em] text-black/45">
+              <span className="h-px w-7 bg-[#dd0403]" />
+              <span>SOFTWARE SOLUTIONS COMPANY</span>
+            </div>
+
+          {/* Main Heading */}
+          <h1 className="text-[28px] xs:text-[32px] sm:text-[42px] font-bold leading-[1.12] text-[#111111] tracking-tight">
+            Custom Software Engineering Built for{" "}
+            <span className="text-[#dd0403]">Enterprise Scale</span>
+          </h1>
+
+          {/* Mobile & Tablet Center Image Block */}
+          <div className="relative flex items-center justify-center w-full my-4 sm:my-4">
+            <div className="relative w-full sm:max-w-[500px] overflow-hidden rounded-2xl  border border-black/5  sm:p-5 shadow-sm">
+              <img
+                src={heroIllustration}
+                alt="Custom Software Engineering Built for Enterprise Scale"
+                className="max-h-[220px] xs:max-h-[270px] sm:max-h-[340px] w-full object-contain mx-auto"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                  const fallback = e.currentTarget.parentElement.querySelector(".placeholder-fallback");
+                  if (fallback) fallback.classList.remove("hidden");
+                }}
+              />
+              <div className="placeholder-fallback hidden flex-col items-center justify-center gap-3 py-10 text-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#dd0403]/10 text-[#dd0403]">
+                  <ArrowRight className="h-6 w-6" />
+                </div>
+                <p className="font-bold text-black text-xs">[ Image Placeholder ]</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Description */}
+          <p className="text-[13px] sm:text-[15px] font-medium leading-[1.4] text-black/70">
+            We design, build, and optimize high-performing digital products —
+            from custom web applications to scalable cloud platforms and AI
+            automation.
+          </p>
+
+          {/* Key Metrics Stats Row */}
+          <div className="grid grid-cols-3 gap-2 border-t border-black/10 pt-4 sm:pt-5">
+            {stats.map(([value, lineOne, lineTwo]) => (
+              <div key={value} className="min-w-0 text-center">
+                <p className="text-[20px] xs:text-[22px] sm:text-[28px] font-extrabold leading-none tracking-tight text-[#111111]">
+                  {value}
+                </p>
+                <p className="mt-1 break-words text-[10px] sm:text-[11px] font-medium leading-[1.15] text-[#171717]/70">
+                  {lineOne}
+                  {lineTwo && <span className="block">{lineTwo}</span>}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Action CTAs */}
+          <div className="pt-2 ">
+            <CTAButtons isMobile={true} />
+          </div>
+        </div>
+
+        {/* ============================================================ */}
+        {/* DESKTOP / LAPTOP VIEW (>= lg) - Exact High-Impact Desktop Setup */}
+        {/* ============================================================ */}
+        <div className="hidden lg:grid grid-cols-12 items-center gap-8 xl:gap-12">
           {/* Left Text Column */}
           <div className="w-full lg:col-span-7">
             {/* Top Tagline */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="mb-4 flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#dd0403]"
-            >
-              <span className="h-px w-6 bg-[#dd0403]" />
+            <div className="mb-4 sm:mb-5 flex items-center gap-3 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.2em] text-black/45">
+              <span className="h-px w-7 bg-[#dd0403]" />
               <span>SOFTWARE SOLUTIONS COMPANY</span>
-            </motion.div> */}
-            <div class="mb-4 sm:mb-5 flex items-center gap-3 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.2em] text-black/45"><span class="h-px w-7 bg-[#dd0403]"></span><span>SOFTWARE SOLUTIONS COMPANY</span></div>
+            </div>
 
             {/* Main Heading */}
             <motion.h1
@@ -40,7 +146,7 @@ const SoftwareHero = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl font-bold tracking-tight text-black sm:text-4xl md:text-5xl lg:text-[48px] lg:leading-[1.12]"
+              className="text-[28px] font-bold tracking-tight text-black sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[52px] lg:leading-[1.12]"
             >
               Custom Software Engineering Built for{" "}
               <span className="text-[#dd0403]">Enterprise Scale</span>
@@ -59,41 +165,35 @@ const SoftwareHero = () => {
               automation.
             </motion.p>
 
-            {/* CTAs */}
+            {/* Desktop CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-8 flex flex-wrap items-center gap-4 sm:gap-6"
             >
-              {/* Primary Consultation Button */}
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-                className="group inline-flex items-center justify-between gap-3 rounded-full border-2 border-[#dd0403] bg-[#dd0403] text-white px-6 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-black transition-all duration-300 hover:bg-[#dd0403] hover:text-white shadow-sm"
-              >
-                <span>Book a Free Consultation</span>
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#dd0403] text-white transition-all duration-300  ">
-                  <ChevronRight size={18} strokeWidth={2.5} />
-                </span>
-              </motion.a>
+              <CTAButtons isMobile={false} />
+            </motion.div>
 
-              {/* View Solutions Link */}
-              <motion.a
-                href="#solutions"
-                whileHover={{ x: 4 }}
-                className="group inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#dd0403] transition-colors hover:text-black"
-              >
-                <span className="underline underline-offset-4 decoration-2">
-                  View Our Solutions
-                </span>
-                <ArrowRight
-                  size={16}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </motion.a>
+            {/* Desktop Stats Row */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="mt-8 grid w-full max-w-[460px] grid-cols-3 gap-6 border-t border-black/10 pt-6"
+            >
+              {stats.map(([value, lineOne, lineTwo]) => (
+                <div key={value} className="min-w-0">
+                  <p className="text-[24px] xl:text-[28px] font-bold text-start leading-none tracking-tight text-[#111111]">
+                    {value}
+                  </p>
+                  <p className="mt-1.5 break-words text-start text-[11px] font-medium leading-[1.1] text-black/55">
+                    {lineOne}
+                    {lineTwo && <span className="block">{lineTwo}</span>}
+                  </p>
+                </div>
+              ))}
             </motion.div>
           </div>
 
@@ -105,8 +205,7 @@ const SoftwareHero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="flex justify-center items-center lg:col-span-5"
           >
-            <div className="relative w-full max-w-[500px] overflow-hidden rounded-2xl bg-white p-2 sm:p-4 
-            ">
+            <div className="relative w-full max-w-[500px] overflow-hidden rounded-2xl bg-white p-2 sm:p-4">
               <img
                 src={heroIllustration}
                 alt="Custom Software Engineering Built for Enterprise Scale"
@@ -130,7 +229,6 @@ const SoftwareHero = () => {
               </div>
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>

@@ -119,18 +119,19 @@ export default function CoreServices() {
   const ActiveIcon = activeService.icon;
 
   return (
-    <section className="relative w-full bg-white py-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
+    <section className="relative w-full bg-white md:py-20  px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
       {/* Background Architectural Grid Lines */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.035] [background-image:linear-gradient(#000_1px,transparent_1px),linear-gradient(90deg,#000_1px,transparent_1px)] [background-size:64px_64px]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.035] [background-image:linear-gradient(#000_1px,transparent_1px),linear-gradient(90deg,#000_1px,transparent_1px)] [background-size:64px_64px]
+      hidden md:block" />
 
       {/* Decorative Red Laser Ambient Glows */}
-      <div className="pointer-events-none absolute -top-40 right-0 w-[500px] h-[500px] rounded-full bg-[#dd0403]/5 blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-40 left-0 w-[500px] h-[500px] rounded-full bg-[#dd0403]/5 blur-[120px]" />
+      <div className="pointer-events-none absolute -top-40 right-0 w-[500px] h-[500px] rounded-full bg-[#dd0403]/5 blur-[120px] hidden md:block" />
+      <div className="pointer-events-none absolute -bottom-40 left-0 w-[500px] h-[500px] rounded-full bg-[#dd0403]/5 blur-[120px] hidden md:block" />
 
       <div className="relative z-10 max-w-[1300px] mx-auto">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-black/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:pb-12 md:border-b border-black/10">
           <div>
             {/* <div className="mb-3 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#dd0403]">
               <span className="h-px w-6 bg-[#dd0403]" />
@@ -138,11 +139,14 @@ export default function CoreServices() {
             </div> */}
             <div class="mb-4 sm:mb-5 flex items-center gap-3 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.2em] text-black/45"><span class="h-px w-7 bg-[#dd0403]"></span><span>CAPABILITIES & ARCHITECTURE</span></div>
             
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-black leading-[1.08]">
-              Next-Gen <span className="text-[#dd0403]">Core Services</span>
-              <br />
-              <span className="font-[600] text-black/90">Built For High-Velocity Scale</span>
-            </h2>
+     <h2 className="text-[25px] sm:text-4xl md:text-5xl font-[500] md:font-bold tracking-tight text-black leading-[1.08]">
+  Next-Gen{" "}
+  <span className="text-[#dd0403]">Core Services</span>
+  <br />
+  <span className="md:font-[600] font-[500] text-black/90">
+    Built For High-Velocity Scale
+  </span>
+</h2>
           </div>
 
           <p className="max-w-md text-xs sm:text-sm text-black/60 font-[300] leading-relaxed">
@@ -152,10 +156,33 @@ export default function CoreServices() {
         </div>
 
         {/* Master Futuristic Showcase Layout */}
-        <div className="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           
-          {/* LEFT: Futuristic Service Accordion Selector (5 Columns) */}
-          <div className="lg:col-span-5 flex flex-col gap-3">
+          {/* Mobile & Tablet Pill Tabs (< lg) */}
+          <div className="flex lg:hidden overflow-x-auto [&::-webkit-scrollbar]:hidden pb-2 gap-2 no-scrollbar  -mx-1 px-1">
+            {services.map((service, idx) => {
+              const Icon = service.icon;
+              const isActive = activeTab === idx;
+
+              return (
+                <button
+                  key={service.id}
+                  onClick={() => setActiveTab(idx)}
+                  className={`flex shrink-0 items-center gap-2 rounded-full px-3.5 py-2 text-xs font-medium transition-all ${
+                    isActive
+                      ? "bg-[#dd0403] text-white shadow-sm shadow-[#dd0403]/30"
+                      : "border border-black/10 bg-white text-black/70 hover:bg-neutral-50"
+                  }`}
+                >
+                  <Icon size={14} />
+                  <span>{service.title}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* LEFT: Futuristic Service Accordion Selector (5 Columns) - Desktop / Laptop */}
+          <div className="hidden lg:flex lg:col-span-5 flex-col gap-3">
             {services.map((service, idx) => {
               const Icon = service.icon;
               const isActive = activeTab === idx;
@@ -225,7 +252,7 @@ export default function CoreServices() {
 
                   {/* Compact Preview on Inactive, hidden on active */}
                   {!isActive && (
-                    <p className="mt-2.5 text-xs text-black/60 pl-16 line-clamp-1">
+                    <p className="mt-2 text-xs text-black/60 pl-16 line-clamp-1">
                       {service.shortDesc}
                     </p>
                   )}
@@ -236,14 +263,14 @@ export default function CoreServices() {
 
           {/* RIGHT: High-Tech Interactive Cockpit / Stage (7 Columns) */}
           <div className="lg:col-span-7">
-            <div className="relative h-full overflow-hidden rounded-3xl border border-black/15 bg-[#fafafa] p-7 sm:p-7  flex flex-col justify-between">
+            <div className="relative h-full overflow-hidden md:rounded-3xl rounded-2xl border border-black/15 bg-white p-3 sm:p-6 lg:p-7 flex flex-col justify-between">
               
               {/* HUD Background Tech Grid Lines */}
               <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(#dd0403_1.5px,transparent_1.5px)] [background-size:24px_24px]" />
 
               {/* Glowing Corner Accent */}
-              <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[#dd0403]/10 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-black/5 blur-3xl" />
+              {/* <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[#dd0403]/10 blur-3xl" /> */}
+              {/* <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-black/5 blur-3xl" /> */}
 
               <AnimatePresence mode="wait">
                 <motion.div
@@ -261,53 +288,55 @@ export default function CoreServices() {
                         <span className="flex h-3 w-3 rounded-full bg-[#dd0403] animate-pulse" />
                         <span className="h-3 w-3 rounded-full bg-black/20" />
                         <span className="h-3 w-3 rounded-full bg-black/20" />
-                        <span className="ml-2  text-[11px] font-[400] text-black/50">
+                        {/* <span className="ml-2  text-[11px] font-[400] text-black/50">
                           GRAFIZEN_OS  MODULE_{activeService.index}
-                        </span>
+                        </span> */}
                       </div>
 
-                      <div className="flex items-center gap-2 rounded-full border border-[#dd0403]/20 bg-[#dd0403]/5 px-3 py-1 text-[11px]  font-[400] text-[#dd0403]">
+                      <div className=" hidden  md:flex items-center gap-2 rounded-full border border-[#dd0403]/20 bg-[#dd0403]/5 px-3 py-1 text-[11px]  font-[400] text-[#dd0403]">
                         <Activity size={12} />
                         <span>ACTIVE_NODE</span>
                       </div>
                     </div>
 
                     {/* Active Service Title & Category */}
-                    <div className="mt-3 flex flex-wrap items-center justify-between gap-4">
+                    <div className="md:mt-3 mt-2 flex md:flex-wrap md:items-center justify-between md:gap-4 gap-2">
                       <div>
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#dd0403]/10 border border-[#dd0403]/20 px-2.5 py-1 text-[11px]  font-[400] text-[#dd0403] uppercase">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#dd0403]/10 border border-[#dd0403]/20
+                         px-2.5 py-1 md:text-[11px] text-[9px]  font-[400] text-[#dd0403] uppercase">
                           <Zap size={12} />
                           {activeService.tag}
                         </span>
-                        <h3 className="mt-2 text-2xl sm:text-3xl font-[400] text-black tracking-tight">
+                        <h3 className="mt-2 text-[18px] sm:text-3xl font-[400] text-black tracking-tight">
                           {activeService.title}
                         </h3>
                       </div>
 
                       {/* Icon Container */}
-                      <div className="flex h-13 w-13 items-center justify-center rounded-2xl border border-[#dd0403]/20 bg-white text-[#dd0403] shadow-[0_4px_20px_rgba(221,4,3,0.12)]">
-                        <ActiveIcon size={32} strokeWidth={1.8} />
+                      <div className="flex md:h-13 md:w-13 h-6 w-6 items-center justify-center md:rounded-2xl 
+                      rounded-md border border-[#dd0403]/20 bg-white text-[#dd0403] shadow-[0_4px_20px_rgba(221,4,3,0.12)]">
+                        <ActiveIcon  strokeWidth={1.8} className="md:size-7 size-4" />
                       </div>
                     </div>
 
                     {/* Detailed Description */}
-                    <p className="mt-3 text-sm sm:text-[14px] leading-tight text-black/80 font-[300]">
+                    <p className="md:mt-3 mt-1 text-[13px] sm:text-[14px] leading-tight text-black/55 font-[300]">
                       {activeService.fullDesc}
                     </p>
                   </div>
 
                   {/* Center Content: Architecture Capabilities & Features */}
-                  <div className="space-y-6">
+                  <div className="md:space-y-6 space-y-4">
                     <div>
-                      <div className="flex items-center gap-2 text-[11px]  uppercase tracking-wider text-black/60 font-[400] mb-3">
+                      <div className="flex items-center gap-2 text-[14px]  uppercase md:tracking-wider text-black font-[400] mb-3">
                         <Terminal size={12} className="text-[#dd0403]" />
                         <span>SYSTEM DELIVERABLES & FEATURES</span>
                       </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-2.5 gap-1">
                         {activeService.features.map((feat, fIdx) => (
                           <div
                             key={fIdx}
-                            className="flex items-center gap-2.5 rounded-xl border border-black/10 bg-white px-3.5 py-2.5 text-xs font-[300] text-black/85 shadow-xs transition-colors hover:border-[#dd0403]/40 hover:bg-[#dd0403]/5"
+                            className="flex items-center gap-2.5 rounded-xl md:border border-black/10 md:bg-white md:px-3.5 md:py-2.5 text-[13px] font-[300] text-black/55 md:shadow-xs transition-colors hover:border-[#dd0403]/40 hover:bg-[#dd0403]/5"
                           >
                             <CheckCircle2 size={14} className="text-[#dd0403] shrink-0" />
                             <span>{feat}</span>
@@ -318,15 +347,15 @@ export default function CoreServices() {
 
                     {/* Tech Stack Chips */}
                     <div>
-                      <div className="flex items-center gap-2 text-[11px]  uppercase tracking-wider text-black/60 font-[400] mb-3">
-                        <Layers size={12} className="text-[#dd0403]" />
+                      <div className="flex items-center gap-2 text-[13px]  uppercase md:tracking-wider text-black font-[400] mb-3">
+                        <Layers size={14} className="text-[#dd0403]" />
                         <span>DEPLOYMENT STACK & TOOLS</span>
                       </div>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap md:gap-2 gap-1">
                         {activeService.techStack.map((tech, tIdx) => (
                           <span
                             key={tIdx}
-                            className="rounded-lg border border-black/15 bg-white px-3 py-1  text-xs font-[300] text-black/85 shadow-2xs transition-all hover:border-[#dd0403] hover:text-[#dd0403]"
+                            className="rounded-lg border border-black/15 bg-white px-3 py-1  text-xs font-[300] text-black/55 shadow-2xs transition-all hover:border-[#dd0403] hover:text-[#dd0403]"
                           >
                             {tech}
                           </span>
@@ -336,9 +365,9 @@ export default function CoreServices() {
                   </div>
 
                   {/* Bottom Strip: Live Metric & CTA */}
-                  <div className="pt-3 border-t border-black/10 flex flex-wrap items-center justify-between gap-4">
+                  <div className="md:pt-3 pt-1 border-t border-black/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between md:gap-4 gap-2 ">
                     <div className="flex items-center gap-3">
-                      <div className="text-2xl sm:text-2xl font-[400] text-[#dd0403] ">
+                      <div className="text-[18px] sm:text-xl font-[400] text-[#dd0403] ">
                         {activeService.metrics.stat}
                       </div>
                       <div className="text-xs text-black/60 font-[300] leading-tight">
@@ -348,7 +377,7 @@ export default function CoreServices() {
 
                     <a
                       href="#contact"
-                      className="group/cta inline-flex items-center gap-2.5 rounded-full bg-[#dd0403] px-6 py-3 text-xs font-[500] uppercase tracking-wider text-white shadow-md shadow-[#dd0403]/25 transition-all duration-300 hover:bg-black hover:text-white"
+                      className="group/cta inline-flex items-center justify-center gap-2.5 rounded-xl md:rounded-full bg-[#dd0403] px-6 py-3 text-xs font-[500] uppercase tracking-wider text-white shadow-xs md:shadow-md shadow-[#dd0403]/25 transition-all duration-300 hover:bg-black hover:text-white w-full sm:w-auto"
                     >
                       <span>Deploy This Service</span>
                       <ArrowUpRight

@@ -64,7 +64,7 @@ export default function MobileAppHero() {
       {/* =========================================================
           HERO SECTION
       ========================================================= */}
-      <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12 py-6 md:py-0">
 
         <motion.div
           variants={{
@@ -79,25 +79,26 @@ export default function MobileAppHero() {
           animate="show"
           className="
             grid
-            min-h-[680px]
-            items-center
-            gap-10
+            grid-cols-1
             lg:grid-cols-[1fr_0.9fr]
-            lg:gap-6
-            lg:pt-0
+            
+            lg:gap-x-12
+            lg:gap-y-0
+            items-center
+            min-h-[680px]
             xl:min-h-[550px]
           "
         >
 
           {/* =====================================================
-              LEFT CONTENT
+              1. HEADING + SUBHEADING (Mobile: 1st, Laptop: Col 1 Row 1)
           ===================================================== */}
           <motion.div
             variants={fadeUp}
-            className="relative z-10 max-w-[700px]"
+            className="relative z-10 max-w-[700px] lg:col-start-1 lg:row-start-1"
           >
             {/* Grafizen Signature Eyebrow Tag */}
-            <div className="mb-4 sm:mb-5 flex items-center gap-2.5 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.2em] text-black/40 ">
+            <div className="mb-3 sm:mb-5 flex items-center gap-2.5 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.2em] text-black/40 ">
               <span className="h-px w-7 bg-[#dd0403]" />
               <span>MOBILE APP DEVELOPMENT</span>
             </div>
@@ -105,7 +106,8 @@ export default function MobileAppHero() {
             {/* Heading */}
             <h1
               className="
-                text-3xl
+                text-[28px]
+                xs:text-3xl
                 sm:text-4xl
                 md:text-5xl
                 lg:text-[48px]
@@ -119,130 +121,40 @@ export default function MobileAppHero() {
               Custom{" "}
               <span className="text-[#dd0403]">
                 Mobile App
-              </span>
-
+              </span>{" "}
               <span className="block">
                 Development Company
               </span>
             </h1>
 
-
-            {/* Description */}
-            <motion.p
-              variants={fadeUp}
-              className="
-                mt-6
-                max-w-[580px]
-                text-sm
-                sm:text-base
-                leading-relaxed
-                text-black/55
-                font-[300]
-              "
-            >
-              We are experts in delivering high-quality web and mobile app
-              development services, with a focus on custom ERP and CRM,
-              and tailor solutions to all types of businesses and all sizes.
-              Trusted by companies of all sizes to deliver innovative and
-              scalable apps.
-            </motion.p>
-
-
-            {/* Button */}
-            <motion.div
-              variants={fadeUp}
-              className="mt-8"
-            >
-              <button
-                className="
-                  group
-                  inline-flex
-                  h-11
-                  md:h-12
-                  items-center
-                  gap-3
-                  rounded-full
-                  bg-[#dd0403]
-                  px-6
-                  md:px-7
-                  text-xs
-                  sm:text-sm
-                  font-bold
-                  uppercase
-                  tracking-wider
-                  text-white
-                  shadow-[0_10px_25px_rgba(221,4,3,0.25)]
-                  transition-all
-                  duration-300
-                  hover:-translate-y-0.5
-                  hover:bg-[#c00302]
-                  hover:shadow-[0_14px_30px_rgba(221,4,3,0.35)]
-                "
-              >
-                <span>Schedule a Call</span>
-
-                <span
-                  className="
-                    flex
-                    items-center
-                    justify-center
-                    rounded-full
-                    text-white
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  "
-                >
-                  <ArrowRight size={18} />
-                </span>
-              </button>
-            </motion.div>
-
-
-            {/* Small Benefits */}
-            {/* <motion.div
-              variants={fadeUp}
-              className="
-                mt-10
-                flex
-                flex-wrap
-                gap-x-7
-                gap-y-4
-                text-sm
-                text-[#64748B]
-              "
-            >
-              <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-[#DD0403]" />
-                Custom Solutions
-              </div>
-
-              <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-[#DD0403]" />
-                Scalable Apps
-              </div>
-
-              <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-[#DD0403]" />
-                Expert Developers
-              </div>
-            </motion.div> */}
-
+            {/* Subheading */}
+            <p className="mt-3 sm:mt-4 text-[14px] sm:text-lg md:text-xl font-[400] text-black/75 leading-relaxed">
+              Build Scalable, High-Performing iOS & Android Apps for Your Business
+            </p>
           </motion.div>
 
 
           {/* =====================================================
-              RIGHT IMAGE
+              2. RIGHT IMAGE (Mobile: 2nd, Laptop: Col 2 Rows 1 & 2)
           ===================================================== */}
           <motion.div
             variants={fadeRight}
             className="
               relative
               flex
-              min-h-[430px]
+              min-h-[250px]
+              xs:min-h-[340px]
+              sm:min-h-[400px]
+              lg:min-h-[500px]
               items-center
               justify-center
-              lg:min-h-[500px]
+              lg:col-start-2
+              lg:row-start-1
+              lg:row-span-2
+              lg:self-center
+              my-3
+              sm:my-4
+              lg:my-0
             "
           >
 
@@ -252,15 +164,17 @@ export default function MobileAppHero() {
                 absolute
                 left-1/2
                 top-1/2
-                h-[320px]
-                w-[320px]
+                h-[220px]
+                w-[220px]
+                sm:h-[360px]
+                sm:w-[360px]
+                lg:h-[450px]
+                lg:w-[450px]
                 -translate-x-1/2
                 -translate-y-1/2
                 rounded-full
-             
+                bg-red-50/50
                 blur-3xl
-                sm:h-[450px]
-                sm:w-[450px]
               "
             />
 
@@ -272,8 +186,9 @@ export default function MobileAppHero() {
               className="
                 relative
                 z-10
-                w-[300px]
-                sm:w-[390px]
+                w-[260px]
+                xs:w-[300px]
+                sm:w-[380px]
                 lg:w-[480px]
                 xl:w-[450px]
               "
@@ -357,6 +272,90 @@ export default function MobileAppHero() {
 
           </motion.div>
 
+
+          {/* =====================================================
+              3. CONTENT & BUTTON (Mobile: 3rd, Laptop: Col 1 Row 2)
+          ===================================================== */}
+          <motion.div
+            variants={fadeUp}
+            className="
+              relative
+              z-10
+              max-w-[580px]
+              lg:col-start-1
+              lg:row-start-2
+              lg:mt-6
+            "
+          >
+            {/* Description */}
+            <p
+              className="
+                text-[13px]
+                sm:text-base
+                leading-relaxed
+                text-black/55
+                font-[300]
+              "
+            >
+              We are experts in delivering high-quality web and mobile app
+              development services, with a focus on custom ERP and CRM,
+              and tailor solutions to all types of businesses and all sizes.
+              Trusted by companies of all sizes to deliver innovative and
+              scalable apps.
+            </p>
+
+
+            {/* Button */}
+            <div
+              className="mt-4 sm:mt-8"
+            >
+              <button
+                className="
+                  group
+                  inline-flex
+                  h-11
+                  md:h-12
+                  items-center
+                  gap-3
+                  rounded-full
+                  bg-[#dd0403]
+                  px-6
+                  md:px-7
+                  text-xs
+                  sm:text-sm
+                  font-bold
+                  uppercase
+                  tracking-wider
+                  text-white
+                  shadow-[0_7px_14px_rgba(221,4,3,0.25)]
+                  transition-all
+                  duration-300
+                  hover:-translate-y-0.5
+                  hover:bg-[#c00302]
+                  hover:shadow-[0_14px_30px_rgba(221,4,3,0.35)]
+                "
+              >
+                <span>Schedule a Call</span>
+
+                <span
+                  className="
+                    flex
+                    items-center
+                    justify-center
+                    rounded-full
+                    text-white
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                >
+                  <ArrowRight size={18} />
+                </span>
+              </button>
+            </div>
+
+          </motion.div>
+
         </motion.div>
       </div>
 
@@ -365,19 +364,24 @@ export default function MobileAppHero() {
           TRUST / REVIEW BAR
           IMAGE ONLY
       ========================================================= */}
-      <div className="border-t border-gray-100 bg-[#FFF8F8]">
+      <div className="border-t border-b border-gray-100 ">
 
         <div
           className="
             mx-auto
-            grid
             max-w-[1500px]
-            grid-cols-2
+            flex
+            overflow-x-auto
+            [&::-webkit-scrollbar]:hidden
+            [scrollbar-width:none]
             divide-x
             divide-gray-200
-            px-5
-            sm:grid-cols-3
+            px-4
+            sm:px-6
+            lg:px-5
+            lg:grid
             lg:grid-cols-5
+            lg:overflow-visible
           "
         >
 
@@ -428,7 +432,15 @@ function TrustItem({ image, alt }) {
     <div
       className="
         flex
-        min-h-[130px]
+        min-h-[90px]
+        sm:min-h-[110px]
+        lg:min-h-[130px]
+        min-w-[140px]
+        xs:min-w-[160px]
+        sm:min-w-[180px]
+        lg:min-w-0
+        shrink-0
+        lg:shrink
         items-center
         justify-center
         px-5
@@ -438,8 +450,12 @@ function TrustItem({ image, alt }) {
         src={image}
         alt={alt}
         className="
-          max-h-[65px]
-          max-w-[150px]
+          max-h-[45px]
+          sm:max-h-[55px]
+          lg:max-h-[65px]
+          max-w-[120px]
+          sm:max-w-[140px]
+          lg:max-w-[150px]
           w-auto
           object-contain
         "

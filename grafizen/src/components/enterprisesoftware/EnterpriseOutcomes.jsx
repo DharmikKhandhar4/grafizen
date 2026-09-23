@@ -141,7 +141,7 @@ export default function EnterpriseOutcomes() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-8 lg:pt-12">
+    <section className="relative overflow-hidden bg-white px-5 md:py-16  py-10 sm:px-6 lg:px-8 lg:pt-12">
       {/* Soft Background Elements */}
       <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#dd0403]/[0.025] blur-3xl" />
       {/* <div className="pointer-events-none absolute -right-32 bottom-10 h-80 w-80 rounded-full bg-[#dd0403]/[0.03] blur-3xl" /> */}
@@ -155,7 +155,7 @@ export default function EnterpriseOutcomes() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="mx-auto mb-10 max-w-3xl text-center sm:mb-8"
+          className="mx-auto mb-6 max-w-3xl text-center sm:mb-8"
         >
           {/* Small Label */}
           <div className="mb-4 flex items-center justify-center gap-2">
@@ -167,7 +167,7 @@ export default function EnterpriseOutcomes() {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-[30px] font-medium leading-[1.05] tracking-[-0.035em] text-[#111] sm:text-[40px] md:text-[46px]">
+          <h2 className="text-[28px] font-[600] leading-[1.05] tracking-[-0.035em] text-[#111] sm:text-[40px] md:text-[46px]">
             Enterprise Outcomes{" "}
             <span className="text-[#dd0403]">
               We Engineer
@@ -189,21 +189,22 @@ export default function EnterpriseOutcomes() {
         <div
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="relative"
+          className="relative "
         >
           {/* TOP STEPPER NAVIGATION (BORDERLESS PILL RAIL) */}
-          <div className="mb-10 sm:mb-8 overflow-x-auto no-scrollbar pb-2">
-            <div className="flex items-center gap-2 sm:gap-3 min-w-max mx-auto justify-start lg:justify-center px-2">
+          <div className="md:mb-10 mb-4 sm:mb-8 overflow-x-auto no-scrollbar 
+`overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden pb-2">
+            <div className="flex items-center gap-2 sm:gap-3 min-w-max mx-auto justify-start lg:justify-center px-2  ">
               {outcomes.map((item, idx) => {
                 const isActive = activeIndex === idx;
                 return (
                   <button
                     key={item.id}
                     onClick={() => setActiveIndex(idx)}
-                    className={`group relative flex items-center gap-2.5 px-4 py-2.5 rounded-full text-xs transition-all duration-300${
+                    className={`group relative flex items-center gap-2.5 px-4 py-2.5 rounded-full  text-xs transition-all duration-300${
                       isActive
                         ? "bg-[#dd0403]/10 text-[#dd0403] font-semibold shadow-sm "
-                        : "text-black/55 hover:text-black   bg-slate-50  "
+                        : "text-black/55 hover:text-black   bg-[#dd0403]/5  "
                     }`}
                   >
                     {/* <span
@@ -235,108 +236,150 @@ export default function EnterpriseOutcomes() {
           </div>
 
           {/* MAIN STAGE: EDITORIAL LEFT + FRAMELESS 3D DIAGRAM RIGHT */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-14 items-center min-h-[500px]">
-            {/* LEFT COLUMN: EDITORIAL CONTENT & METRICS (NO BOX / NO CARD) */}
-            <div className="flex flex-col justify-between h-full">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="space-y-6"
-                >
-                  {/* Category Tag & Icon */}
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-2xl bg-[#dd0403]/10 text-[#dd0403] flex items-center justify-center shrink-0">
-                      <Icon size={20} strokeWidth={2} />
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#dd0403]">
-                        {activeOutcome.tag}
-                      </p>
-                      <p className="text-[11px] text-black/40 font-mono">
-                        Outcome Phase 0{activeIndex + 1} of 06
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-semibold text-[#111] leading-[1.18] tracking-[-0.025em]">
-                    {activeOutcome.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-[13px] sm:text-[14px] leading-relaxed text-black/60 font-[300] max-w-xl">
-                    {activeOutcome.description}
+        <div className="w-full max-w-[1600px] mx-auto">
+      {/* ========================================================= */}
+      {/* 1. DESKTOP / LAPTOP LAYOUT (lg:block - UNCHANGED DESIGN) */}
+      {/* ========================================================= */}
+      <div className="hidden lg:grid grid-cols-[1fr_1.3fr] gap-14 items-center min-h-[500px] border-0 p-0 rounded-2xl">
+        {/* LEFT COLUMN: EDITORIAL CONTENT & METRICS */}
+        <div className="flex flex-col justify-between h-full">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="space-y-6"
+            >
+              {/* Category Tag & Icon */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-[#dd0403]/10 text-[#dd0403] flex items-center justify-center shrink-0">
+                  {Icon && <Icon size={20} strokeWidth={2} />}
+                </div>
+                <div>
+                  <p className="text-[13px] font-[400] uppercase tracking-[0.2em] text-[#dd0403]">
+                    {activeOutcome.tag}
                   </p>
-
-                  {/* Key Highlights Checklist */}
-                  <div className=" space-y-2">
-                    {activeOutcome.highlights.map((h, i) => (
-                      <div key={i} className="flex items-center gap-2.5 text-[13px] font-[300] text-black/70">
-                        <CheckCircle2 size={14} className="text-[#dd0403] shrink-0" />
-                        <span>{h}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className=" pt-3 border-t border-black/[0.08] flex items-center gap-6" /> 
-
-                  {/* High-Impact Stat / Target Metric Callout */}
-                  {/* <div className="pt-3 border-t border-black/[0.08] flex items-center gap-6">
-                    <div>
-                      <span className="text-2xl sm:text-2xl font-extrabold tracking-tight text-[#dd0403]">
-                        {activeOutcome.value}
-                      </span>
-                    </div>
-                    <div className="h-10 w-px bg-black/[0.08]" />
-                    <div>
-                      <p className="text-[9px] uppercase tracking-wider font-bold text-black/40">
-                        Verified Metric
-                      </p>
-                      <p className="text-xs sm:text-sm font-semibold text-[#111]">
-                        {activeOutcome.metric}
-                      </p>
-                    </div>
-                  </div> */}
-                </motion.div>
-              </AnimatePresence>
-
-              {/* SLIDER NAVIGATION ARROWS & STEP COUNTER */}
-          
-            </div>
-
-            {/* RIGHT COLUMN: FRAMELESS 3D ARCHITECTURAL DIAGRAM */}
-            <div className="relative flex items-center justify-center min-h-[360px] sm:min-h-[440px] lg:min-h-[500px]">
-              {/* Soft Ambient Radiance in Background (No Box Outline) */}
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <div className="w-[85%] h-[85%] rounded-full bg-gradient-to-tr from-[#dd0403]/[0.04] via-[#dd0403]/[0.015] to-transparent blur-3xl" />
-                <div className="w-[60%] h-[60%] rounded-full border border-black/[0.03] animate-[spin_60s_linear_infinite]" />
+                </div>
               </div>
 
-              {/* Floating Architectural Badge */}
-      
+              {/* Title */}
+              <h3 className="text-[32px] font-[400] text-[#111] leading-[1.18] tracking-[-0.025em]">
+                {activeOutcome.title}
+              </h3>
 
-              {/* Pure Frameless 3D Illustration */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  initial={{ opacity: 0, scale: 0.95, y: 15 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 1.03, y: -15 }}
-                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative z-10 w-full flex items-center justify-center"
-                >
-                  <img
-                    src={activeOutcome.image}
-                    alt={activeOutcome.title}
-                    className="w-full max-h-[460px] sm:max-h-[400px] object-contain  select-none transition-transform duration-500 hover:scale-[1.02]"
-                  />
-                </motion.div>
-              </AnimatePresence>
-            </div>
+              {/* Description */}
+              <p className="text-[14px] leading-relaxed text-justify text-black/55 font-[300] max-w-xl">
+                {activeOutcome.description}
+              </p>
+
+              {/* Key Highlights Checklist */}
+              <div className="space-y-2">
+                {activeOutcome.highlights?.map((h, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-2.5 text-[13px] font-[300] text-black/70"
+                  >
+                    <CheckCircle2 size={14} className="text-[#dd0403] shrink-0" />
+                    <span>{h}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-3 border-t border-black/[0.08] flex items-center gap-6" />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* RIGHT COLUMN: FRAMELESS 3D ARCHITECTURAL DIAGRAM */}
+        <div className="relative flex items-center justify-center min-h-[500px]">
+          {/* Soft Ambient Radiance in Background */}
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+            <div className="w-[85%] h-[85%] rounded-full bg-gradient-to-tr from-[#dd0403]/[0.04] via-[#dd0403]/[0.015] to-transparent blur-3xl" />
+            <div className="w-[60%] h-[60%] rounded-full border border-black/[0.03] animate-[spin_60s_linear_infinite]" />
           </div>
+
+          {/* Pure Frameless 3D Illustration */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 1.03, y: -15 }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              className="relative z-10 w-full flex items-center justify-center"
+            >
+              <img
+                src={activeOutcome.image}
+                alt={activeOutcome.title}
+                className="w-full max-h-[460px] object-contain select-none transition-transform duration-500 hover:scale-[1.02]"
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* ========================================================= */}
+      {/* 2. MOBILE & TABLET LAYOUT (lg:hidden - TAILORED MOBILE CARD) */}
+      {/* ========================================================= */}
+      <div className="block lg:hidden w-full">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeIndex}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col md:gap-5 gap-3 rounded-2xl border border-neutral-200 bg-white px-3 py-4 sm:p-7 shadow-xs"
+          >
+            {/* Top Bar: Icon + Category Tag */}
+            <div className="flex items-center justify-between border-b border-neutral-100 pb-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-[#dd0403]/10 text-[#dd0403] flex items-center justify-center shrink-0">
+                  {Icon && <Icon size={16} strokeWidth={2} />}
+                </div>
+                <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#dd0403]">
+                  {activeOutcome.tag}
+                </span>
+              </div>
+            </div>
+
+            {/* Mobile Title */}
+            <h3 className="text-xl sm:text-2xl font-[400] text-[#111] leading-snug tracking-tight">
+              {activeOutcome.title}
+            </h3>
+
+            {/* Architectural Image Box with Radiant Background */}
+            <div className="relative w-full rounded-xl md:bg-gradient-to-b from-neutral-50 to-neutral-100/60 md:p-4 border border-neutral-100 flex items-center justify-center overflow-hidden min-h-[185px] sm:min-h-[260px]">
+              <div className="absolute inset-0 md:bg-[#dd0403]/5 blur-2xl pointer-events-none" />
+              <img
+                src={activeOutcome.image}
+                alt={activeOutcome.title}
+                className="relative z-10 w-full max-h-[220px] sm:max-h-[280px] object-contain select-none"
+              />
+            </div>
+
+            {/* Mobile Description */}
+            <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal hidden md:flex">
+              {activeOutcome.description}
+            </p>
+
+            {/* Key Highlights Checklist (Compact Grid for Mobile) */}
+            {/* {activeOutcome.highlights && activeOutcome.highlights.length > 0 && (
+              <div className="pt-2 border-t border-neutral-100 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {activeOutcome.highlights.map((h, i) => (
+                  <div key={i} className="flex items-center gap-2 text-xs text-neutral-700">
+                    <CheckCircle2 size={14} className="text-[#dd0403] shrink-0" />
+                    <span>{h}</span>
+                  </div>
+                ))}
+              </div>
+            )} */}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </div>
         </div>
       </div>
     </section>

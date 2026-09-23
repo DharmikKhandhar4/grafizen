@@ -4,7 +4,7 @@ export default function HeroConstellationSVG() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden -z-10 selection:bg-transparent">
       {/* TOP RIGHT CONSTELLATION MESH */}
-      <div className="absolute -top-12 -right-12 w-[350px] sm:w-[500px] lg:w-[650px] h-[350px] sm:h-[500px] lg:h-[650px] opacity-80 sm:opacity-60">
+      <div className="absolute -top-12 -right-12 w-[350px] sm:w-[500px] lg:w-[650px] h-[350px] sm:h-[500px] lg:h-[650px] opacity-80 sm:opacity-60 hidden md:block">
         <svg viewBox="0 0 600 600" className="w-full h-full stroke-[#dd0403]/45" fill="none">
           <defs>
             <radialGradient id="redGlowRight" cx="70%" cy="30%" r="60%">

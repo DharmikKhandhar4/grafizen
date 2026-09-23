@@ -3,40 +3,45 @@ import { motion } from "framer-motion";
 import { Zap, ShieldCheck, Users2, Trophy } from "lucide-react";
 
 const reasons = [
-  {
-    id: "agile",
-    title: "Agile Sprint Delivery",
-    description:
-      "Two-week development cycles with total progress transparency and continuous delivery.",
-    // Card tilt and translation like in image
-    rotation: "-rotate-6",
-    hoverRotation: "hover:-rotate-2",
-    translateY: "lg:-translate-y-4",
-    // 3D Top Badge Sphere colors
-    topOrbGradient: "from-[#eab308] to-[#ca8a04]",
-    topOrbShadow: "shadow-[0_8px_16px_rgba(202,138,4,0.35)]",
-    // Pastel Inner Card Background
-    cardBg: "bg-[#fefce8]", // Soft pastel yellow
-    cardBorder: "border-[#fef08a]",
-    icon: Zap,
-    iconColor: "text-[#ca8a04]",
-    iconBg: "bg-[#fef08a]/60",
-  },
+ {
+  id: "agile",
+  title: "Agile Sprint Delivery",
+  description:
+    "Two-week development cycles with total progress transparency and continuous delivery.",
+
+  // Card tilt and translation like in image
+  rotation: "-rotate-6",
+  hoverRotation: "-rotate-2",
+  translateY: "lg:-translate-y-4",
+  translateX: "-translate-x-4",
+
+  // 3D Top Badge Sphere colors
+  topOrbGradient: "from-[#dd0403] to-[#a90302]",
+  topOrbShadow: "shadow-[0_8px_16px_rgba(221,4,3,0.35)]",
+
+  // Pastel Inner Card Background
+  cardBg: "bg-[#fef2f2]", // Soft pastel red
+  cardBorder: "border-[#fecaca]",
+  icon: Zap,
+  iconColor: "text-[#dd0403]",
+  iconBg: "bg-[#fecaca]/60",
+},
   {
     id: "security",
     title: "Enterprise Security Standards",
     description:
       "Built-in compliance with ISO 27001, GDPR, SOC 2, and end-to-end encryption protocols.",
     rotation: "rotate-6",
-    hoverRotation: "hover:rotate-2",
+    hoverRotation: "rotate-2",
     translateY: "lg:translate-y-6",
-    topOrbGradient: "from-[#8b5cf6] to-[#6d28d9]",
-    topOrbShadow: "shadow-[0_8px_16px_rgba(109,40,217,0.35)]",
-    cardBg: "bg-[#faf5ff]", // Soft pastel purple
+    translateX: "translate-x-4",
+    topOrbGradient: "from-[#dd0403] to-[#a90302]",
+    topOrbShadow: "shadow-[0_8px_16px_rgba(221,4,3,0.35)]",
+    cardBg: "bg-[#fef2f2]", // Soft pastel purple
     cardBorder: "border-[#f3e8ff]",
     icon: ShieldCheck,
-    iconColor: "text-[#7c3aed]",
-    iconBg: "bg-[#f3e8ff]",
+    iconColor: "text-[#dd0403]",
+  iconBg: "bg-[#fecaca]/60",
   },
   {
     id: "engagement",
@@ -44,15 +49,16 @@ const reasons = [
     description:
       "Scale your project with dedicated engineering teams, project-based contracts, or staff augmentation.",
     rotation: "-rotate-3",
-    hoverRotation: "hover:rotate-0",
+    hoverRotation: "md:rotate-0 -rotate-3",
     translateY: "lg:translate-y-2",
-    topOrbGradient: "from-[#ec4899] to-[#db2777]",
-    topOrbShadow: "shadow-[0_8px_16px_rgba(219,39,119,0.35)]",
-    cardBg: "bg-[#fdf2f8]", // Soft pastel pink
+    translateX: "-translate-x-4",
+    topOrbGradient: "from-[#dd0403] to-[#a90302]",
+    topOrbShadow: "shadow-[0_8px_16px_rgba(221,4,3,0.35)]",
+    cardBg: "bg-[#fef2f2]", // Soft pastel pink
     cardBorder: "border-[#fce7f3]",
     icon: Users2,
-    iconColor: "text-[#db2777]",
-    iconBg: "bg-[#fce7f3]",
+iconColor: "text-[#dd0403]",
+  iconBg: "bg-[#fecaca]/60",
   },
   {
     id: "track-record",
@@ -60,21 +66,22 @@ const reasons = [
     description:
       "99.8% on-time deployment rate with proactive post-launch maintenance and technical support.",
     rotation: "rotate-4",
-    hoverRotation: "hover:rotate-1",
+    hoverRotation: "rotate-2",
     translateY: "lg:translate-y-12",
-    topOrbGradient: "from-[#38bdf8] to-[#0284c7]",
-    topOrbShadow: "shadow-[0_8px_16px_rgba(2,132,199,0.35)]",
-    cardBg: "bg-[#f0f9ff]", // Soft pastel sky blue
+    translateX: "translate-x-4",
+    topOrbGradient: "from-[#dd0403] to-[#a90302]",
+    topOrbShadow: "shadow-[0_8px_16px_rgba(221,4,3,0.35)]",
+    cardBg: "bg-[#fef2f2]", // Soft pastel sky blue
     cardBorder: "border-[#e0f2fe]",
     icon: Trophy,
-    iconColor: "text-[#0284c7]",
-    iconBg: "bg-[#e0f2fe]",
+  iconColor: "text-[#dd0403]",
+  iconBg: "bg-[#fecaca]/60",
   },
 ];
 
 export default function WhyChooseSoftware() {
   return (
-    <section className="relative w-full bg-white py-24 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
+    <section className="relative w-full bg-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
       
       {/* Background Subtle Gray Horizontal Notebook/Blueprint Lines (Identical to image) */}
       <div className="pointer-events-none absolute inset-0 flex flex-col justify-around opacity-40">
@@ -86,11 +93,11 @@ export default function WhyChooseSoftware() {
       <div className="relative z-10 max-w-6xl mx-auto">
         
         {/* Section Heading matching reference typography */}
-        <div className="text-center max-w-2xl mx-auto mb-20 sm:mb-28">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[600]  text-slate-900 tracking-tight">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 lg:mb-24">
+          <h2 className="text-[28px] sm:text-4xl lg:text-5xl font-[600]  text-black tracking-tight">
             Why <span className="italic text-[#dd0403] ">Choose</span> Grafizen?
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-black/55 font-[300] leading-relaxed">
+          <p className="mt-3 text-[13px] sm:text-base text-black/55 font-[300] leading-relaxed">
             Here's why forward-thinking enterprises choose us to engineer their digital systems:
           </p>
         </div>
@@ -111,7 +118,7 @@ export default function WhyChooseSoftware() {
         </svg>
 
         {/* Floating Tilted Cards Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-14 xl:gap-20 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-14 xl:gap-20 max-w-4xl mx-auto">
           {reasons.map((item, idx) => {
             const Icon = item.icon;
 
@@ -122,17 +129,17 @@ export default function WhyChooseSoftware() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
-                className={`relative flex justify-center ${item.translateY}`}
+                className={`relative flex justify-center ${item.translateY}  ${item.translateX}`}
               >
                 {/* Main White Elevated Card with Shadow and Tilt */}
                 <div
                   className={`
-                    relative w-full max-w-[340px] sm:max-w-[360px]
-                    rounded-[2rem] bg-white p-3 pt-8
+                    relative w-full max-w-[290px] sm:max-w-[360px]
+                    md:rounded-[2rem] rounded-[1.3rem] bg-white p-3 pt-8
                     border border-slate-100
                     shadow-[0_20px_50px_rgba(0,0,0,0.08)]
                     transition-all duration-500 ease-out
-                    ${item.rotation} ${item.hoverRotation}
+                    ${item.rotation.replace('rotate', 'sm:rotate')} ${item.hoverRotation}
                     hover:scale-105 hover:shadow-[0_30px_70px_rgba(0,0,0,0.14)]
                     cursor-pointer group
                   `}
@@ -156,9 +163,9 @@ export default function WhyChooseSoftware() {
                   {/* Inner Pastel Colored Content Pod */}
                   <div
                     className={`
-                      w-full rounded-[1.5rem] p-6 sm:p-7
+                      w-full md:rounded-[1.5rem] rounded-[1rem] p-3 sm:p-7
                       ${item.cardBg} border ${item.cardBorder}
-                      flex flex-col items-start text-left min-h-[220px] justify-between
+                      flex flex-col items-start text-left md:min-h-[220px] justify-between
                       transition-colors duration-300
                     `}
                   >
@@ -174,7 +181,7 @@ export default function WhyChooseSoftware() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xl font-[400] text-black tracking-tight leading-snug mb-3">
+                      <h3 className="md:text-xl text-[19px] font-[400] text-black tracking-tight leading-snug md:mb-3 mb-1">
                         {item.title}
                       </h3>
 

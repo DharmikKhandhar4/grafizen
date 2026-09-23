@@ -107,7 +107,7 @@ const MobileAppWhyChoose = () => {
           {/* Heading */}
           <motion.h2
             variants={itemVariants}
-            className="text-[34px] font-[600] leading-[1.08] tracking-[-0.04em] text-black sm:text-[42px] md:text-[50px] lg:text-[48px]"
+            className="text-[28px] font-[600] leading-[1.08] tracking-[-0.04em] text-black sm:text-[42px] md:text-[50px] lg:text-[48px]"
           >
             Why Choose{" "}
             <span className="text-[#dd0403]">Grafizen</span>
@@ -472,92 +472,151 @@ const MobileAppWhyChoose = () => {
           {/* =================================================
               MOBILE / TABLET VERSION
           ================================================== */}
-          <div className="relative z-10 lg:hidden">
+         <div className="relative z-10 lg:hidden">
 
-            {/* Center Visual */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                scale: 0.9,
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-              }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-              }}
-              className="mx-auto mb-12 flex h-[310px] w-[310px] items-center justify-center sm:h-[400px] sm:w-[400px]"
-            >
-              <div className="relative flex h-full w-full items-center justify-center rounded-full border-[2px] border-[#dd0403]">
+  {/* First 2 Mobile Items */}
+  <div className="mb-9 grid grid-cols-1 gap-3 sm:grid-cols-2  pt-3">
+    {leftItems.slice(0, 2).map((item, index) => {
+      const Icon = item.icon;
 
-                <div className="absolute inset-5 rounded-full bg-[#dd0403]/[0.035] blur-2xl" />
-
-                <img
-                  src="/images/mobile-app.png"
-                  alt="Mobile App Development"
-                  className="relative z-10 h-[245px] w-[245px] object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.15)] sm:h-[320px] sm:w-[320px]"
-                />
-              </div>
-            </motion.div>
-
-            {/* Mobile Items */}
-            <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">
-
-              {[...leftItems, ...rightItems].map((item, index) => {
-                const Icon = item.icon;
-
-                return (
-                  <motion.div
-                    key={item.title}
-                    initial={{
-                      opacity: 0,
-                      y: 25,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                      amount: 0.15,
-                    }}
-                    transition={{
-                      duration: 0.55,
-                      delay: index * 0.08,
-                    }}
-                    className="flex items-start gap-4"
-                  >
-                    <div className="flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full bg-[#dd0403]/[0.06]">
-                      <Icon
-                        size={29}
-                        strokeWidth={1.8}
-                        className="text-[#dd0403]"
-                      />
-                    </div>
-
-                    <div>
-                      <h3 className="text-[17px] font-[600] leading-[1.15] text-black">
-                        {item.title}
-
-                        {item.title2 && (
-                          <>
-                            <br />
-                            {item.title2}
-                          </>
-                        )}
-                      </h3>
-
-                      <p className="mt-2 text-[13px] leading-5 text-[#475569]">
-                        {item.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+      return (
+        <motion.div
+          key={item.title}
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.15,
+          }}
+          transition={{
+            duration: 0.55,
+            delay: index * 0.08,
+          }}
+          className=" flex items-start flex-col gap-0  border border-dotted   border-[#dd0403] p-3 rounded-2xl"
+        >
+         <div className=" flex items-center gap-2 ">
+           <div className="flex h-[35px] w-[35px] shrink-0 items-center justify-center rounded-full bg-[#dd0403]/[0.06] md:h-[62px] md:w-[62px]">
+            <Icon
+              strokeWidth={1.8}
+              className="size-5 text-[#dd0403] md:size-6"
+            />
           </div>
+
+          <div>
+            <h3 className="text-[15px] font-[400] leading-[1.15] text-black">
+              {item.title}
+
+              {item.title2 && (
+                <>
+                  <br className="hidden md:block" />
+                  {item.title2}
+                </>
+              )}
+            </h3>
+
+          
+          </div>
+         </div>
+            <p className="mt-2 text-[13px] leading-5 font-[300] text-black/55">
+              {item.description}
+            </p>
+        </motion.div>
+      );
+    })}
+  </div>
+
+  {/* Center Visual */}
+  <motion.div
+    initial={{
+      opacity: 0,
+      scale: 0.9,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+    }}
+    viewport={{ once: true }}
+    transition={{
+      duration: 0.7,
+    }}
+    className="mx-auto mb-9 flex h-[210px] w-[210px] items-center justify-center sm:h-[400px] sm:w-[400px] sm:mb-12"
+  >
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border-[0.5px] border-dotted border-[#dd0403]">
+      <div className="absolute inset-5 rounded-full bg-[#dd0403]/[0.035] blur-2xl" />
+
+      <img
+        src={whychoose}
+        alt="Mobile App Development"
+        className="relative z-10 h-[180px] w-[180px] zoom-115 object-cover drop-shadow-[0_20px_30px_rgba(0,0,0,0.15)] sm:h-[320px] sm:w-[320px]"
+      />
+    </div>
+  </motion.div>
+
+  {/* Last 2 Mobile Items */}
+  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+    {rightItems.slice(0, 2).map((item, index) => {
+      const Icon = item.icon;
+
+      return (
+        <motion.div
+          key={item.title}
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.15,
+          }}
+          transition={{
+            duration: 0.55,
+            delay: index * 0.08,
+          }}
+          className="flex items-start flex-col gap-0  border border-dotted   border-[#dd0403] p-3 rounded-2xl"
+        >
+         <div className=" flex gap-2 items-center ">
+           <div className="flex  h-[35px] w-[35px] shrink-0 items-center justify-center rounded-full bg-[#dd0403]/[0.06] md:h-[62px] md:w-[62px]">
+            <Icon
+              strokeWidth={1.8}
+              className="size-5 text-[#dd0403] md:size-6"
+            />
+          </div>
+
+          <div>
+            <h3 className="text-[17px] font-[400] leading-[1.15] text-black">
+              {item.title}
+
+              {item.title2 && (
+                <>
+                  <br className="hidden md:block" />
+                  {item.title2}
+                </>
+              )}
+            </h3>
+
+          </div>
+         </div>
+          
+            <p className="mt-2 text-[13px] leading-5 text-black/55 font-[300]">
+              {item.description}
+            </p>
+           
+        </motion.div>
+      );
+    })}
+  </div>
+
+</div> 
         </div>
       </div>
     </section>

@@ -274,12 +274,12 @@ export default function SocialMediaHero() {
           </p>
 
           {/* 5. ACTION BUTTONS (order-5 on mobile, lg:order-3 on desktop) */}
-          <div className="order-5 lg:order-3 mt-6 sm:mt-8 flex  sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full sm:w-auto">
+          <div className="order-5 lg:order-3 mt-6 sm:mt-8 flex  sm:flex-row justify-center items-center gap-3 sm:gap-3 w-full sm:w-auto">
             <a
               href="https://grafizen.com/contact-us"
-              className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-xl bg-[#dd0403] px-6 py-3 text-xs sm:text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(221,4,3,0.22)]  "
+              className="group inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-xl bg-[#dd0403] px-6 py-3 text-xs sm:text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(221,4,3,0.22)]  "
             >
-               <span className=" md:flex hidden whitespace-nowrap "> Book Your  Free</span>   Consultation
+               <span className=" md:flex hidden whitespace-nowrap  "> Book Your  Free</span>   Consultation
               <ArrowRight
                 size={16}
                 className="transition-transform duration-300 group-hover:translate-x-1"

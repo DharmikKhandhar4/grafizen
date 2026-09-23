@@ -93,7 +93,7 @@ export default function MobileAppOverview() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="mb-12 lg:mb-6"
+          className="mb-5 lg:mb-6"
         >
           <div className="flex items-center gap-3">
             <span className="h-[2px] w-8 bg-[#dd0403]" />
@@ -107,8 +107,8 @@ export default function MobileAppOverview() {
         {/* =========================
             MAIN CONTENT
         ========================== */}
-        <div className=" grid grid-cols-2 items-end ">
-              <h2 className="max-w-[750px] text-3xl font-[600] leading-[1.12] tracking-tight text-black sm:text-4xl lg:text-[48px] ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-4">
+              <h2 className="max-w-[750px] text-[28px] font-[600] leading-[1.15] tracking-tight text-black sm:text-3xl lg:text-[48px]">
               Custom Mobile App{" "}
               <span className="text-[#dd0403]">
                 Development
@@ -117,13 +117,13 @@ export default function MobileAppOverview() {
             </h2>
 
             {/* Sub Heading */}
-            <h3 className="mt-6  text-right max-w-[680px] text-lg  leading-7 font-[300] text-black/50 sm:text-[14px]">
+            <h3 className="mt-2 lg:mt-6 text-left lg:text-right max-w-[680px] text-[14px] leading-6 font-[300] text-black/50 sm:text-[14px]">
               Partner with us for your startup and enterprise mobile app
               development.
             </h3>
 
         </div>
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20 mt-5">
+        <div className="grid items-start  sm:gap-10 lg:grid-cols-2 lg:gap-20 mt-5">
 
           {/* =========================
               LEFT CONTENT
@@ -133,11 +133,12 @@ export default function MobileAppOverview() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
+            className=" order-2 lg:order-none"
           >
             {/* Heading */}
         
             {/* Description */}
-            <div className="  max-w-[680px] mt-6 space-y-2 text-sm leading-5 font-[300] text-black/52 sm:text-[14px]">
+            <div className="  max-w-[680px] md:mt-6 space-y-2 text-[14px] leading-5 font-[300] text-black/52 sm:text-[14px]">
               <p>
                 We help you grow your business by developing the right custom
                 mobile app. A custom mobile app will be suitable for you if
@@ -148,7 +149,7 @@ export default function MobileAppOverview() {
 
               <p>
                 Our expert teams of app developers on{" "}
-                <span className="font-semibold text-black">
+                <span className="font-semibold text-black text-[14px]">
                   Android and iOS
                 </span>{" "}
                 platforms will help you to bring your dream to reality.
@@ -184,15 +185,15 @@ export default function MobileAppOverview() {
                     delay: index * 0.08,
                     duration: 0.5,
                   }}
-                  className="flex items-center gap-3"
+                  className="flex md:items-center items-start gap-3"
                 >
                   <CheckCircle2
                     size={16}
                     strokeWidth={2}
-                    className=" shrink-0 text-[#dd0403]"
+                    className=" shrink-0 text-[#dd0403] mt-1"
                   />
 
-                  <p className="text-sm leading-6 text-black/52 font-[300] sm:text-[14px]">
+                  <p className="text-[14px] md:leading-6 text-black/52 font-[300] sm:text-[14px]">
                     {point}
                   </p>
                 </motion.div>
@@ -225,7 +226,7 @@ export default function MobileAppOverview() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="relative flex min-h-[400px] items-center justify-center lg:h-[400px]"
+            className="   relative flex min-h-[280px] sm:min-h-[350px] items-center justify-center lg:h-[400px] order-1 lg:order-none"
           >
             {/* Red soft glow */}
             {/* <div className="absolute h-[330px] w-[330px] rounded-full bg-[#dd0403]/[0.055] blur-3xl sm:h-[430px] sm:w-[430px]" /> */}
@@ -237,7 +238,7 @@ export default function MobileAppOverview() {
             <motion.img
               src={mobileAppImage}
               alt="Custom mobile app development"
-              className="relative z-10 w-[290px] object-cover sm:w-[390px] lg:w-[490px]  lg:h-[400px]"
+              className="relative z-10 w-full max-w-[300px] object-cover sm:max-w-[350px] lg:max-w-[490px] lg:h-[400px]"
               animate={{
                 y: [0, -10, 0],
               }}

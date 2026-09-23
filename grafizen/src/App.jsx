@@ -24,9 +24,9 @@ function App() {
 
       {/* <MainSocialMediaMarketing /> */}
       {/* <MainSoftwaerDevelopmentCompany /> */}
-      <MainCustomSoftwear />
       {/* <MainEnterpriseSoftware /> */}
-      {/* <MobileAppDevlopment /> */}
+      {/* <MobileAppDevlopment />  */}
+      <MainCustomSoftwear />
     
     </>
 

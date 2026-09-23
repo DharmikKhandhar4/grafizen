@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Target,
@@ -12,6 +12,7 @@ import {
   Database,
   Cloud,
   ArrowUpRight,
+  ChevronDown,
 } from "lucide-react";
 
 const features = [
@@ -88,8 +89,17 @@ const floatingVariants = {
 };
 
 export default function WhyChooseGrafizen() {
+  const [openCards, setOpenCards] = useState({});
+
+  const toggleCard = (index) => {
+    setOpenCards((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
   return (
-    <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:pb-24 lg:pt-0">
+    <section className="relative overflow-hidden bg-white py-12 sm:py-16 md:py-20 lg:pb-24 lg:pt-0">
 
       {/* Background Glow */}
       <div className="pointer-events-none absolute left-[-180px] top-[20%] h-[360px] w-[360px] rounded-full bg-red-50/60 blur-3xl" />
@@ -109,7 +119,8 @@ export default function WhyChooseGrafizen() {
           className="
             grid
             items-center
-            gap-12
+            gap-2
+            sm:gap-12
             lg:grid-cols-[0.95fr_1fr_1.15fr]
             lg:gap-8
             xl:gap-12
@@ -122,31 +133,30 @@ export default function WhyChooseGrafizen() {
 
           <motion.div
             variants={itemVariants}
-            className="relative z-10"
+            className="relative z-10 w-full max-w-2xl mx-auto lg:max-w-none lg:mx-0"
           >
-
-            {/* Top Accent */}
-            {/* <div className="mb-5 flex items-center gap-2">
-              <span className="h-[5px] w-12 rounded-full bg-[#DD0403]" />
-              <span className="h-[5px] w-7 rounded-full bg-red-200" />
-            </div> */}
 
             {/* Main Heading */}
             <h2
               className="
                 max-w-xl
-                text-5xl
-                font-bold
-                leading-[1.1]
-                tracking-[-2px]
-                text-[#111827]
-                sm:text-6xl
+                text-[28px]
+                xs:text-[32px]
+                sm:text-4xl
+                md:text-5xl
                 lg:text-[48px]
                 xl:text-[48px]
+                font-[600]
+                md:font-bold
+                leading-[1.15]
+                lg:leading-[1.1]
+                tracking-tight
+                lg:tracking-[-2px]
+                text-[#111827]
               "
             >
               Why Choose
-              <span className="block text-[#DD0403]">
+              <span className="sm:inline md:block pl-1.5 md:pl-0 lg:pl-1.5 text-[#DD0403]">
                 Grafizen
               </span>
             </h2>
@@ -154,18 +164,17 @@ export default function WhyChooseGrafizen() {
             {/* Sub Heading */}
             <h3
               className="
-                      
-                          text-[13px]
-                          
-                     
-                        
-                mt-7
+                mt-3
+                sm:mt-4         
+                md:mt-7
                 max-w-lg
-                text-xl
+                text-lg
+                sm:text-xl
+                md:text-2xl
                 font-[400]
-                leading-7
+                leading-snug
+                sm:leading-7
                 text-black
-                sm:text-2xl
               "
             >
               What Makes Grafizen Reliable for Enterprise Software Development
@@ -174,24 +183,26 @@ export default function WhyChooseGrafizen() {
             {/* Description */}
             <p
               className="
-                mt-6
-                max-w-xl
-                text-base
-                leading-6
+                mt-4
+                sm:mt-6
+                md:max-w-xl
+                text-[13px]
+                md:leading-6
                 text-black/55
                 sm:text-[14px]
                 font-[300]
               "
             >
               Grafizen is a reliable partner for enterprise software
-              development, combining technical expertise with a client-focused
+              development, combining technical expertise with a
+              client-focused
               approach. We deliver scalable, secure solutions tailored to your
               business needs, with agile processes, strong communication, and
               ongoing support for long-term success.
             </p>
 
             {/* Mini Benefits */}
-            <div className="mt-9 flex  items-center gap-x-6 gap-y-5">
+            <div className="mt-7 sm:mt-9 flex items-center justify-between sm:justify-start gap-1.5 xs:gap-2 sm:gap-6 w-full">
 
               <MiniBenefit
                 icon={ShieldCheck}
@@ -199,7 +210,7 @@ export default function WhyChooseGrafizen() {
                 subtitle="Solutions"
               />
 
-              <div className="hidden h-10 w-px bg-gray-300 sm:block" />
+              <div className="h-6 sm:h-10 w-px bg-gray-200 sm:bg-gray-300 shrink-0" />
 
               <MiniBenefit
                 icon={Code2}
@@ -207,7 +218,7 @@ export default function WhyChooseGrafizen() {
                 subtitle="Team"
               />
 
-              <div className="hidden h-10 w-px bg-gray-300 sm:block" />
+              <div className="h-6 sm:h-10 w-px bg-gray-200 sm:bg-gray-300 shrink-0" />
 
               <MiniBenefit
                 icon={Server}
@@ -229,13 +240,25 @@ export default function WhyChooseGrafizen() {
             className="
               relative
               flex
-              min-h-[450px]
+              min-h-[300px]
+              xs:min-h-[340px]
+              sm:min-h-[390px]
+              md:min-h-[430px]
+              lg:min-h-[450px]
+              w-full
+              max-w-[340px]
+              xs:max-w-[380px]
+              sm:max-w-[460px]
+              md:max-w-[500px]
+              lg:max-w-none
+              mx-auto
               items-center
               justify-center
+              my-2
+              sm:my-4
+              lg:my-0
             "
           >
-
-           
 
             {/* Main Image */}
             <div
@@ -244,17 +267,28 @@ export default function WhyChooseGrafizen() {
                 z-10
                 h-[280px]
                 w-[280px]
+                xs:h-[250px]
+                xs:w-[250px]
+                sm:h-[310px]
+                sm:w-[310px]
+                md:h-[350px]
+                md:w-[350px]
+                lg:h-[280px]
+                lg:w-[280px]
+                xl:h-[370px]
+                xl:w-[370px]
                 overflow-hidden
                 rounded-full
-                border-[14px]
+                border-[8px]
+                xs:border-[10px]
+                sm:border-[12px]
+                lg:border-[14px]
                 border-white
                 bg-gradient-to-br
                 from-gray-100
                 via-white
                 to-red-50
                 shadow-[0_25px_70px_rgba(15,23,42,0.12)]
-                sm:h-[370px]
-                sm:w-[370px]
               "
             >
 
@@ -288,11 +322,22 @@ export default function WhyChooseGrafizen() {
               className="
                 absolute
                 right-[2%]
-                top-[17%]
+                xs:right-[4%]
+                sm:right-[6%]
+                md:right-[10%]
+                lg:right-[2%]
+                xl:right-[4%]
+                top-[12%]
+                sm:top-[14%]
+                lg:top-[17%]
                 z-20
                 flex
-                h-20
-                w-20
+                h-14
+                w-14
+                sm:h-16
+                sm:w-16
+                xl:h-20
+                xl:w-20
                 items-center
                 justify-center
                 rounded-full
@@ -300,24 +345,29 @@ export default function WhyChooseGrafizen() {
                 border-red-100
                 bg-white
                 shadow-[0_15px_40px_rgba(15,23,42,0.12)]
-                sm:right-[4%]
-                sm:h-16
-                sm:w-16
               "
             >
 
               <div
                 className="
                   flex
-                  h-14
-                  w-14
+                  h-10
+                  w-10
+                  sm:h-12
+                  sm:w-12
+                  xl:h-14
+                  xl:w-14
                   items-center
                   justify-center
                   rounded-full
                   bg-red-50
                 "
               >
-                <img src="./image/customsoftwear/insurance.png"className="  rounded-2xl h-10"  />
+                <img
+                  src="./image/customsoftwear/insurance.png"
+                  alt="Security"
+                  className="rounded-2xl h-6 sm:h-8 xl:h-10 object-contain"
+                />
                
               </div>
 
@@ -333,12 +383,23 @@ export default function WhyChooseGrafizen() {
               animate="animate"
               className="
                 absolute
-                bottom-[8%]
-                left-[3%]
+                bottom-[6%]
+                sm:bottom-[7%]
+                lg:bottom-[8%]
+                left-[2%]
+                xs:left-[4%]
+                sm:left-[6%]
+                md:left-[10%]
+                lg:left-[1%]
+                xl:left-[3%]
                 z-20
                 flex
-                h-20
-                w-24
+                h-14
+                w-16
+                sm:h-16
+                sm:w-20
+                xl:h-20
+                xl:w-24
                 items-center
                 justify-center
                 rounded-2xl
@@ -346,29 +407,28 @@ export default function WhyChooseGrafizen() {
                 border-gray-100
                 bg-white
                 shadow-[0_15px_40px_rgba(15,23,42,0.10)]
-                sm:h-18
-                sm:w-20
               "
             >
 
-              <div className="relative">
-
-                {/* <Server
-                  size={43}
-                  strokeWidth={1.5}
-                  className="text-[#111827]"
-                /> */}
-                <img src="./image/customsoftwear/softwear2.png"className="  rounded-2xl"  />
-              
+              <div className="relative flex items-center justify-center">
+                <img
+                  src="./image/customsoftwear/softwear2.png"
+                  alt="Server"
+                  className="rounded-xl h-8 sm:h-10 xl:h-12 object-contain"
+                />
 
                 <span
                   className="
                     absolute
-                    -right-3
-                    -top-2
+                    -right-2.5
+                    -top-2.5
                     flex
-                    h-7
-                    w-7
+                    h-5
+                    w-5
+                    sm:h-6
+                    sm:w-6
+                    xl:h-7
+                    xl:w-7
                     items-center
                     justify-center
                     rounded-full
@@ -376,7 +436,7 @@ export default function WhyChooseGrafizen() {
                     text-white
                   "
                 >
-                  <Cloud size={14} />
+                  <Cloud className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </span>
 
               </div>
@@ -393,12 +453,23 @@ export default function WhyChooseGrafizen() {
               animate="animate"
               className="
                 absolute
-                bottom-[5%]
-                right-[3%]
+                bottom-[4%]
+                sm:bottom-[5%]
+                lg:bottom-[5%]
+                right-[2%]
+                xs:right-[4%]
+                sm:right-[6%]
+                md:right-[10%]
+                lg:right-[1%]
+                xl:right-[3%]
                 z-20
                 flex
-                h-20
-                w-24
+                h-14
+                w-16
+                sm:h-16
+                sm:w-20
+                xl:h-20
+                xl:w-24
                 items-center
                 justify-center
                 rounded-2xl
@@ -406,18 +477,15 @@ export default function WhyChooseGrafizen() {
                 border-gray-100
                 bg-white
                 shadow-[0_15px_40px_rgba(15,23,42,0.10)]
-                sm:h-18
-                sm:w-20
               "
             >
 
-              <div className="relative">
-
-       
-                  <img src="./image/customsoftwear/database.png"className="  h-12"  />
-
-        
-
+              <div className="relative flex items-center justify-center">
+                <img
+                  src="./image/customsoftwear/database.png"
+                  alt="Database"
+                  className="h-7 sm:h-9 xl:h-12 object-contain"
+                />
               </div>
 
             </motion.div>
@@ -431,25 +499,41 @@ export default function WhyChooseGrafizen() {
 
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 gap-2 sm:grid-cols-2"
+            className="
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              gap-2.5
+              sm:gap-3
+              lg:gap-2
+              xl:gap-2.5
+              max-w-2xl
+              md:max-w-3xl
+              lg:max-w-none
+              mx-auto
+              w-full
+            "
           >
 
             {features.map((feature, index) => {
 
               const Icon = feature.icon;
+              const isLast = index === features.length - 1;
+              const isOpen = !!openCards[index];
 
               return (
                 <motion.div
                   key={feature.title}
                   variants={itemVariants}
                   whileHover={{
-                    y: -5,
+                    y: -4,
                     boxShadow:
                       "0 20px 45px rgba(15, 23, 42, 0.08)",
                   }}
                   transition={{
                     duration: 0.25,
                   }}
+                  onClick={() => toggleCard(index)}
                   className={`
                     group
                     relative
@@ -459,35 +543,82 @@ export default function WhyChooseGrafizen() {
                     border-[#E5E7EB]
                     bg-white
                     p-3
+                    sm:p-3.5
+                    lg:p-3
+                    xl:p-3.5
                     transition-all
                     duration-300
                     hover:border-red-200
+                    cursor-pointer
+                    sm:cursor-default
                     ${
-                      index === features.length - 1
+                      isLast
                         ? "sm:col-span-2"
                         : ""
                     }
                   `}
                 >
 
-                  {/* Red Vertical Accent */}
-                  {/* <span
-                    className="
-                      absolute
-                      left-0
-                      top-5
-                      h-9
-                      w-[3px]
-                      rounded-r-full
-                      bg-[#DD0403]
-                    "
-                  /> */}
+                  <div className="flex gap-3 sm:gap-4 items-center justify-between">
 
-                  <div className="flex gap-4 items-center ">
+                    <div className="flex gap-3 sm:gap-4 items-center">
 
-                    {/* Icon */}
+                      {/* Icon */}
+                      <div
+                        className="
+                          flex
+                          h-6
+                          w-6
+                          sm:h-8
+                          sm:w-8
+                          lg:h-6
+                          lg:w-6
+                          xl:h-7
+                          xl:w-7
+                          shrink-0
+                          items-center
+                          justify-center
+                          md:rounded-full
+                          rounded-md
+                          bg-[#FEF2F2]
+                          transition-all
+                          duration-300
+                          group-hover:bg-[#DD0403]
+                        "
+                      >
+                        <Icon
+                          size={16}
+                          strokeWidth={1.8}
+                          className="
+                            text-[#DD0403]
+                            transition-colors
+                            duration-300
+                            group-hover:text-white
+                          "
+                        />
+                      </div>
+
+                      {/* Feature Content */}
+                      <div>
+                        <h4
+                          className="
+                            text-[14px]
+                            sm:text-[15px]
+                            font-[500]
+                            leading-5
+                            text-[#111827]
+                          "
+                        >
+                          {feature.title}
+                        </h4>
+                      </div>
+
+                    </div>
+
+                    {/* Mobile Dropdown Chevron (Visible on mobile for all cards) */}
                     <div
-                      className="
+                      className={`
+                        sm:hidden
                         flex
                         h-6
                         w-6
@@ -495,75 +626,46 @@ export default function WhyChooseGrafizen() {
                         items-center
                         justify-center
                         rounded-full
-                        bg-[#FEF2F2]
+                        
+                        text-[#DD0403]
                         transition-all
                         duration-300
-                        group-hover:bg-[#DD0403]
-                      "
+                        ${isOpen ? "rotate-180 bg-[#DD0403] text-white" : ""}
+                      `}
                     >
-                      <Icon
-                        size={18}
-                        strokeWidth={1.8}
-                        className="
-                          text-[#DD0403]
-                          transition-colors
-                          duration-300
-                          group-hover:text-white
-                        "
-                      />
+                      <ChevronDown size={14} strokeWidth={2.5} />
                     </div>
-
-
-                    {/* Feature Content */}
-                    <div>
-
-                      <h4
-                        className="
-                          text-[15px]
-                          font-[400]
-                          leading-5
-                          text-[#111827]
-                        "
-                      >
-                        {feature.title}
-                      </h4>
-
-                
-
-                    </div>
-                    
 
                   </div>
-                        <p
+
+                  {/* Feature Text / Details (Collapsible on mobile, always visible on tablet/desktop) */}
+                  <div
+                    className={`
+                      grid
+                      transition-all
+                      duration-300
+                      ease-in-out
+                      ${
+                        isOpen
+                          ? "grid-rows-[1fr] opacity-100 mt-2"
+                          : "grid-rows-[0fr] opacity-0 mt-0 sm:grid-rows-[1fr] sm:opacity-100 sm:mt-2"
+                      }
+                    `}
+                  >
+                    <div className="overflow-hidden">
+                      <p
                         className="
-                          mt-2
-                          text-[13px]
-                          leading-4
+                          text-[12px]
+                          sm:text-[13px]
+                          leading-relaxed
                           text-black/55
                           font-[300]
                         "
                       >
                         {feature.text}
                       </p>
-
-
-                  {/* Hover Arrow */}
-                  {/* <div
-                    className="
-                      absolute
-                      bottom-4
-                      right-4
-                      opacity-0
-                      transition-all
-                      duration-300
-                      group-hover:opacity-100
-                    "
-                  >
-                    <ArrowUpRight
-                      size={17}
-                      className="text-[#DD0403]"
-                    />
-                  </div> */}
+                    </div>
+                  </div>
 
                 </motion.div>
               );
@@ -589,13 +691,16 @@ function MiniBenefit({
   subtitle,
 }) {
   return (
-    <div className="flex items-center gap-2.5">
+    <div className="flex items-center gap-1.5 xs:gap-2 sm:gap-2.5 shrink-0">
 
       <div
         className="
           flex
-          h-9
-          w-9
+          h-7
+          w-7
+          sm:h-9
+          sm:w-9
+          shrink-0
           items-center
           justify-center
           rounded-full
@@ -603,9 +708,8 @@ function MiniBenefit({
         "
       >
         <Icon
-          size={19}
           strokeWidth={1.8}
-          className="text-[#DD0403]"
+          className="text-[#DD0403] h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-[19px] sm:w-[19px]"
         />
       </div>
 
@@ -613,9 +717,13 @@ function MiniBenefit({
 
         <p
           className="
-            text-sm
-            font-[400]
+            text-[11px]
+            xs:text-xs
+            sm:text-sm
+            font-[500]
+            sm:font-[400]
             text-black
+            whitespace-nowrap
           "
         >
           {title}
@@ -623,9 +731,12 @@ function MiniBenefit({
 
         <p
           className="
-            text-sm
+            text-[10px]
+            xs:text-[11px]
+            sm:text-sm
             text-black/55
             font-[300]
+            whitespace-nowrap
           "
         >
           {subtitle}

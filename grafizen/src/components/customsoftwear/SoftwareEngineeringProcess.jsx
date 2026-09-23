@@ -5,6 +5,7 @@ import cloudImg from "../../../public/image/customsoftwear/cloud.png";
 import legacyImg from "../../../public/image/customsoftwear/legacy.png";
 import apiImg from "../../../public/image/customsoftwear/api.png";
 import { motion } from "framer-motion";
+import { Globe,Smartphone,Cloud,RefreshCw,Plug, } from "lucide-react";
 
 const container = {
   hidden: {},
@@ -30,7 +31,7 @@ const services = [
     title: (
       <>
         CUSTOM WEB APP
-        <br />
+    
         DEVELOPMENT
       </>
     ),
@@ -51,7 +52,7 @@ const services = [
     title: (
       <>
         MOBILE APP
-        <br />
+  
         ENGINEERING
       </>
     ),
@@ -73,7 +74,7 @@ const services = [
     title: (
       <>
         CLOUD & DEVOPS
-        <br />
+    
         INTEGRATION
       </>
     ),
@@ -96,7 +97,7 @@ const services = [
     title: (
       <>
         LEGACY SYSTEM
-        <br />
+       
         MODERNIZATION
       </>
     ),
@@ -123,7 +124,7 @@ const services = [
     title: (
       <>
         API & ENTERPRISE
-        <br />
+       
         INTEGRATION
       </>
     ),
@@ -141,6 +142,13 @@ const services = [
     image: apiImg,
   },
 ];
+const serviceIcons = {
+  web: Globe,
+  mobile: Smartphone,
+  cloud: Cloud,
+  legacy: RefreshCw,
+  api: Plug,
+};
 
 const ServiceCard = ({ service, index }) => {
   return (
@@ -148,7 +156,9 @@ const ServiceCard = ({ service, index }) => {
       className={`
         relative
         w-full
-        max-w-[190px]
+        md:max-w-[190px]
+        max-w-[230px]
+        min-h-[280px]
         rounded-[10px]
         border
         border-slate-500/80
@@ -156,11 +166,12 @@ const ServiceCard = ({ service, index }) => {
         px-3
         pb-4
         pt-3
-        shadow-[0_12px_25px_rgba(30,41,59,0.12)]
+        md:shadow-[0_12px_25px_rgba(30,41,59,0.12)]
         transition-all
         duration-300
         hover:-translate-y-1
         hover:shadow-[0_18px_35px_rgba(30,41,59,0.16)]
+         scrollbar-hide
         ${
           index % 2 === 0
             ? "lg:translate-y-7"
@@ -186,35 +197,58 @@ const ServiceCard = ({ service, index }) => {
       <p className="mt-1 text-center text-[12px] leading-[1.4] text-[black]/55">
         {service.description}
       </p>
+    </div>
+  );
+};
 
-      {/* Number */}
-      {/* <div className="absolute -bottom-5 left-1/2 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full border border-slate-300 bg-white text-[10px] font-bold text-slate-500 shadow-sm">
-        {service.number}
-      </div> */}
+/* ─── Mobile timeline card ─── */
+const MobileTimelineCard = ({ service, index, isLast }) => {
+  const Icon = serviceIcons[service.type];
+
+  return (
+    <div className="relative flex gap-4">
+      {/* Vertical timeline track */}
+      <div className="flex flex-col items-center ">
+        {!isLast && (
+      <div className=" w-px h-24  bg-[#dd0403] absolute  top-9.5  left-3 " />
+       )}
+
+        {/* Icon badge */}
+        <div className="relative z-10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#dd0403] text-white shadow-[0_0_0_3px_rgba(221,4,3,0.1)] mt-7">
+          <Icon size={14} strokeWidth={1.8} />
+        </div>
+
+        {/* Vertical connector */}
+        {/* {!isLast && (
+          <div className="w-px  flex-1 bg-gradient-to-b from-[#dd0403]/30 via-slate-200 to-slate-100  " />
+        )} */}
+      </div>
+
+      {/* Card */}
+      <div className="mb-5 flex-1 rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-slate-50/80 p-3 shadow-[0_4px_20px_rgba(15,23,42,0.06)] relative">
+      <div className=" w-7 h-px bg-[#dd0403]/20 absolute  top-9.5  -left-7 " />
+              <div className="flex">
+          <div className="pt-0.5 min-w-0">
+            {/* Title - one line */}
+            <h3 className="text-[13px] font-[400]  text-[#dd0403]">
+              {service.title}
+            </h3>
+
+            {/* Description */}
+            <p className="mt-1.5 text-[11px] leading-[1.45] text-black/45">
+              {service.description}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default function FullCycleEngineering() {
   return (
-    <section className="relative overflow-hidden bg-white py-14 md:py-16 lg:py-20">
-      {/* Decorative background */}
-      {/* <FloatingDots /> */}
-
+    <section className="relative overflow-hidden bg-white px-5 py-10 pt-16 md:py-16 lg:py-20">
       {/* Heading */}
-      {/* <div className="relative z-10 mx-auto max-w-5xl px-5 text-center">
-        <h2 className="text-[27px] font-[600] uppercase leading-[1.15] tracking-[-0.5px] text-slate-900 sm:text-[32px] md:text-[40px] lg:text-[48px]">
-          <span>
-            <span className="text-[#dd0403]">FULL-CYCLE</span>{" "}
-            SOFTWARE ENGINEERING
-          </span>
-          <br />
-          <span>
-            TAILORED TO{" "}
-            <span className="text-[#dd0403]">YOUR ARCHITECTURE</span>
-          </span>
-        </h2>
-      </div> */}
      <motion.div
           variants={container}
           initial="hidden"
@@ -227,19 +261,32 @@ export default function FullCycleEngineering() {
             <span className=""> Software Development Services </span>
           </motion.p>
 
-          <motion.h2
-            variants={fadeUp}
-            className="mt-3 sm:mt-4 text-2xl xs:text-3xl sm:text-[42px] lg:text-[48px] font-medium leading-tight sm:leading-[1] tracking-[-0.02em] text-[#111]"
-          >
-             <span className="text-[#dd0403] pr-2">FULL-CYCLE</span>
-          SOFTWARE ENGINEERING{" "}
-             TAILORED TO
-            <span className="text-[#dd0403] pl-2">YOUR ARCHITECTURE</span>
-          </motion.h2>
+         <motion.h2
+  variants={fadeUp}
+  className="
+    mt-3
+    text-[28px]
+    leading-[1.15]
+    tracking-[-0.02em]
+    font-[600]
+    text-[#111]
 
+    sm:mt-4
+    sm:text-[42px]
+    sm:leading-[1.05]
+
+    lg:text-[48px]
+    lg:leading-[1]
+  "
+>
+  <span className="text-[#dd0403]">
+    Full-Cycle
+  </span>{" "}
+  Software Development Solutions
+</motion.h2>
           <motion.p
             variants={fadeUp}
-            className="mx-auto mt-3 md:mt-6 max-w-[620px] text-xs xs:text-sm sm:text-[14px] font-[300] leading-relaxed sm:leading-4 text-black/50 "
+            className="mx-auto mt-3 md:mt-6 max-w-[620px] text-[13px]  xs:text-sm sm:text-[14px] font-[300]  sm:leading-4 text-black/50 "
           >
             From concept to deployment, we deliver end-to-end software solutions
             engineered for scalability, security, and performance — perfectly
@@ -247,58 +294,84 @@ export default function FullCycleEngineering() {
           </motion.p>
         </motion.div>   
 
-      {/* Main diagram */}
-      <div className="relative z-10 mx-auto mt-12 max-w-[1200px] px-5 lg:mt-10">
-        {/* Connection line */}
-        <svg
-          className="pointer-events-none absolute left-0 right-0 top-[34%] hidden h-[150px] w-full lg:block"
-          viewBox="0 0 1050 150"
-          preserveAspectRatio="none"
-          fill="none"
-        >
-          <path
-            d="
-              M 80 55
-              C 120 20, 170 20, 205 55
-              C 240 90, 285 90, 325 55
-              C 365 20, 410 20, 450 55
-              C 490 90, 540 90, 580 55
-              C 620 20, 665 20, 705 55
-              C 745 90, 800 90, 840 55
-              C 880 20, 930 20, 970 55
-            "
-            stroke="#64748b"
-            strokeWidth="1.3"
-            strokeDasharray="4 5"
+      {/* ═══════════ Mobile: Vertical Timeline (below sm) ═══════════ */}
+      <div className="relative z-10 mx-auto mt-10 max-w-[400px] sm:hidden">
+        {services.map((service, index) => (
+          <MobileTimelineCard
+            key={service.number}
+            service={service}
+            index={index}
+            isLast={index === services.length - 1}
           />
-
-          <circle cx="80" cy="55" r="4" fill="#dd0403" />
-          <circle cx="325" cy="55" r="4" fill="#3b82f6" />
-          <circle cx="580" cy="55" r="4" fill="#dd0403" />
-          <circle cx="840" cy="55" r="4" fill="#3b82f6" />
-          <circle cx="970" cy="55" r="4" fill="#dd0403" />
-        </svg>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 justify-items-center gap-10 sm:grid-cols-2 md:grid-cols-3 lg:flex lg:items-start lg:justify-between lg:gap-0">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={service.number}
-              service={service}
-              index={index}
-            />
-          ))}
-        </div>
+        ))}
       </div>
 
-      {/* Bottom decorative elements */}
-      {/* <div className="relative mx-auto mt-10 hidden h-8 max-w-[900px] lg:block">
-        <div className="absolute left-[5%] top-1/2 h-px w-20 bg-slate-300" />
-        <div className="absolute left-[13%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-slate-400 bg-white" />
+      {/* ═══════════ Desktop / Tablet: Original layout (sm+) ═══════════ */}
+    <div className="relative z-10 mx-auto mt-12 max-w-[1200px] md:px-5 lg:mt-10 hidden sm:block">
+  {/* Connection line */}
+  <svg
+    className="pointer-events-none absolute left-0 right-0 top-[34%] hidden h-[150px] w-full lg:block"
+    viewBox="0 0 1050 150"
+    preserveAspectRatio="none"
+    fill="none"
+  >
+    <path
+      d="
+        M 80 55
+        C 120 20, 170 20, 205 55
+        C 240 90, 285 90, 325 55
+        C 365 20, 410 20, 450 55
+        C 490 90, 540 90, 580 55
+        C 620 20, 665 20, 705 55
+        C 745 90, 800 90, 840 55
+        C 880 20, 930 20, 970 55
+      "
+      stroke="#64748b"
+      strokeWidth="1.3"
+      strokeDasharray="4 5"
+    />
 
-        <div className="absolute right-[5%] top-1/2 h-px w-20 bg-slate-300" />
-        <div className="absolute right-[13%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-slate-400 bg-white" />
-      </div> */}
+    <circle cx="80" cy="55" r="4" fill="#dd0403" />
+    <circle cx="325" cy="55" r="4" fill="#3b82f6" />
+    <circle cx="580" cy="55" r="4" fill="#dd0403" />
+    <circle cx="840" cy="55" r="4" fill="#3b82f6" />
+    <circle cx="970" cy="55" r="4" fill="#dd0403" />
+  </svg>
+
+  {/* Cards */}
+  <div
+    className="
+      grid grid-cols-2 justify-items-center
+      gap-10
+      pb-0
+
+      md:grid-cols-3
+
+      lg:flex
+      lg:items-start
+      lg:justify-between
+      lg:gap-0
+    "
+  >
+    {services.map((service, index) => (
+      <div
+        key={service.number}
+        className="
+          w-auto
+          md:min-w-[255px]
+          shrink
+        "
+      >
+        <ServiceCard
+          service={service}
+          index={index}
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
+     
     </section>
   );
 }

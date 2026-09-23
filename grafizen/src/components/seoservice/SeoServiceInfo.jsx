@@ -184,10 +184,10 @@ function ServiceCardLeft({ item }) {
           />
         </div>
         <div className="min-w-0 flex-1">
-          <h4 className="text-[13px] sm:text-[16px] font-[300] uppercase tracking-[-0.03em] text-black">
+          <h4 className="text-[13px] sm:text-[16px] font-[400] uppercase tracking-[-0.03em] text-black">
             {item.title}
           </h4>
-          <p className="mt-0.5 sm:mt-1 text-[11px] sm:text-[13px] leading-relaxed sm:leading-5 text-black/55">
+          <p className="mt-0.5 sm:mt-1 text-[11px] sm:text-[13px] leading-relaxed font-[300] sm:leading-5 text-black/55">
             {item.description}
           </p>
         </div>
@@ -210,10 +210,10 @@ function ServiceCardRight({ item }) {
           />
         </div>
         <div className="min-w-0 flex-1">
-          <h4 className="text-[13px] sm:text-[16px] font-[300]] uppercase tracking-[-0.03em] text-black">
+          <h4 className="text-[13px] sm:text-[16px] font-[400] uppercase tracking-[-0.03em] text-black">
             {item.title}
           </h4>
-          <p className="mt-0.5 sm:mt-1 text-[11px] sm:text-[13px] leading-relaxed sm:leading-5 text-black/55">
+          <p className="mt-0.5 sm:mt-1 text-[11px] sm:text-[13px] font-[300] leading-relaxed sm:leading-5 text-black/55">
             {item.description}
           </p>
         </div>
