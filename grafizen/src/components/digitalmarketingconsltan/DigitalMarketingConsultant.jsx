@@ -117,7 +117,7 @@ export default function ReplicatedHero() {
           <ImageBlock />
 
           <div className="space-y-5 pt-1">
-            <p className="text-[13px] sm:text-[15px] font-medium leading-[1.35] text-[#171717]">
+            <p className="text-[13px] sm:text-[15px] font-[300] leading-[1.35] text-black/55">
               Looking for a trusted Digital Marketing Consultant ? We create
               data-driven marketing strategies that help businesses increase
               online visibility, generate quality leads, and achieve measurable
@@ -127,10 +127,10 @@ export default function ReplicatedHero() {
             <div className="grid grid-cols-3 gap-2 border-t border-black/10 pt-4">
               {stats.map(([value, lineOne, lineTwo]) => (
                 <div key={value} className="min-w-0">
-                  <p className="text-[18px] xs:text-[20px] sm:text-[28px] font-extrabold text-center leading-none tracking-tight text-[#111111]">
+                  <p className="text-[18px] xs:text-[20px] sm:text-[28px] font-[400] text-center leading-none tracking-tight text-[#111111]">
                     {value}
                   </p>
-                  <p className="mt-1 break-words text-[9px] sm:text-[11px] text-center font-medium leading-[1.1] text-[#171717]">
+                  <p className="mt-1 break-words text-[9px] sm:text-[11px] text-center font-[300] leading-[1.1] text-black/55">
                     {lineOne}
                     {lineTwo && <span className="block">{lineTwo}</span>}
                   </p>

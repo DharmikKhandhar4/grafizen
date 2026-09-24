@@ -26,10 +26,10 @@ const SoftwareHero = () => {
       }`}
     >
       <motion.a
-        href="#contact"
+        href="https://grafizen.com/contact-us"
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.98 }}
-        className="group inline-flex md:min-h-11 w-full sm:w-auto items-center justify-center sm:justify-between gap-3 md:rounded-full rounded-xl border-2 border-[#dd0403] bg-[#dd0403] md:px-6 px-4 md:py-2.5 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#dd0403]/20 transition-all duration-300 hover:bg-black hover:border-black "
+        className="group inline-flex md:min-h-11 w-full sm:w-auto items-center justify-center sm:justify-between gap-3 md:rounded-full rounded-xl border-2 border-[#dd0403] bg-[#dd0403] md:px-6 px-4 md:py-2.5 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#dd0403]/20 transition-all duration-300  "
       >
         <span className=" flex gap-1"><span className=" hidden sm:flex">Book a Free </span> <span>Consultation</span></span>
         <span className="flex h-7 w-7 items-center justify-center rounded-full  text-white transition-all duration-300 group-hover:bg-[#dd0403] group-hover:text-white">
@@ -38,7 +38,7 @@ const SoftwareHero = () => {
       </motion.a>
 
       <motion.a
-        href="#solutions"
+        href="https://grafizen.com/services/ai-and-business-software-services"
         whileHover={{ x: 4 }}
         className="group inline-flex md:min-h-11 w-full sm:w-auto items-center justify-center gap-2 md:rounded-full rounded-xl border-2 border-[#dd0403] bg-white md:px-6 px-4 md:py-2.5 py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#dd0403] transition-colors hover:bg-[#dd0403] hover:text-white"
       >

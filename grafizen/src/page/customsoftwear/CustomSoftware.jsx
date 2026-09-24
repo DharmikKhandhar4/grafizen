@@ -11,10 +11,11 @@ import tech from "../../../public/image/digitalmarketing/clientlogo2.png";
 import google from "../../../public/image/digitalmarketing/clientlogo.png";
 
 const softwareWords = [
-  "Software Development ",
-  "Web Application ",
+ 
+ 
   "Cloud & SaaS Platforms",
   "Enterprise Software ",
+  "Software Solutions " ,
 ];
 
 export default function CustomSoftware() {
@@ -73,7 +74,7 @@ export default function CustomSoftware() {
               words={softwareWords}
               className="text-[#dd0403] text-center block "
             />{" "}
-            <br className="hidden sm:inline" />
+            {/* <br className="hidden sm:inline" /> */}
             for Scaling Businesses & Enterprises
           </motion.h1>
 
@@ -102,7 +103,7 @@ export default function CustomSoftware() {
             className="mt-8 flex  items-center   justify-center gap-4 sm:flex-row"
           >
             <motion.a
-              href="#contact"
+              href="https://grafizen.com/contact-us"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="
@@ -117,7 +118,7 @@ export default function CustomSoftware() {
             </motion.a>
 
             <motion.a
-              href="#case-studies"
+              href="https://grafizen.com/healthcare"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="

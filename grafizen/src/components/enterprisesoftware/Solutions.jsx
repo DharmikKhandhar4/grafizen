@@ -875,7 +875,7 @@ export default function Solutions() {
                     {/* Content */}
 
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
+                      <div className="flex items-center gap-2 mb-1  ">
                         <h3
                           className="
                             text-[15px]
@@ -1306,6 +1306,7 @@ export default function Solutions() {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
 

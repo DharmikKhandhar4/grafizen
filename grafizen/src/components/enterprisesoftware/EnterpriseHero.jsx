@@ -524,7 +524,7 @@ export default function EnterpriseHero() {
             {/* CTA */}
             <div className="mt-9 flex items-center gap-4">
               <motion.a
-                href="#contact"
+                href="https://grafizen.com/contact-us"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 className="group inline-flex h-12 items-center justify-center gap-3 rounded-full bg-[#dd0403] px-6 text-[14px] font-medium text-white shadow-[0_14px_35px_rgba(221,4,3,0.17)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#bd0303]"

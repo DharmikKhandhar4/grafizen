@@ -5,7 +5,7 @@ import { cn } from "../../lib/utils";
 export const FlipWords = ({
   words = [
     "Software Development ",
-    "Web Application ",
+
     "Cloud & SaaS Platforms",
     "Enterprise Software ",
   ],

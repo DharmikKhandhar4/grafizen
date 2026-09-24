@@ -375,7 +375,7 @@ export default function CoreServices() {
                       </div>
                     </div>
 
-                    <a
+                    {/* <a
                       href="#contact"
                       className="group/cta inline-flex items-center justify-center gap-2.5 rounded-xl md:rounded-full bg-[#dd0403] px-6 py-3 text-xs font-[500] uppercase tracking-wider text-white shadow-xs md:shadow-md shadow-[#dd0403]/25 transition-all duration-300 hover:bg-black hover:text-white w-full sm:w-auto"
                     >
@@ -384,7 +384,7 @@ export default function CoreServices() {
                         size={16}
                         className="transition-transform duration-300 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5"
                       />
-                    </a>
+                    </a> */}
                   </div>
                 </motion.div>
               </AnimatePresence>

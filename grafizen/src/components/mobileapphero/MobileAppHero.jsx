@@ -284,7 +284,7 @@ export default function MobileAppHero() {
               max-w-[580px]
               lg:col-start-1
               lg:row-start-2
-              lg:mt-6
+              md:-mt-35
             "
           >
             {/* Description */}
@@ -309,7 +309,8 @@ export default function MobileAppHero() {
             <div
               className="mt-4 sm:mt-8"
             >
-              <button
+              <a
+              href="https://grafizen.com/contact-us"
                 className="
                   group
                   inline-flex
@@ -351,7 +352,7 @@ export default function MobileAppHero() {
                 >
                   <ArrowRight size={18} />
                 </span>
-              </button>
+              </a>
             </div>
 
           </motion.div>

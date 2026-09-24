@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       {/* final ready page */}
-      {/* <MainDigitalMarketingConsultant /> */}
+      <MainDigitalMarketingConsultant />
       {/* <MainDExpertsRajkot /> */}
       {/* <MainSeoPage />    */}
 
@@ -26,7 +26,7 @@ function App() {
       {/* <MainSoftwaerDevelopmentCompany /> */}
       {/* <MainEnterpriseSoftware /> */}
       {/* <MobileAppDevlopment />  */}
-      <MainCustomSoftwear />
+      {/* <MainCustomSoftwear /> */}
     
     </>
 
