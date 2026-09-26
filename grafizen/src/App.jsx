@@ -11,12 +11,14 @@ import PpcWhyChooseUS from "./page/ppc/PpcWhyChooseUs"
 import MainSoftwaerDevelopmentCompany from  "./page/softwaredevelopmentcompany/MainSoftwareDevelopmentCompany"
 import MainEnterpriseSoftware from "./page/enterprisesoftware/MainEnterpriseSoftware";
 import MobileAppDevlopment from "./page/mobileapphero/MobileAppDevlopment";
+import AndroidAppComapany from "./page/androidapp/AdroidAppComapany";
+import WebDevelopmentCompany from "./page/webdevelopment/WebDevelopmentCompany";
 
 function App() {
   return (
     <>
       {/* final ready page */}
-      <MainDigitalMarketingConsultant />
+      {/* <MainDigitalMarketingConsultant /> */}
       {/* <MainDExpertsRajkot /> */}
       {/* <MainSeoPage />    */}
 
@@ -27,6 +29,8 @@ function App() {
       {/* <MainEnterpriseSoftware /> */}
       {/* <MobileAppDevlopment />  */}
       {/* <MainCustomSoftwear /> */}
+      {/* <AndroidAppComapany /> */}
+        <WebDevelopmentCompany /> 
     
     </>
 
