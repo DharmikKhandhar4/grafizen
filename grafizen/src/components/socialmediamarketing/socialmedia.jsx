@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Heart,
-  Share2,
-  TrendingUp,
-} from "lucide-react";
+import { ArrowRight, Heart, Share2, TrendingUp } from "lucide-react";
 import face from "../../../public/face.png";
 import insta from "../../../public/insta.png";
 import instagramwhite from "../../../public/image/instagramwhite.png";
@@ -13,7 +8,7 @@ import whatsapp from "../../../public/whatsapp.png";
 import facebook from "../../../public/image/CompleteServices/facebook.png";
 import facebookwhite from "../../../public/image/facebookwhite.png";
 import follow from "../../../public/image/follow.png";
-import post from "../../../public/image/Post.png";
+import post from "../../../public/image/post.png";
 import reach from "../../../public/image/reach.png";
 
 // Floating animation helper
@@ -219,13 +214,19 @@ export default function SocialMediaHero() {
                 alt="Instagram"
                 className="h-5 w-5 sm:h-6 sm:w-6 object-contain"
               />
-              <span className="text-xs font-semibold md:text-neutral-800 text-white
-              ">
+              <span
+                className="text-xs font-semibold md:text-neutral-800 text-white
+              "
+              >
                 Instagram
               </span>
             </div>
             <div className="flex items-center gap-2 rounded-xl  bg-gradient-to-tr from-[#00c6ff] to-[#0072ff] md:bg-white/75 px-3 py-1.5 shadow-xs backdrop-blur-md">
-              <img src={facebookwhite} alt="Facebook" className="h-5 w-5 sm:h-6 sm:w-6 object-contain" />
+              <img
+                src={facebookwhite}
+                alt="Facebook"
+                className="h-5 w-5 sm:h-6 sm:w-6 object-contain"
+              />
               <span className="text-xs font-semibold md:text-neutral-800 text-white ">
                 Facebook
               </span>
@@ -245,8 +246,18 @@ export default function SocialMediaHero() {
           {/* 3. IMAGES & STATS GRID (order-3 on mobile, lg:order-4 on desktop) */}
           <div className="order-3 lg:order-4 my-3 sm:my-8 lg:mt-16 grid grid-cols-3 gap-2 sm:gap-4 border-y lg:border-t lg:border-b-0 border-black/[0.08] py-4 sm:py-8 lg:pt-8 lg:pb-0 w-full max-w-lg mx-auto">
             {[
-              { label: "Follower Growth", val: "3.5x", icon: TrendingUp, image: follow },
-              { label: "Post Engagement", val: "+84%", icon: Heart, image: post },
+              {
+                label: "Follower Growth",
+                val: "3.5x",
+                icon: TrendingUp,
+                image: follow,
+              },
+              {
+                label: "Post Engagement",
+                val: "+84%",
+                icon: Heart,
+                image: post,
+              },
               { label: "Total Reach", val: "10M+", icon: Share2, image: reach },
             ].map(({ label, val, icon: Icon, image }) => (
               <div key={label} className="text-center">
@@ -279,7 +290,11 @@ export default function SocialMediaHero() {
               href="https://grafizen.com/contact-us"
               className="group inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-xl bg-[#dd0403] px-6 py-3 text-xs sm:text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(221,4,3,0.22)]  "
             >
-               <span className=" md:flex hidden whitespace-nowrap  "> Book Your  Free</span>   Consultation
+              <span className=" md:flex hidden whitespace-nowrap  ">
+                {" "}
+                Book Your Free
+              </span>{" "}
+              Consultation
               <ArrowRight
                 size={16}
                 className="transition-transform duration-300 group-hover:translate-x-1"
