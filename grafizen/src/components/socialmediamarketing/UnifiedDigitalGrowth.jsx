@@ -39,7 +39,7 @@ export default function UnifiedDigitalGrowth() {
   const ImageShowcase = () => (
     <div className="group relative my-4 sm:my-6 w-full max-w-[600px] rounded-2xl p-2 sm:p-3 transition-all duration-500 flex justify-center mx-auto">
       <img
-        src="/image/about/Unified.png"
+        src="/image/about/unified.png"
         alt="Grafizen digital marketing and technology dashboard"
         className="h-full max-h-[280px] xs:max-h-[320px] sm:max-h-[330px] w-full max-w-[400px] rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.02]"
       />

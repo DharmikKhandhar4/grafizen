@@ -28,18 +28,7 @@ import AISecurityPage from "./page/aisecurity/AISecurityPage";
 
 /* ─── Pages Registry ───────────────────────────────────────── */
 const PAGES = [
-  {
-    id: "ai-security",
-    name: "AI-Powered Security Hero",
-    tag: "AI / Cyber",
-    component: AISecurityPage,
-  },
-  {
-    id: "ios-development",
-    name: "iOS App Development Company",
-    tag: "Mobile",
-    component: IOSAppDevelopmentCompany,
-  },
+ 
   {
     id: "best-web-development",
     name: "Best Web Development Company",
@@ -117,6 +106,18 @@ const PAGES = [
     name: "Internet Marketing Rajkot",
     tag: "Marketing",
     component: MainInternetMarketingRajkot,
+  },
+   {
+    id: "ai-security",
+    name: "AI-Powered Security Hero",
+    tag: "AI / Cyber",
+    component: AISecurityPage,
+  },
+  {
+    id: "ios-development",
+    name: "iOS App Development Company",
+    tag: "Mobile",
+    component: IOSAppDevelopmentCompany,
   },
 ];
 

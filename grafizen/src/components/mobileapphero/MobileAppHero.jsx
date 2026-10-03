@@ -9,8 +9,8 @@ import {
 import google from "../../../public/image/mobileapp/google.png";
 import apple from "../../../public/image/mobileapp/apple-store.png";
 import clutch from "../../../public/image/mobileapp/clutch.png";
-import googleplay from "../../../public/image/mobileapp/Google-Play.png";
-import upwork from "../../../public/image/mobileapp/Upwork.png";
+import googleplay from "../../../public/image/mobileapp/googleplay.png";
+import upwork from "../../../public/image/mobileapp/upwork.png";
 
 
 const fadeUp = {

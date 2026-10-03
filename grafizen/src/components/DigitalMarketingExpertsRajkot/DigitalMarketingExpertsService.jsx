@@ -8,11 +8,11 @@ import {
   MousePointerClick,
   FileText,
 } from "lucide-react";
-import bulk from "../../../public/image/digitalmarketing/Video.png";
-import Socialmedia from "../../../public/image/digitalmarketing/Socialmedia.png";
-import campaign from "../../../public/image/digitalmarketing/Video.png";
-import segmentation from "../../../public/image/digitalmarketing/Strategy.png";
-import personalization from "../../../public/image/digitalmarketing/Conversion.png";
+import bulk from "../../../public/image/digitalmarketing/video.png";
+import Socialmedia from "../../../public/image/digitalmarketing/socialmedia.png";
+import campaign from "../../../public/image/digitalmarketing/video.png";
+import segmentation from "../../../public/image/digitalmarketing/strategy.png";
+import personalization from "../../../public/image/digitalmarketing/conversion.png";
 import automation from "../../../public/image/digitalmarketing/infu.png";
 
 export default function EmailServices() {
