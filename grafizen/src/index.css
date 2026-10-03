@@ -214,3 +214,16 @@ body {
     }
   }
 }
+
+@keyframes shine {
+  0% {
+    background-position: 150% 0;
+  }
+  100% {
+    background-position: -150% 0;
+  }
+}
+
+.animate-shine {
+  animation: shine 4s linear infinite;
+}
