@@ -103,7 +103,7 @@ const securityFeatures = [
 
 export default function AISecurityHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-white pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24 selection:bg-[#dd0403]/15 selection:text-[#dd0403]">
+    <section className="relative w-full overflow-hidden bg-white pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-4  selection:bg-[#dd0403]/15 selection:text-[#dd0403]">
       <div className="relative mx-auto max-w-[1300px] px-5 sm:px-8 lg:px-0">
         {/* ── MAIN 3-COLUMN HERO GRID ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-4 items-center min-h-[75vh] -mt-3">
@@ -304,7 +304,7 @@ export default function AISecurityHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-16 sm:mt-20 -lg:mt-24 pt-8 border-t border-neutral-200/70"
+          className=" -lg:mt-24 pt-4 border-t border-neutral-200/70"
         >
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-neutral-500 mb-6 text-center">
             TRUSTED BY INNOVATIVE COMPANIES
