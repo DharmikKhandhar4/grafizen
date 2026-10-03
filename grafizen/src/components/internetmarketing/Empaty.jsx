@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 
 const painPoints = [
   {
-    image: "/internet/Leads.png",
+    image: "/internet/leads.png",
     title: "Traffic is Slow.",
     description: "Excellent products, but the digital world passes you by.",
   },
   {
-    image: "/internet/Traffic.png",
+    image: "/internet/traffic.png",
     title: "Leads are Rare.",
     description:
       "Quality prospects are hard to find, and your funnel feels weak and frustrating.",
   },
   {
-    image: "/internet/Conversions.png",
+    image: "/internet/conversions.png",
     title: "Conversions Feel Like Wish Thinking.",
     description: "Clicks are rare, not new customers.",
   },

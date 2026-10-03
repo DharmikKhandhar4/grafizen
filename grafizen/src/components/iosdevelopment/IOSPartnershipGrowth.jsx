@@ -91,7 +91,9 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
     if (onContactClick) {
       onContactClick();
     } else {
-      const contactSection = document.getElementById("contact") || document.getElementById("consultation");
+      const contactSection =
+        document.getElementById("contact") ||
+        document.getElementById("consultation");
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: "smooth" });
       } else {
@@ -106,7 +108,6 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
       className="relative w-full overflow-hidden bg-white py-20 sm:py-24 lg:py-28 selection:bg-[#dd0403]/15 selection:text-[#dd0403]"
     >
       <div className="relative z-10 mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-        
         {/* ── SECTION HEADER (MATCHING IOSServicesWorks LAYOUT & TYPOGRAPHY) ── */}
         <div className="mb-12 sm:mb-16 lg:mb-10 grid grid-cols-2 items-end gap-5">
           <div>
@@ -123,15 +124,15 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
 
           <div>
             <p className="mt-4 text-base sm:text-[14px] font-[300] text-black/55 leading-5">
-              Our iOS teams stay engaged through App Store submission, post-launch monitoring,
-              and each major iOS version update, so your app never breaks when Apple ships a new release.
+              Our iOS teams stay engaged through App Store submission,
+              post-launch monitoring, and each major iOS version update, so your
+              app never breaks when Apple ships a new release.
             </p>
           </div>
         </div>
 
         {/* ── MAIN CONTENT GRID ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
           {/* ════ LEFT COLUMN: Interactive Partnership Pillars (Cols 1-7) ════ */}
           <div className="lg:col-span-7 flex flex-col divide-y divide-neutral-200 border-y border-neutral-200">
             {partnershipPillars.map((pillar, idx) => {
@@ -143,7 +144,9 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
                   key={pillar.id}
                   onClick={() => setActiveTab(idx)}
                   className={`group relative py-6 sm:py-5 transition-all duration-300 cursor-pointer ${
-                    isActive ? "bg-neutral-50/70 -mx-4 px-4 sm:-mx-6 sm:px-6 rounded-2xl" : "hover:bg-neutral-50/40"
+                    isActive
+                      ? "bg-neutral-50/70 -mx-4 px-4 sm:-mx-6 sm:px-6 rounded-2xl"
+                      : "hover:bg-neutral-50/40"
                   }`}
                 >
                   {/* Left accent bar for active item */}
@@ -151,7 +154,11 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
                     <motion.div
                       layoutId="activePillarBar"
                       className="absolute left-0 top-3 bottom-3 w-0 bg-[#dd0403] rounded-r"
-                      transition={{ type: "spring", stiffness: 360, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 360,
+                        damping: 30,
+                      }}
                     />
                   )}
 
@@ -164,7 +171,10 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
                             : "bg-neutral-100 text-neutral-600 group-hover:bg-[#dd0403]/10 group-hover:text-[#dd0403]"
                         }`}
                       >
-                        <PillarIcon className="h-5 w-5" strokeWidth={isActive ? 2.2 : 2} />
+                        <PillarIcon
+                          className="h-5 w-5"
+                          strokeWidth={isActive ? 2.2 : 2}
+                        />
                       </div>
                       <h3
                         className={`text-lg sm:text-xl lg:text-[18px] font-[400] tracking-tight transition-colors duration-200 ${
@@ -227,14 +237,12 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
 
           {/* ════ RIGHT COLUMN: All Right-Side Information Inside Tall iPhone Mockup ════ */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 flex flex-col items-center justify-center">
-            
             {/* Ambient Background Glow */}
             <div className="relative w-full max-w-[350px] sm:max-w-[365px] mx-auto">
               {/* <div className="pointer-events-none absolute -inset-4 rounded-[60px] bg-gradient-to-b from-[#dd0403]/8 via-neutral-100/20 to-[#dd0403]/6 blur-2xl" /> */}
 
               {/* ── Tall Front-Facing iPhone Device Frame ── */}
               <div className="relative w-full rounded-[52px] sm:rounded-[56px] bg-[#0c0c0c] p-2.5 sm:p-2 shadow-[0_30px_70px_rgba(0,0,0,0.15),0_10px_20px_rgba(0,0,0,0.06)] border-[5px] sm:border-[6px] border-[#d8d8d8] ring-1 ring-black/10">
-                
                 {/* Physical Titanium Side Buttons */}
                 {/* <div className="absolute -left-[7px] top-24 h-7 w-[2.5px] rounded-l bg-[#c8c8c8]" />
                 <div className="absolute -left-[7px] top-36 h-12 w-[2.5px] rounded-l bg-[#c8c8c8]" />
@@ -243,20 +251,25 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
 
                 {/* iPhone Screen Container (All Content Inside) */}
                 <div className="relative rounded-[42px] sm:rounded-[46px] bg-gradient-to-b from-[#f8f9fc] via-white to-[#f5f6fa] overflow-hidden p-4 sm:p-4.5 pt-3 min-h-[610px] sm:min-h-[620px] flex flex-col justify-between border border-neutral-200/70 shadow-inner">
-                  
                   {/* Top Area: Status Bar & Dynamic Island */}
                   <div>
                     <div className="flex items-center justify-between mb-3 px-1">
-                      <span className="text-xs font-semibold tracking-tight text-black">9:41</span>
-                      
+                      <span className="text-xs font-semibold tracking-tight text-black">
+                        9:41
+                      </span>
+
                       {/* Pill Dynamic Island */}
                       <div className="flex items-center gap-1.5 rounded-full bg-neutral-950 px-2.5 py-1 text-[9.5px] text-white shadow-xs">
                         <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        <span className="tracking-tight text-[9px] font-medium">{activePillar.dynamicIslandText}</span>
+                        <span className="tracking-tight text-[9px] font-medium">
+                          {activePillar.dynamicIslandText}
+                        </span>
                       </div>
 
                       <div className="flex items-center gap-1 text-black">
-                        <span className="text-[10px] font-bold tracking-tight">5G</span>
+                        <span className="text-[10px] font-bold tracking-tight">
+                          5G
+                        </span>
                         <div className="w-4 h-2.5 border border-neutral-900 rounded-2xs p-0.5 flex items-center rounded-sm">
                           <div className="w-full h-full bg-neutral-900 rounded-xs " />
                         </div>
@@ -297,7 +310,9 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
                       className={`relative rounded-2xl bg-gradient-to-br ${activePillar.gradient} p-3.5 border border-neutral-200/80 shadow-2xs my-1`}
                     >
                       <div className="flex items-center justify-between text-[10px]">
-                        <span className="uppercase tracking-wider font-semibold text-neutral-400">Current Phase</span>
+                        <span className="uppercase tracking-wider font-semibold text-neutral-400">
+                          Current Phase
+                        </span>
                         {/* <span className="inline-flex items-center gap-1 rounded-full bg-[#dd0403]/10 px-2 py-0.5 text-[10px] font-bold text-[#dd0403]">
                           <ActivePillarIcon className="w-3 h-3" />
                           <span>{activePillar.badge}</span>
@@ -316,9 +331,16 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
                       {/* Mini metric tags */}
                       <div className="mt-2.5 grid grid-cols-3 gap-1.5 text-center">
                         {activePillar.metrics.map((m, mIdx) => (
-                          <div key={mIdx} className="rounded-xl bg-white/95 p-1.5 border border-neutral-200/70 shadow-2xs">
-                            <div className="text-xs font-[400] text-black leading-tight">{m.value}</div>
-                            <div className="text-[9.5px] text-black/55 font-[300] truncate leading-tight mt-0.5">{m.label}</div>
+                          <div
+                            key={mIdx}
+                            className="rounded-xl bg-white/95 p-1.5 border border-neutral-200/70 shadow-2xs"
+                          >
+                            <div className="text-xs font-[400] text-black leading-tight">
+                              {m.value}
+                            </div>
+                            <div className="text-[9.5px] text-black/55 font-[300] truncate leading-tight mt-0.5">
+                              {m.label}
+                            </div>
                           </div>
                         ))}
                       </div>
@@ -390,17 +412,11 @@ export default function IOSPartnershipGrowth({ onContactClick }) {
                       <div className="h-1 w-28 rounded-full bg-neutral-900/30" />
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
-
-
-
       </div>
     </section>
   );
