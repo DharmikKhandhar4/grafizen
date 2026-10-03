@@ -193,7 +193,7 @@ const BestWebDevelopmentHero = () => {
                   {/* Upwork Badge */}
                   <div className="flex items-center gap-2 rounded-lg bg-neutral-50 px-2.5 py-1 border border-neutral-200/80 transition-all hover:bg-neutral-100/80">
                     <img
-                      src="/image/mobileapp/upwork.png"
+                      src="/image/mobileapp/upworks.png"
                       alt="Upwork Top Rated"
                       className="h-4 sm:h-[18px] w-auto object-contain"
                     />
