@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import email from "../../../../public/image/emailpage/emialservice.png";
+import email from "../../../public/image/emailpage/emialservice.png";
 import advertising from "../../../public/image/emailpage/advertising.png";
 import conversion from "../../../public/image/emailpage/good-conversion-rate.png";
 import people from "../../../public/image/emailpage/people.png";

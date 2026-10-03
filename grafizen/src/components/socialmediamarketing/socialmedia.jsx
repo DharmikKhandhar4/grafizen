@@ -8,7 +8,7 @@ import whatsapp from "../../../public/whatsapp.png";
 import facebook from "../../../public/image/CompleteServices/facebook.png";
 import facebookwhite from "../../../public/image/facebookwhite.png";
 import follow from "../../../public/image/follow.png";
-import post from "../../../public/image/post.png";
+import post from "../../../public/image/Post.png";
 import reach from "../../../public/image/reach.png";
 
 // Floating animation helper

@@ -9,10 +9,10 @@ import {
   FileText,
 } from "lucide-react";
 // import bulk from "../../../public/image/digitalmarketing/videos.png";
-import socialmedia from "../../../public/image/digitalmarketing/socialmedia.png";
+import socialmedia from "../../../public/image/digitalmarketing/Socialmedia.png";
 import campaign from "../../../public/image/digitalmarketing/videos.png";
-import segmentation from "../../../public/image/digitalmarketing/strategy.png";
-import personalization from "../../../public/image/digitalmarketing/conversion.png";
+import segmentation from "../../../public/image/digitalmarketing/Strategy.png";
+import personalization from "../../../public/image/digitalmarketing/Conversion.png";
 import automation from "../../../public/image/digitalmarketing/infu.png";
 
 export default function EmailServices() {
