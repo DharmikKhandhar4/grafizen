@@ -8,9 +8,9 @@ import {
   MousePointerClick,
   FileText,
 } from "lucide-react";
-import bulk from "../../../public/image/digitalmarketing/video.png";
-import Socialmedia from "../../../public/image/digitalmarketing/socialmedia.png";
-import campaign from "../../../public/image/digitalmarketing/video.png";
+// import bulk from "../../../public/image/digitalmarketing/videos.png";
+import socialmedia from "../../../public/image/digitalmarketing/socialmedia.png";
+import campaign from "../../../public/image/digitalmarketing/videos.png";
 import segmentation from "../../../public/image/digitalmarketing/strategy.png";
 import personalization from "../../../public/image/digitalmarketing/conversion.png";
 import automation from "../../../public/image/digitalmarketing/infu.png";
@@ -44,7 +44,7 @@ export default function EmailServices() {
       description:
         "Engaging content creation and audience management across major platforms to build brand authority and foster loyal client communities.",
       keyword: "ENGAGEMENT",
-      image: Socialmedia,
+      image: socialmedia,
       icon: Share2,
     },
     {

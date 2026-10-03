@@ -21,7 +21,7 @@ const channels = [
   {
     title: "YouTube ",
 
-    image: "/image/social/video.png",
+    image: "/image/social/socialvideo.png",
     description:
       "Use YouTube strategy and engaging videos to reach the right audience, build authority, and generate leads.",
   },
