@@ -13,7 +13,7 @@ import whatsapp from "../../../public/whatsapp.png";
 import facebook from "../../../public/image/CompleteServices/facebook.png";
 import facebookwhite from "../../../public/image/facebookwhite.png";
 import follow from "../../../public/image/follow.png";
-import post from "../../../public/image/post.png";
+// import post from "../../../public/image/post.png";
 import reach from "../../../public/image/reach.png";
 
 // Floating animation helper
@@ -246,7 +246,7 @@ export default function SocialMediaHero() {
           <div className="order-3 lg:order-4 my-3 sm:my-8 lg:mt-16 grid grid-cols-3 gap-2 sm:gap-4 border-y lg:border-t lg:border-b-0 border-black/[0.08] py-4 sm:py-8 lg:pt-8 lg:pb-0 w-full max-w-lg mx-auto">
             {[
               { label: "Follower Growth", val: "3.5x", icon: TrendingUp, image: follow },
-              { label: "Post Engagement", val: "+84%", icon: Heart, image: post },
+              { label: "Post Engagement", val: "+84%", icon: Heart, image: reach },
               { label: "Total Reach", val: "10M+", icon: Share2, image: reach },
             ].map(({ label, val, icon: Icon, image }) => (
               <div key={label} className="text-center">
